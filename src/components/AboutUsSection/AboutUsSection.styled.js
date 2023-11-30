@@ -1,0 +1,19 @@
+import styled from "styled-components";
+
+export const About_us_foto_text = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 136px;
+  margin-top: 60px;
+`;
+export const About_us_Image = styled.img`
+  width: 486px;
+  height: 419px;
+  background-color: gray;
+  border-radius: 20px;
+`;
+export const About_us_text = styled.p`
+  width: 350px;
+  text-align: justify;
+`;
