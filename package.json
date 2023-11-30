@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Kmaksym1.github.io/HealthyTots/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
