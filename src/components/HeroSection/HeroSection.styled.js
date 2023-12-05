@@ -70,7 +70,7 @@ export const IMG_Wrapper_Center = styled.div`
     width: 584px;
     height: 584px;
     z-index: 100;
-    animation: ${zoomAnimation} 0.8s forwards;
+    
   }
 `; 
 
@@ -98,7 +98,7 @@ export const IMG_Wrapper = styled.div`
 
   &:hover {
     transform: scale(2);
-    /* z-index: 100; */
+    z-index: 100;
     background-color: transparent;
     animation: ${zoomAnimation} 0.8s forwards;
   }
