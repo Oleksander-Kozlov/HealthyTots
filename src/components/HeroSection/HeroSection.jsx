@@ -1,4 +1,12 @@
+
 import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
+import { 
+
+  H1,
+  HeroBtn,
+  Hero_Wrapper,
+  
+} from "./HeroSection.styled";
 
 const HeroSection = () => {
   return (
@@ -16,14 +24,14 @@ const HeroSection = () => {
           justifyContent: "space-between",
         }}
       >
-        <div>
-          <h1>
+        <Hero_Wrapper>
+          <H1>
             Healthy Tots: де кожен<br></br> маленький пацієнт - великий
             пріоритет.
-          </h1>
-          <button>Записатися на прийом</button>
-        </div>
-        
+          </H1>
+          <HeroBtn>Записатися на прийом</HeroBtn>
+        </Hero_Wrapper>
+      
       </Container_Wrapper>
     </section>
   );
