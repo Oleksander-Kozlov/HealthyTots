@@ -8,7 +8,7 @@ import { GlobalStyle } from "./Global.styled";
 // import NotFoundPage from "./components/NotFound/NotFound";
 
 import BlogPage from "./pages/BlogPage/BlogPage";
-import ContactsPage from "./pages/ContactsPage/COntactsPage";
+import ContactsPage from "./pages/ContactsPage/ContactsPage";
 import DoctorsPage from "./pages/DoctorsPage/DoctorsPage";
 import HomePage from "./pages/HomePage/HomePage";
 import ServicesPage from "./pages/Services/ServicesPage";
