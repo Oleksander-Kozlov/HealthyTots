@@ -10,7 +10,7 @@ body {
   font-size: 14px; */
   
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   
 }
 
@@ -45,6 +45,7 @@ img {
 button {
   cursor: pointer;
   color: inherit;
+  border: none;
 }
 section{
     padding-bottom: 120px;
