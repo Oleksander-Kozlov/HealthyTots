@@ -1,5 +1,6 @@
 import AboutUsSection from "../../components/AboutUsSection/AboutUSSection";
 import AdvantagesSection from "../../components/AdvantagesSection/AdvantagesSection";
+import Appointment_Section from "../../components/Appointment/AppointmentSection";
 import {FeedBacks_Section, Main_Container, Container_Wrapper } from "./HomePage.styled";
 
 const HomePage = () => {
@@ -18,7 +19,7 @@ const HomePage = () => {
           <h2>Відгуки</h2>
           </Container_Wrapper>
     </FeedBacks_Section>
-
+    <Appointment_Section/>
   </Main_Container>);
 };
 

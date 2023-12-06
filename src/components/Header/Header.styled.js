@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 export const Header_container = styled.header`
   text-align: center;
   padding: 0px;
@@ -9,9 +9,11 @@ export const Header_container = styled.header`
 top: 0;  
 z-index: 100;  
 width: 100%;   */
-position: sticky;
+
+
+/* position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 10; */
 `;
 
 // header {
@@ -39,23 +41,26 @@ export const Contact_container = styled.div`
   gap: 8px;
 `;
 
+export const Navigation_Container = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+height: 29px;
+background-color: #BDDFEF;
+
+`
 export const Navigation = styled.nav`
 display: flex;
 align-items: center;
 justify-content: center;
 gap: 50px;
-height: 29px;
-background-color: #A9AAAC;
+
 
 `
 
-export const Link_styled = styled(Link)`
-text-decoration: none;
-color: black;
-&:hover,
-&:focus {
-    color: #ffffff;
-    
-    
-  }
+export const PhoneNumber = styled.a`
+display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
 `
