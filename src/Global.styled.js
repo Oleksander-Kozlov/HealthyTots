@@ -81,14 +81,17 @@ button {
   border: none;
 }
 section{
-    padding-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 80px;
 }
 
 `;
 
 export const Link_styled = styled(Link)`
-
-  color: #0D3F7C;
+  color: #0d3f7c;
   &:hover,
   &:focus {
     color: #ffffff;

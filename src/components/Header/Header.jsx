@@ -25,9 +25,7 @@ const Header = () => {
         <Contact_container>
           {/* <img src={phone_icon} alt="phone_icon" /> */}
           <p>
-            
-            
-            <PhoneNumber href="tel:+380975240670"><PiPhoneFill color="#8CD4FA" size={24} /><p>+ 38 (097) 5240670</p></PhoneNumber>
+            <PhoneNumber href="tel:+380975240670"><PiPhoneFill color="#8CD4FA" size={24} />+ 38 (097) 5240670</PhoneNumber>
           </p>
           {/* <p>+ 38 (097) 5240670</p> */}
         </Contact_container>
