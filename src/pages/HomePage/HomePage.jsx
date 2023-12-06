@@ -1,13 +1,16 @@
 import AboutUsSection from "../../components/AboutUsSection/AboutUSSection";
 import AdvantagesSection from "../../components/AdvantagesSection/AdvantagesSection";
+
 import Appointment_Section from "../../components/Appointment/AppointmentSection";
+
+import HeroSection from "../../components/HeroSection/HeroSection";
+
 import {FeedBacks_Section, Main_Container, Container_Wrapper } from "./HomePage.styled";
 
 const HomePage = () => {
   return (
     <Main_Container>
-      <>
-      </>
+     <HeroSection/>
       <AboutUsSection/>
      
       

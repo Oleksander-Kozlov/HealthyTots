@@ -30,6 +30,9 @@ body {
   font-size: 14px;
   width: 100%;
   height: 100vh;
+
+  
+
 }
 
 h1,
@@ -75,6 +78,7 @@ img {
 button {
   cursor: pointer;
   color: inherit;
+  border: none;
 }
 section{
     padding-bottom: 120px;
