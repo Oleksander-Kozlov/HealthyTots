@@ -10,9 +10,9 @@ export const About_us_Section = styled.section`
 `
 
 export const Container_Wrapper = styled.div`
-    padding: 0 120px;
+    padding:  40px 120px;
     overflow: hidden;    
-`
+`;
 
 
 

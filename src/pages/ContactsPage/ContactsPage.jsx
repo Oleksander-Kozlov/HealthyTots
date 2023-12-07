@@ -1,31 +1,44 @@
+import { H1 } from "../../components/HeroSection/HeroSection.styled";
+import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
+import { Main_Container } from "../HomePage/HomePage.styled";
+import { ContactsWrapper, H3, InfoWrapper, MapWrapper, Text } from "./ContactsPage.styled";
 
 const ContactsPage = () => {
   
   return (
-    <>
-      <a>Головна</a>
-      <a>/контакти</a>
-      <h1>Контакти</h1>
-      <div>
-        <div>
-          <h3>Адреса</h3>
-          <p>м.Ладижин, Наконечного 131Є</p>
-          <h3>Часи прийому:</h3>
-          <p>Пн. - Пт.: 09:00 - 19:00</p>
-          <p>Сб. - Нд.: 11:00 - 17:00</p>
-          <h3>Teлефон:</h3>
-          <p> + 38 (097) 5240670Є</p>
-          <h3>Пошта:</h3>
-          <p>Solomko_neo@ukr.net</p>
-          <h3>Ми у соціальних мережах:</h3>
-          <div></div>
-        </div>
-        <div>
-          <Map/>
-        </div>
-      </div>
-    </>
+    <Main_Container
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <a style={{ alignSelf: "flex-start" }}>
+        Головна<a>/контакти</a>
+      </a>
+
+      <H1>Контакти</H1>
+      <InfoWrapper>
+        <ContactsWrapper>
+          <H3>Адреса</H3>
+          <Text>м.Ладижин, Наконечного 131Є</Text>
+          <H3>Часи прийому:</H3>
+          <Text>Пн. - Пт.: 09:00 - 19:00<br/>
+          Сб. - Нд.: 11:00 - 17:00</Text>
+          <H3>Teлефон:</H3>
+          <Text> + 38 (097) 5240670Є</Text>
+          <H3>Пошта:</H3>
+          <Text>Solomko_neo@ukr.net</Text>
+          <H3>Ми у соціальних мережах:</H3>
+          <MakeAppointmentButton onClick={() => alert("Запишись")}>
+            Записатися на прийом
+          </MakeAppointmentButton>
+        </ContactsWrapper>
+        <Map />
+        {/* <MapWrapper></MapWrapper> */}
+      </InfoWrapper>
+    </Main_Container>
   );
   };
   
