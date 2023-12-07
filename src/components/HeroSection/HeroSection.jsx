@@ -20,14 +20,15 @@ const HeroSection = () => {
     <section
       style={{
         paddingTop: "40px",
-        background: "pink",
+        paddingBottom: "40px",
+        
         display: "flex",
         justifyContent: "center",
       }}
     >
       <Container_Wrapper
         style={{
-          background: "gray",
+         
           flexDirection: "row",
           display: "flex",
           justifyContent: "space-between",
@@ -39,7 +40,9 @@ const HeroSection = () => {
             Healthy Tots: де кожен<br></br> маленький пацієнт - великий
             пріоритет.
           </H1>
-          <MakeAppointmentButton onClick={()=>alert("Запишись")}>Записатися на прийом</MakeAppointmentButton>
+          <MakeAppointmentButton onClick={() => alert("Запишись")}>
+            Записатися на прийом
+          </MakeAppointmentButton>
         </Hero_Wrapper>
         <IMG_Block_Wrapper>
           <IMG_Wrapper x="left" y="top">

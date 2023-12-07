@@ -2,7 +2,7 @@ import { H1 } from "../../components/HeroSection/HeroSection.styled";
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
 import { Main_Container } from "../HomePage/HomePage.styled";
-import { ContactsWrapper, H3, InfoWrapper, MapWrapper, Text } from "./ContactsPage.styled";
+import { ContactsWrapper, H3, InfoWrapper, Text } from "./ContactsPage.styled";
 
 const ContactsPage = () => {
   
