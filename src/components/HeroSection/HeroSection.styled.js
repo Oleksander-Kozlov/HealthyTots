@@ -20,8 +20,10 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;`
 export const HeroBtn = styled.button`
+  width: 260px;
+
   border-radius: 20px;
-  background: #515151;
+  background:  #0d3f7c;
 
   color: #fff;
 
@@ -30,7 +32,8 @@ export const HeroBtn = styled.button`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-padding: 16px 32px`;
+  padding: 16px 32px;
+`;
 
 export const IMG_Block_Wrapper = styled.div`
   position: relative;

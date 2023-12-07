@@ -4,10 +4,11 @@ import Hero_img3 from "../../assets/Hero_img3.png";
 import Hero_img4 from "../../assets/Hero_img4.png";
 import Hero_img5 from "../../assets/img55.png";
 import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
+import MakeAppointmentButton from "../MakeAppointmentButton/MakeAppointmentButton";
 import { 
   About_us_Image,
   H1,
-  HeroBtn,
+
   Hero_Wrapper,
   IMG_Block_Wrapper,
   IMG_Wrapper,
@@ -20,6 +21,8 @@ const HeroSection = () => {
       style={{
         paddingTop: "40px",
         background: "pink",
+        display: "flex",
+        justifyContent: "center",
       }}
     >
       <Container_Wrapper
@@ -28,6 +31,7 @@ const HeroSection = () => {
           flexDirection: "row",
           display: "flex",
           justifyContent: "space-between",
+          gap: "24px",
         }}
       >
         <Hero_Wrapper>
@@ -35,7 +39,7 @@ const HeroSection = () => {
             Healthy Tots: де кожен<br></br> маленький пацієнт - великий
             пріоритет.
           </H1>
-          <HeroBtn>Записатися на прийом</HeroBtn>
+          <MakeAppointmentButton onClick={()=>alert("Запишись")}>Записатися на прийом</MakeAppointmentButton>
         </Hero_Wrapper>
         <IMG_Block_Wrapper>
           <IMG_Wrapper x="left" y="top">
