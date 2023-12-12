@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-const Button = styled.button`
-  width: 325px;
+const Button = styled.a`
+  display: flex;
+  justify-content: center;
+  width: fit-content;
   padding: 16px 32px;
   border-radius: 20px;
   background: #0d3f7c;
@@ -14,12 +16,12 @@ const Button = styled.button`
   line-height: normal;
 `;
 
-const MakeAppointmentButton = ({children, onClick}) => {
-  return <Button onClick={onClick}>{children}</Button>;
+const MakeAppointmentButton = ({ children }) => {
+  return <Button href="#form">{children}</Button>;
 };
 
 MakeAppointmentButton.propTypes = {
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired,
+  
 };
 export default MakeAppointmentButton;
