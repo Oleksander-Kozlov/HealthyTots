@@ -22,7 +22,7 @@ export const Item = styled.div`
 export const Advantages_item_Img = styled.img`
 width: 120px;
     height: 120px;
-    border-radius: 16px;
-background: #D9D9D9;
+    /* border-radius: 16px; */
+/* background: #D9D9D9; */
 margin-bottom: 12px;
 `

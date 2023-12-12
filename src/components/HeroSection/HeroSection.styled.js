@@ -24,16 +24,14 @@ export const HeroBtn = styled.button`
 
   border-radius: 20px;
   background:  #0d3f7c;
-
   color: #fff;
-
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   padding: 16px 32px;
-`;
+`
 
 export const IMG_Block_Wrapper = styled.div`
   position: relative;

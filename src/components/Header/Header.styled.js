@@ -1,19 +1,23 @@
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 export const Header_container = styled.header`
-  text-align: center;
+display: flex;
+    flex-direction: column;
+    align-items: center;
+  /* text-align: center; */
   padding: 0px;
   margin-bottom: 20px;
   background-color: White;
+  
   /* position: fixed;  
 top: 0;  
 z-index: 100;  
 width: 100%;   */
-
-
 /* position: sticky;
   top: 0;
   z-index: 10; */
+
+
 `;
 
 // header {
@@ -29,13 +33,16 @@ width: 100%;   */
   
 export const Header_upperLine = styled.div`
   display: flex;
-  justify-content: center;
+  
+  justify-content: space-around;
     gap:143px;
     padding-top: 20px;
     padding-bottom: 20px;
+    align-items: center;
+    width: 1570px;
 `;
 
-export const Contact_container = styled.div`
+export const Contact_container = styled.a`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -45,8 +52,13 @@ export const Navigation_Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-height: 29px;
+height:53px;
 background-color: #BDDFEF;
+/* position: fixed;
+    top: 0; */
+    /* position:-webkit-sticky; position:fixed; top:0px; */
+    
+width: 100%;
 
 `
 export const Navigation = styled.nav`
@@ -58,9 +70,9 @@ gap: 50px;
 
 `
 
-export const PhoneNumber = styled.a`
-display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 18px;
-`
+// export const PhoneNumber = styled.a`
+// display: flex;
+//     align-items: center;
+//     gap: 8px;
+//     font-size: 18px;
+// `

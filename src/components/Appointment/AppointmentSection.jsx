@@ -1,5 +1,6 @@
-
 import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
+
+// import emailjs from '@emailjs/browser';
 import {
   AppointmentImg,
   Block,
@@ -12,6 +13,11 @@ import {
 import AppointmentJpg from "../../img/Appointment.jpg";
 import { Formik, Field, Form } from "formik";
 import * as yup from "yup";
+import {  useState } from "react";
+// import { PopupContainer, PopupInnerContainer } from "./AppointmentPopup/AppointmentPopup";
+import AppointmentPopup from "./AppointmentPopup/AppointmentPopup";
+import { useEffect } from "react";
+
 
 // const phoneRegExp =
 //   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -22,15 +28,17 @@ const schema = yup.object().shape({
   //     .string()
   //     .matches(phoneRegExp, "Phone number is not valid")
   //     .required("Required"),
+    termsAndConditions: yup.boolean()
+    .oneOf([true], "You must accept the terms and conditions")
 });
 
 const Appointment_Section = () => {
-  //початкові значення форміка
-
-  const handleSubmit = (values, { resetForm }) => {
-    alert(JSON.stringify(values));
-    resetForm();
-  };
+    const [termsAndConditions, setTermsAndConditions] = useState(false);
+    const [showPopUp, setShowPopUp] = useState(false);
+  //   const handleSubmit = (values, { resetForm }) => {
+  //     alert(JSON.stringify(values));
+  //     resetForm();
+  //   };
 
   const initialValues = {
     name: "",
@@ -38,6 +46,27 @@ const Appointment_Section = () => {
     massage: "",
     termsAndConditions: false,
   };
+
+    // function sendemail(object) {
+
+    //   emailjs.send(service_46pydvw, 'template_etiy58a', object, 'BgVuFq4bE7bcGiPtg')
+    //     .then((result) => {
+    //         console.log(result.text);
+    //     }, (error) => {
+    //         console.log(error.text);
+    //     });
+
+    // }
+    
+  useEffect(() => {
+    const timer = setTimeout(() => {
+    setShowPopUp(false);
+  }, 2500);
+return () => clearTimeout(timer);
+}, [showPopUp]);
+    
+
+  console.log(termsAndConditions);
   return (
     <section>
       <Container_Wrapper>
@@ -52,8 +81,13 @@ const Appointment_Section = () => {
             <Formik
               initialValues={initialValues}
               validationSchema={schema}
-              onSubmit={handleSubmit}>
-              {({ errors, touched }) => (
+              onSubmit={(values, { resetForm }) => {
+                console.log(values);
+                //   sendemail(values)
+                setShowPopUp(true)
+                resetForm();
+              }}>
+              {({ values, errors, touched, isSubmitting }) => (
                 <Form>
                   <FormContainer2>
                     <Field
@@ -61,8 +95,7 @@ const Appointment_Section = () => {
                       name="name"
                       type="text"
                       placeholder="Ім’я та прізвище*"
-
-                      // value={values.name}
+                      value={values.name}
                       // onChange={handleChange}
                       //   onFocus={handleFocus}
                     />
@@ -71,22 +104,24 @@ const Appointment_Section = () => {
                     ) : null}
                     <Field
                       as={Input}
-                      type="phone"
-                      name="number"
+                      type="text"
+                      name="phone"
                       placeholder="Номер телефону*"
-                      //     value={values.name}
-                      // onChange={handleChange}
+                      value={values.phone}
                     />
                     <Field
                       as={Input}
                       type="text"
                       name="massage"
                       placeholder="Повідомлення"
-                      //     value={values.name}
-                      // onChange={handleChange}
+                      value={values.massage}
                     />{" "}
                     <div style={{ display: "flex", alignItems: "flex-start" }}>
-                      <Field type="checkbox" name="termsAndConditions" />
+                      <Field
+                        type="checkbox"
+                        name="termsAndConditions"
+                        value={setTermsAndConditions(false)}
+                      />
                       <span
                         htmlFor="termsAndConditions"
                         style={{
@@ -97,16 +132,24 @@ const Appointment_Section = () => {
                         Я погоджуюсь з політикою конфіденційності та публічним
                         договором
                       </span>
+                      {errors.termsAndConditions &&
+                      touched.termsAndConditions ? (
+                        <ErrorMessage>{errors.termsAndConditions}</ErrorMessage>
+                      ) : null}
                     </div>
                   </FormContainer2>
 
-                  <SubmitButton type="submit">Записатися</SubmitButton>
+                  <SubmitButton type="submit" disabled={isSubmitting}>
+                    Записатися
+                  </SubmitButton>
                 </Form>
               )}
             </Formik>
-          </FormContainer>
+                  </FormContainer>
+                  {showPopUp ?<AppointmentPopup/>:<div/>}
         </Block>
-      </Container_Wrapper>
+          </Container_Wrapper>
+         
     </section>
   );
 };

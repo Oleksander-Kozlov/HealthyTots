@@ -6,6 +6,8 @@ import Footer from "../Footer/Footer";
 const SharedLayout = () => {
   return (
     <>
+      {/* <div style={{height: "90px", backgroundColor: "black"}}></div>
+      <Header style={{ position: "sticky", top: "0", zIndex: "100", backgroundColor: "white" }}/> */}
       <Header/>
          <Suspense
             //   fallback={<Loader />}

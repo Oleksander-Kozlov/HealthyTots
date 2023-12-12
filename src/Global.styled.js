@@ -29,8 +29,8 @@ body {
   font-family: var(--font-text);
   font-size: 14px;
   width: 100%;
-  height: 100vh;
-
+  /* height: 100vh; */
+  scroll-behavior: smooth;
   
 
 }
@@ -91,7 +91,11 @@ section{
 `;
 
 export const Link_styled = styled(Link)`
-  color: #0d3f7c;
+font-family: Balsamiq Sans;
+font-size: 24px;
+text-align: center;
+  /* color: #0d3f7c; */
+  color: #FFF
   &:hover,
   &:focus {
     color: #ffffff;

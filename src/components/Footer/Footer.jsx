@@ -13,7 +13,7 @@ const Footer = () => {
         <Footer_container>
 <img src={logoHT} alt="logoHT" />
           <Navigation_Footer>
-          <Link_styled to="/">Головна</Link_styled>
+          <Link_styled to="/">Головна </Link_styled>
           <Link_styled to="/doctors">Лікарі</Link_styled>
           <Link_styled to="/services">Послуги</Link_styled>
           <Link_styled to="/blog">Блог</Link_styled>

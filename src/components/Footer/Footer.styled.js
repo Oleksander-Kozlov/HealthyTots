@@ -6,7 +6,7 @@ export const Footer_container = styled.div`
     align-items: center;
     /* gap: 50px; */
 height: 226px;
-background-color: #EAE6E6;
+background-color: #0D3F7C;
 padding: 0 120px;
 
 `
@@ -23,4 +23,5 @@ display: flex;
 align-items: flex-start;
 flex-direction: column;
 gap: 12px;
+ 
 `
