@@ -1,6 +1,7 @@
 import { FollowUsContainer, LinkContainer } from "./SocialLinks.styled"
-import FacebookLogo from '../../../img/svg/facebook.svg';
-import InstagramLogo from '../../../img/svg/instagram.svg';
+import { RiInstagramFill } from "react-icons/ri";
+import { FaFacebookSquare } from "react-icons/fa";
+
 const SocialLinks = () => {
     return (
         <FollowUsContainer>
@@ -11,7 +12,8 @@ const SocialLinks = () => {
         aria-label="link to Instagram"
         title="Instagram"
       >
-            <img src={InstagramLogo} alt="Instagram Logo" />
+                
+                <RiInstagramFill style={{ fontSize: 40, fill: "#BDDFEF" }} />
         </LinkContainer>
                     <LinkContainer
                     href="https://www.facebook.com/SolomkoLiudmyla"
@@ -19,8 +21,9 @@ const SocialLinks = () => {
                     rel="noreferrer noopener"
                 aria-label="link to Facebook"
                     title="Facebook"
-                  >
-                        <img src={FacebookLogo} alt="Facebook Logo" />
+            >
+                <FaFacebookSquare style={{ fontSize: 40, fill: "#BDDFEF" }}/>
+                        
                     </LinkContainer>
                     </FollowUsContainer>
 )

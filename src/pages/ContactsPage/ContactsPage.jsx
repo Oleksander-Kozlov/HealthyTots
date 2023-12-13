@@ -1,4 +1,3 @@
-import { H1 } from "../../components/HeroSection/HeroSection.styled";
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
 import { Main_Container } from "../HomePage/HomePage.styled";
@@ -18,7 +17,7 @@ const ContactsPage = () => {
         Головна<a>/контакти</a>
       </a>
 
-      <H1>Контакти</H1>
+      <h2>Контакти</h2>
       <InfoWrapper>
         <ContactsWrapper>
           <H3>Адреса</H3>

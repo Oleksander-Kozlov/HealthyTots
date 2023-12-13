@@ -3,27 +3,27 @@ import styled, { keyframes } from "styled-components";
 import Hero_img5 from "../../assets/img55.png";
 
 export const Hero_Wrapper = styled.div`
-display: flex;flex-direction:column;
-justify-content: center;
- text-align:left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  gap: 48px;
 `;
 
-export const H1 = styled.h1`
-
-margin-bottom: 48px;
-color: #000;
-text-align: left;
-
-font-family: Inter;
-font-size: 40px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;`
+// export const H1 = styled.h1`
+  
+//   color: #000;
+//   text-align: left;
+//   font-family: Inter;
+//   font-size: 40px;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: normal;
+// `;
 export const HeroBtn = styled.button`
   width: 260px;
-
   border-radius: 20px;
-  background:  #0d3f7c;
+  background: #0d3f7c;
   color: #fff;
   font-family: Inter;
   font-size: 24px;
@@ -31,7 +31,7 @@ export const HeroBtn = styled.button`
   font-weight: 400;
   line-height: normal;
   padding: 16px 32px;
-`
+`;
 
 export const IMG_Block_Wrapper = styled.div`
   position: relative;
@@ -42,7 +42,7 @@ export const IMG_Block_Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
-  /* background-color: gray; */
+  background-color: gray;
   border-radius: 20px;
 `;
 
@@ -71,10 +71,8 @@ export const IMG_Wrapper_Center = styled.div`
     width: 584px;
     height: 584px;
     z-index: 100;
-    
   }
-`; 
-
+`;
 
 // Создание ключевых кадров для анимации
 const zoomAnimation = keyframes`

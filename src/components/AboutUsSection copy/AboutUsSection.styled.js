@@ -10,7 +10,7 @@ export const About_us_foto_text = styled.div`
 export const About_us_Image = styled.img`
   width: 486px;
   height: 419px;
-  background-color: gray;
+  
   border-radius: 20px;
 `;
 export const About_us_text = styled.p`

@@ -8,7 +8,7 @@ margin: 0px 20px;
 `
 
 export const Block = styled.div`
-    /* width: 1080px; */
+    width: 960px;
     display: flex;
     justify-content: space-between;
 border-radius: 60px;
@@ -33,7 +33,7 @@ align-items: flex-start;
 `
 
 export const Input = styled.input`
-color: black;
+/* color: black; */
 display: flex;
 /* width: 504px; */
 padding: 20px 12px;
@@ -42,11 +42,24 @@ gap: 10px;
 border-radius: 12px;
 background: #FFF;
 border: 0;
+color: var(--Grey-non-acttive, #94B0B7);
+/* Text secondary */
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;
 &::placeholder {
     color: #94B0B7;
     font-style: italic;
   }
 `;
+export const InputMessage = styled(Input).attrs({ as: 'input' })`
+  height: 95px;
+`;
+
+
+
 
 export const FormContainer2 = styled.div`
 display: flex;

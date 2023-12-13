@@ -39,7 +39,7 @@ export const Header_upperLine = styled.div`
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
-    width: 1570px;
+    width: 1440px;
 `;
 
 export const Contact_container = styled.a`

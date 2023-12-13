@@ -8,6 +8,7 @@ import {
   FormContainer,
   FormContainer2,
   Input,
+  InputMessage,
   SubmitButton,
 } from "./Appointment.styled";
 import AppointmentJpg from "../../img/Appointment.jpg";
@@ -75,7 +76,13 @@ return () => clearTimeout(timer);
 
           <FormContainer>
             <h2>Записатися на прийом</h2>
-            <p style={{ textAlign: "left" }}>
+            <p style={{ textAlign: "left", color: "var(--Text-color, #0C151C)",
+/* Text secondary */
+fontFamily: "Roboto",
+fontSize: "18px",
+fontStyle: "normal",
+fontWeight: "400",
+lineHeight: "120%",}}>
               Ми вам перетелефонуємо для підтвердження запису у робочі години
             </p>
             <Formik
@@ -110,11 +117,12 @@ return () => clearTimeout(timer);
                       value={values.phone}
                     />
                     <Field
-                      as={Input}
+                      as={InputMessage}
                       type="text"
                       name="massage"
                       placeholder="Повідомлення"
-                      value={values.massage}
+                    value={values.massage}
+                    
                     />{" "}
                     <div style={{ display: "flex", alignItems: "flex-start" }}>
                       <Field

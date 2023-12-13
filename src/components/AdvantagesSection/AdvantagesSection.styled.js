@@ -26,3 +26,8 @@ width: 120px;
 /* background: #D9D9D9; */
 margin-bottom: 12px;
 `
+
+export const TextContainer = styled.p`
+max-width: 380px;
+font-size: 18px;
+`
