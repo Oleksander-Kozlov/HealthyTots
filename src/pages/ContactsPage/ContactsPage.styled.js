@@ -10,6 +10,7 @@ export const InfoWrapper = styled.div`
   overflow: hidden;
   background-color: tomato;
   width: 1200px;
+  margin-bottom: 48px;
 `;
 export const ContactsWrapper = styled.div`
   padding: 60px;
