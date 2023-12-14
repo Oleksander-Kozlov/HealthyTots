@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import BGContact from "../../assets/Union.png"
+export const MainContainer = styled.main`
+  background-image: url(${BGContact});
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
 export const H2 = styled.h2`
 margin-bottom:48px;
 `

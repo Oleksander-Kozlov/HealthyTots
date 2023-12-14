@@ -1,7 +1,16 @@
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
-import { Main_Container } from "../HomePage/HomePage.styled";
-import { ContactsWrapper, H2, H3, InfoWrapper, SocialMediaLink, SocialMediaLinkWrapper, Text } from "./ContactsPage.styled";
+
+import {
+  ContactsWrapper,
+  H2,
+  H3,
+  InfoWrapper,
+  SocialMediaLink,
+  SocialMediaLinkWrapper,
+  Text,
+  MainContainer,
+} from "./ContactsPage.styled";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
 import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
@@ -10,7 +19,7 @@ import { Link } from "react-router-dom";
 const ContactsPage = () => {
   
   return (
-    <Main_Container
+    <MainContainer
       style={{
         display: "flex",
         flexDirection: "column",
@@ -68,7 +77,7 @@ const ContactsPage = () => {
         <Map />
         {/* <MapWrapper></MapWrapper> */}
       </InfoWrapper>
-    </Main_Container>
+    </MainContainer>
   );
   };
   
