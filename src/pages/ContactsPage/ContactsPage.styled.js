@@ -11,7 +11,10 @@ export const InfoWrapper = styled.div`
   gap: 126px;
   border-radius: 60px;
   overflow: hidden;
-  background-color: tomato;
+  border-radius: 60px;
+  background: var(--white, #fff);
+  box-shadow: 0px -4px 12px 4px rgba(13, 63, 124, 0.2),
+    0px 4px 12px 0px rgba(13, 63, 124, 0.2);
   width: 1200px;
   margin-bottom: 48px;
 `;
