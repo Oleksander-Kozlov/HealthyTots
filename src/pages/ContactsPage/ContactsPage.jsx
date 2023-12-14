@@ -31,7 +31,7 @@ const ContactsPage = () => {
             Сб. - Нд.: 11:00 - 17:00
           </Text>
           <H3>Teлефон:</H3>
-          <Text> + 38 (097) 5240670Є</Text>
+          <Text> + 38 (097) 5240670</Text>
           <H3>Пошта:</H3>
           <Text>Solomko_neo@ukr.net</Text>
           <H3>Ми у соціальних мережах:</H3>
