@@ -45,10 +45,10 @@ font-size: 40px;
 line-height: normal;
 }
 h3{
-  font-family: var(--font-title);
+font-family: var(--font-title);
 font-size: 24px;
 color: #0D3F7C;
-},
+}
 h4,
 h5,
 h6,
