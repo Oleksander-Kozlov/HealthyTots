@@ -95,7 +95,7 @@ font-family: Balsamiq Sans;
 font-size: 24px;
 text-align: center;
   /* color: #0d3f7c; */
-  color: #FFF
+  color: #FFF;
   &:hover,
   &:focus {
     color: #ffffff;
