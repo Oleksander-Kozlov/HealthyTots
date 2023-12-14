@@ -24,14 +24,17 @@ const ContactsPage = () => {
           <H3>Адреса</H3>
           <Text>м.Ладижин, Наконечного 131Є</Text>
           <H3>Часи прийому:</H3>
-          <Text>Пн. - Пт.: 09:00 - 19:00<br/>
-          Сб. - Нд.: 11:00 - 17:00</Text>
+          <Text>
+            Пн. - Пт.: 09:00 - 19:00
+            <br />
+            Сб. - Нд.: 11:00 - 17:00
+          </Text>
           <H3>Teлефон:</H3>
           <Text> + 38 (097) 5240670Є</Text>
           <H3>Пошта:</H3>
           <Text>Solomko_neo@ukr.net</Text>
           <H3>Ми у соціальних мережах:</H3>
-          <MakeAppointmentButton onClick={() => alert("Запишись")}>
+          <MakeAppointmentButton handleClick={() => alert("Запишись")}>
             Записатися на прийом
           </MakeAppointmentButton>
         </ContactsWrapper>

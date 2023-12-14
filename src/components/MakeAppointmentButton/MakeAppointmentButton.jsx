@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-const Button = styled.a`
+const Button = styled.button`
   display: flex;
   justify-content: center;
   width: fit-content;
@@ -16,12 +16,16 @@ const Button = styled.a`
   line-height: normal;
 `;
 
-const MakeAppointmentButton = ({ children }) => {
-  return <Button href="#form">{children}</Button>;
+const MakeAppointmentButton = ({ children , handleClick})=> {
+  return (
+    <Button type="button" onClick={handleClick}>
+      {children}
+    </Button>
+  );
 };
 
 MakeAppointmentButton.propTypes = {
   children: PropTypes.node.isRequired,
-  
+  handleClick: PropTypes.func.isRequired,
 };
 export default MakeAppointmentButton;

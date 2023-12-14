@@ -13,15 +13,16 @@ import {
   IMG_Wrapper,
   IMG_Wrapper_Center,
 } from "./HeroSection.styled";
+import PropTypes from "prop-types";
 
-const HeroSection = () => {
- 
+
+const HeroSection = ({handleClick}) => {
   return (
     <section
       style={{
         paddingTop: "40px",
         paddingBottom: "40px",
-        
+
         display: "flex",
         justifyContent: "center",
       }}
@@ -39,7 +40,7 @@ const HeroSection = () => {
             Healthy Tots: де кожен<br></br> маленький пацієнт - великий
             пріоритет.
           </H1>
-          <MakeAppointmentButton>
+          <MakeAppointmentButton handleClick={handleClick}>
             Записатися на прийом
           </MakeAppointmentButton>
         </Hero_Wrapper>
@@ -64,4 +65,8 @@ const HeroSection = () => {
     </section>
   );
 };
+  HeroSection.propTypes = {
+  
+    handleClick: PropTypes.func.isRequired,
+  };
 export default HeroSection;
