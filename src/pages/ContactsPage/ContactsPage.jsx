@@ -10,6 +10,7 @@ import {
   SocialMediaLinkWrapper,
   Text,
   MainContainer,
+  RotatedBackground,
 } from "./ContactsPage.styled";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -26,6 +27,7 @@ const ContactsPage = () => {
         alignItems: "center",
       }}
     >
+      <RotatedBackground/>
       <LinkContainer>
         <Link to="/">
           <p style={{ color: "#94B0B7", fontSize: "18px" }}> Головна /</p>
