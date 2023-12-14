@@ -1,11 +1,38 @@
 import styled from "styled-components";
-import BGContact from "../../assets/Union.png"
+import BGContactDesctop_1x from "../../assets/Unionbg@1x.png";
+import BGContactDesctop_2x from "../../assets/Unionbg@2x.png";
 export const MainContainer = styled.main`
-  background-image: url(${BGContact});
+position:relative;
+overflow:hidden;
+    
+`;
+export const RotatedBackground = styled.div`
+  position: absolute;
+  z-index: -1;
+  width: 3555px;
+  height: 1415.476px;
+  background-image: url(${BGContactDesctop_1x});
+  transform: rotate(-45deg);
+  transform-origin: center;
   background-size: cover;
   background-repeat: no-repeat;
+  opacity: 0.2;
+  /* Для ретина-дисплеев с разрешением 2x и шириной больше 1440px */
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px),
+    (min-resolution: 192dpi) and (min-width: 1440px) {
+    position: absolute;
+    z-index: -1;
+    width: 3555px;
+    height: 1415.476px;
+    background-image: url(${BGContactDesctop_2x});
+    transform: rotate(-45deg);
+    transform-origin: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+  }
 `;
-
+ 
 export const H2 = styled.h2`
 margin-bottom:48px;
 `
