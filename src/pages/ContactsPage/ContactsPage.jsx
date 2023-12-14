@@ -1,7 +1,7 @@
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
 import { Main_Container } from "../HomePage/HomePage.styled";
-import { ContactsWrapper, H3, InfoWrapper, Text } from "./ContactsPage.styled";
+import { ContactsWrapper, H3, InfoWrapper, SocialMediaLink, SocialMediaLinkWrapper, Text } from "./ContactsPage.styled";
 import { RiInstagramFill } from "react-icons/ri";
 import { RiFacebookBoxFill } from "react-icons/ri";
 
@@ -35,8 +35,8 @@ const ContactsPage = () => {
           <H3>Пошта:</H3>
           <Text>Solomko_neo@ukr.net</Text>
           <H3>Ми у соціальних мережах:</H3>
-          <div>
-            <a
+          <SocialMediaLinkWrapper>
+            <SocialMediaLink
               href="https://www.instagram.com/healthytots.pediatriya/?igshid=MzMyNGUyNmU2YQ%3D%3D"
               target="_blank"
               rel="noreferrer noopener"
@@ -44,8 +44,8 @@ const ContactsPage = () => {
               title="Instagram"
             >
               <RiInstagramFill style={{ fontSize: 40, fill: "#BDDFEF" }} />
-            </a>
-            <a
+            </SocialMediaLink>
+            <SocialMediaLink
               href="https://www.facebook.com/SolomkoLiudmyla"
               target="_blank"
               rel="noreferrer noopener"
@@ -53,8 +53,8 @@ const ContactsPage = () => {
               title="Facebook"
             >
               <RiFacebookBoxFill style={{ fontSize: 40, fill: "#BDDFEF" }} />
-            </a>
-          </div>
+            </SocialMediaLink>
+          </SocialMediaLinkWrapper>
           {/* <SocialLinks /> */}
           <MakeAppointmentButton handleClick={() => alert("Запишись")}>
             Записатися на прийом

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   gap: 126px;
   border-radius: 60px;
@@ -20,8 +20,18 @@ width: 588px;
 height: 838px;
 background-color: azure;
 
+            
 `
-    
+
+export const SocialMediaLinkWrapper = styled.div`display:flex;
+gap:20px;
+margin-bottom: 40px;`;
+export const SocialMediaLink = styled.a`
+  display: inline-flex;
+  
+  width: 40px;
+  height: 40px;
+`;
 
 export const H3 = styled.h3`
   color: var(--Blue-accent, #0d3f7c);
