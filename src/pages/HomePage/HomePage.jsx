@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import AboutUsSection from "../../components/AboutUsSection/AboutUSSection";
 import AdvantagesSection from "../../components/AdvantagesSection/AdvantagesSection";
 import Appointment_Section from "../../components/Appointment/AppointmentSection";
