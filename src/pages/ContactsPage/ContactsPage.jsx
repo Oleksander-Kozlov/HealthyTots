@@ -4,6 +4,8 @@ import { Main_Container } from "../HomePage/HomePage.styled";
 import { ContactsWrapper, H2, H3, InfoWrapper, SocialMediaLink, SocialMediaLinkWrapper, Text } from "./ContactsPage.styled";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
+import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+import { Link } from "react-router-dom";
 
 const ContactsPage = () => {
   
@@ -15,9 +17,12 @@ const ContactsPage = () => {
         alignItems: "center",
       }}
     >
-      <a style={{ alignSelf: "flex-start" }}>
-        Головна<a>/контакти</a>
-      </a>
+      <LinkContainer>
+        <Link to="/">
+          <p style={{ color: "#94B0B7", fontSize: "18px" }}> Головна /</p>
+        </Link>
+        <p style={{ fontSize: "18px" }}>&nbsp;Контакти</p>
+      </LinkContainer>
 
       <H2>Контакти</H2>
       <InfoWrapper>
