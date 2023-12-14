@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import Hero_img5 from "../../assets/img55.png";
 
 export const Hero_Wrapper = styled.div`
+
 width: 590px;
 
 display: flex;flex-direction:column;
@@ -23,14 +24,12 @@ export const H1 = styled.h1`
   font-weight: 700;
   line-height: normal;
 `;
+
 export const HeroBtn = styled.button`
   width: 260px;
-
   border-radius: 20px;
-  background:  #0d3f7c;
-
+  background: #0d3f7c;
   color: #fff;
-
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
@@ -48,7 +47,7 @@ export const IMG_Block_Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
-  
+
   border-radius: 20px;
 `;
 // Создание ключевых кадров для анимации
@@ -88,6 +87,7 @@ export const IMG_Wrapper_Center = styled.div`
     width: 584px;
     height: 584px;
     z-index: 100;
+
     
   } */
   &:hover {
@@ -95,9 +95,9 @@ export const IMG_Wrapper_Center = styled.div`
     z-index: 100;
     background-color: transparent;
     animation: ${zoomAnimation} 1s both;
-  }
-`; 
 
+  }
+`;
 
 
 export const IMG_Wrapper = styled.div`

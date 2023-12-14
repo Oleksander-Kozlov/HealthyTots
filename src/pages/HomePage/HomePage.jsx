@@ -1,9 +1,7 @@
 import { useRef } from "react";
 import AboutUsSection from "../../components/AboutUsSection/AboutUSSection";
 import AdvantagesSection from "../../components/AdvantagesSection/AdvantagesSection";
-
 import Appointment_Section from "../../components/Appointment/AppointmentSection";
-
 import HeroSection from "../../components/HeroSection/HeroSection";
 
 import {
@@ -17,9 +15,7 @@ const HomePage = () => {
     <Main_Container>
       <HeroSection handleClick={()=>alert("kyky")} />
       <AboutUsSection />
-
       <AdvantagesSection />
-
       <FeedBacks_Section>
         <Container_Wrapper>
           <h2>Відгуки</h2>

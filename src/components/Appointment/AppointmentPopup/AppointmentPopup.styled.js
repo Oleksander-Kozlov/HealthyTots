@@ -1,0 +1,43 @@
+import { styled } from "styled-components";
+
+export const PopupContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const PopupInnerContainer = styled.div`
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 587px;
+  height: 297px;
+  margin: auto;
+  
+  border-radius: 60px;
+  z-index: 1;
+  background: #ebf5fa;
+  padding: 40px;
+  
+`;
+export const IconOkey = styled.div`
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background: linear-gradient(to bottom right, #4FC646, #3FB06B);
+display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 8px rgba(1, 0, 0, 0.3);
+`
