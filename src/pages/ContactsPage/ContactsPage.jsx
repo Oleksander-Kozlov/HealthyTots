@@ -3,7 +3,7 @@ import Map from "../../components/Map/Map";
 import { Main_Container } from "../HomePage/HomePage.styled";
 import { ContactsWrapper, H2, H3, InfoWrapper, SocialMediaLink, SocialMediaLinkWrapper, Text } from "./ContactsPage.styled";
 import { RiInstagramFill } from "react-icons/ri";
-import { RiFacebookBoxFill } from "react-icons/ri";
+import { FaFacebookSquare } from "react-icons/fa";
 
 const ContactsPage = () => {
   
@@ -52,7 +52,7 @@ const ContactsPage = () => {
               aria-label="link to Facebook"
               title="Facebook"
             >
-              <RiFacebookBoxFill style={{ fontSize: 40, fill: "#BDDFEF" }} />
+              <FaFacebookSquare style={{ fontSize: 40, fill: "#BDDFEF" }} />
             </SocialMediaLink>
           </SocialMediaLinkWrapper>
           {/* <SocialLinks /> */}
