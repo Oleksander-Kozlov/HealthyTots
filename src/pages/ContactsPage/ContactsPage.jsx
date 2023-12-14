@@ -1,7 +1,7 @@
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
 import { Main_Container } from "../HomePage/HomePage.styled";
-import { ContactsWrapper, H3, InfoWrapper, SocialMediaLink, SocialMediaLinkWrapper, Text } from "./ContactsPage.styled";
+import { ContactsWrapper, H2, H3, InfoWrapper, SocialMediaLink, SocialMediaLinkWrapper, Text } from "./ContactsPage.styled";
 import { RiInstagramFill } from "react-icons/ri";
 import { RiFacebookBoxFill } from "react-icons/ri";
 
@@ -19,7 +19,7 @@ const ContactsPage = () => {
         Головна<a>/контакти</a>
       </a>
 
-      <h2>Контакти</h2>
+      <H2>Контакти</H2>
       <InfoWrapper>
         <ContactsWrapper>
           <H3>Адреса</H3>

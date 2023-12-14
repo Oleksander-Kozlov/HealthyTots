@@ -1,4 +1,7 @@
 import styled from "styled-components";
+export const H2 = styled.h2`
+margin-bottom:48px;
+`
 
 export const InfoWrapper = styled.div`
   display: flex;
