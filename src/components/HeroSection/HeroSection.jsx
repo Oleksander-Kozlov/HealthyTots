@@ -7,6 +7,7 @@ import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
 import MakeAppointmentButton from "../MakeAppointmentButton/MakeAppointmentButton";
 import {
   About_us_Image,
+  BouncyDiv,
   H1,
   Hero_Wrapper,
   IMG_Block_Wrapper,
@@ -41,9 +42,11 @@ const HeroSection = ({handleClick}) => {
             Healthy Tots: де кожен<br></br> маленький пацієнт - великий
             пріоритет.
           </H1>
-          <MakeAppointmentButton handleClick={handleClick}>
-            Записатися на прийом
-          </MakeAppointmentButton>
+          <BouncyDiv>
+            <MakeAppointmentButton handleClick={handleClick}>
+              Записатися на прийом
+            </MakeAppointmentButton>
+          </BouncyDiv>
         </Hero_Wrapper>
         <IMG_Block_Wrapper>
           <IMG_Wrapper x="left" y="top">

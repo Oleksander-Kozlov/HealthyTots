@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
+import { pulse } from "react-animations";
 
-import Hero_img5 from "../../assets/img55.png";
+
 
 export const Hero_Wrapper = styled.div`
 
@@ -24,7 +25,12 @@ export const H1 = styled.h1`
   font-weight: 700;
   line-height: normal;
 `;
+const pulseAnimation = keyframes`${pulse}`;
 
+export const BouncyDiv = styled.div`
+
+  animation: 1s ${pulseAnimation} infinite;
+`;
 export const HeroBtn = styled.button`
   width: 260px;
   border-radius: 20px;
@@ -36,6 +42,7 @@ export const HeroBtn = styled.button`
   font-weight: 400;
   line-height: normal;
   padding: 16px 32px;
+  
 `;
 
 export const IMG_Block_Wrapper = styled.div`
@@ -80,30 +87,7 @@ export const IMG_Wrapper_Center = styled.div`
   top: 24%;
   left: 24%;
   width: 280px;
-  
-  /* z-index: 199; */
 
-  /* &::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    background-image: url(${Hero_img5});
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 20px;
-
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
-  }
-  &:hover::before {
-    opacity: 1;
-    width: 584px;
-    height: 584px;
-    z-index: 100;
-
-    
-  } */
   &:hover {
     /* transform: scale(2); */
     z-index: 100;
