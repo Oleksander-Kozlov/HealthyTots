@@ -1,8 +1,8 @@
-import Hero_img1 from "../../assets/Hero_img1.png";
-import Hero_img2 from "../../assets/Hero_img2.png";
-import Hero_img3 from "../../assets/Hero_img3.png";
-import Hero_img4 from "../../assets/Hero_img4.png";
-import Hero_img5 from "../../assets/img55.png";
+import Hero_img1 from "../../assets/rectangle/Rectangle1_1x.png";
+import Hero_img2 from "../../assets/rectangle/Rectangle2_1x.png";
+import Hero_img3 from "../../assets/rectangle/Rectangle3_1x.png";
+import Hero_img4 from "../../assets/rectangle/Rectangle4_1x.png";
+import Hero_img5 from "../../assets/rectangle/RectangleCenter_1x.png";
 import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
 import MakeAppointmentButton from "../MakeAppointmentButton/MakeAppointmentButton";
 import {
@@ -59,7 +59,7 @@ const HeroSection = ({handleClick}) => {
             <About_us_Image src={Hero_img4} alt="Hero_img4" />
           </IMG_Wrapper>
           <IMG_Wrapper_Center>
-            <About_us_Image src={Hero_img5} alt="Hero_img5" />
+            <About_us_Image src={Hero_img5} alt="Hero_img_center" />
           </IMG_Wrapper_Center>
         </IMG_Block_Wrapper>
       </Container_Wrapper>
