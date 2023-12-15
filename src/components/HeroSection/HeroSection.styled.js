@@ -59,9 +59,22 @@ const zoomAnimation = keyframes`
     transform: scale(2.2); /* Увеличение в 2 раза */
   }
   100% {
-    transform: scale(1); /* Возврат к исходному размеру */
+    transform: scale(1); z-index:-1;/* Возврат к исходному размеру */
+  };
+  `
+  // Создание ключевых кадров для анимации
+const zoomAnimation1 = keyframes`
+  0% {
+    transform: scale(1); /* Исходный размер */
   }
-`;
+  50% {
+    transform: scale(2.2); /* Увеличение в 2 раза */
+  }
+  100% {
+    transform: scale(1);/* Возврат к исходному размеру */
+  };
+  `
+
 export const IMG_Wrapper_Center = styled.div`
   position: absolute;
   top: 24%;
@@ -94,7 +107,7 @@ export const IMG_Wrapper_Center = styled.div`
     /* transform: scale(2); */
     z-index: 100;
     background-color: transparent;
-    animation: ${zoomAnimation} 1s both;
+    animation: ${zoomAnimation1} 1s both;
 
   }
 `;
