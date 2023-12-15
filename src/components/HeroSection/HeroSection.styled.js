@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
+import { pulse } from "react-animations";
 
-import Hero_img5 from "../../assets/img55.png";
+
 
 export const Hero_Wrapper = styled.div`
 
@@ -24,7 +25,12 @@ export const H1 = styled.h1`
   font-weight: 700;
   line-height: normal;
 `;
+const pulseAnimation = keyframes`${pulse}`;
 
+export const BouncyDiv = styled.div`
+
+  animation: 1s ${pulseAnimation} infinite;
+`;
 export const HeroBtn = styled.button`
   width: 260px;
   border-radius: 20px;
@@ -36,6 +42,7 @@ export const HeroBtn = styled.button`
   font-weight: 400;
   line-height: normal;
   padding: 16px 32px;
+  
 `;
 
 export const IMG_Block_Wrapper = styled.div`
@@ -48,7 +55,7 @@ export const IMG_Block_Wrapper = styled.div`
   flex-wrap: wrap;
   gap: 24px;
 
-  border-radius: 20px;
+  
 `;
 // Создание ключевых кадров для анимации
 const zoomAnimation = keyframes`
@@ -59,43 +66,36 @@ const zoomAnimation = keyframes`
     transform: scale(2.2); /* Увеличение в 2 раза */
   }
   100% {
-    transform: scale(1); /* Возврат к исходному размеру */
+    transform: scale(1); z-index:-1;/* Возврат к исходному размеру */
+  };
+  `
+  // Создание ключевых кадров для анимации
+const zoomAnimation1 = keyframes`
+  0% {
+    transform: scale(1); /* Исходный размер */
   }
-`;
+  50% {
+    transform: scale(2.5); /* Увеличение в 2 раза */
+  }
+  100% {
+    transform: scale(1);/* Возврат к исходному размеру */
+  };
+  `
+
 export const IMG_Wrapper_Center = styled.div`
   position: absolute;
   top: 24%;
   left: 24%;
   width: 280px;
-  /* z-index: 199; */
 
-  /* &::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    background-image: url(${Hero_img5});
-    background-repeat: no-repeat;
-    background-size: contain;
-    border-radius: 20px;
-
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
-  }
-  &:hover::before {
-    opacity: 1;
-    width: 584px;
-    height: 584px;
-    z-index: 100;
-
-    
-  } */
   &:hover {
     /* transform: scale(2); */
     z-index: 100;
-    background-color: transparent;
-    animation: ${zoomAnimation} 1s both;
+    box-shadow: 0px 0px 16px 16px rgba(13, 63, 124, 0.25);
+    border-radius: 20px;
 
+    background-color: transparent;
+    animation: ${zoomAnimation1} 1s both;
   }
 `;
 
@@ -108,6 +108,10 @@ export const IMG_Wrapper = styled.div`
 
   transform-origin: ${(props) => props.x} ${(props) => props.y};
   transition: transform 0.3s ease;
+  border-radius: 20px;
+  background: rgba(13, 63, 124, 0.25),
+    lightgray -51.244px 1.039px / 177.778% 100% no-repeat;
+  box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
 
   &:hover {
     transform: scale(2);
