@@ -48,7 +48,7 @@ export const IMG_Block_Wrapper = styled.div`
   flex-wrap: wrap;
   gap: 24px;
 
-  border-radius: 20px;
+  
 `;
 // Создание ключевых кадров для анимации
 const zoomAnimation = keyframes`
@@ -68,7 +68,7 @@ const zoomAnimation1 = keyframes`
     transform: scale(1); /* Исходный размер */
   }
   50% {
-    transform: scale(2.2); /* Увеличение в 2 раза */
+    transform: scale(2.5); /* Увеличение в 2 раза */
   }
   100% {
     transform: scale(1);/* Возврат к исходному размеру */
@@ -80,6 +80,7 @@ export const IMG_Wrapper_Center = styled.div`
   top: 24%;
   left: 24%;
   width: 280px;
+  
   /* z-index: 199; */
 
   /* &::before {
@@ -106,9 +107,11 @@ export const IMG_Wrapper_Center = styled.div`
   &:hover {
     /* transform: scale(2); */
     z-index: 100;
+    box-shadow: 0px 0px 16px 16px rgba(13, 63, 124, 0.25);
+    border-radius: 20px;
+
     background-color: transparent;
     animation: ${zoomAnimation1} 1s both;
-
   }
 `;
 
@@ -121,6 +124,10 @@ export const IMG_Wrapper = styled.div`
 
   transform-origin: ${(props) => props.x} ${(props) => props.y};
   transition: transform 0.3s ease;
+  border-radius: 20px;
+  background: rgba(13, 63, 124, 0.25),
+    lightgray -51.244px 1.039px / 177.778% 100% no-repeat;
+  box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
 
   &:hover {
     transform: scale(2);
