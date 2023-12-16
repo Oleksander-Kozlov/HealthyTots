@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { bounce } from "react-animations";
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
 
