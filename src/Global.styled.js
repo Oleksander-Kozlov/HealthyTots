@@ -91,13 +91,18 @@ section{
 `;
 
 export const Link_styled = styled(Link)`
-font-family: Balsamiq Sans;
-font-size: 24px;
-text-align: center;
-  /* color: #0d3f7c; */
-  color: #FFF;
-  &:hover,
+  font-family: Balsamiq Sans;
+  font-size: 24px;
+  text-align: center;
+  color: #0d3f7c;
+
+  &:hover {
+    color: #318fb5;
+  }
   &:focus {
-    color: #ffffff;
+    color: #001244;
+  }
+  &:active {
+    color: #001244;
   }
 `;

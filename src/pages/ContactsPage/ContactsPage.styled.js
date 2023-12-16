@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { shake } from "react-animations";
+
+const bounceAnimation = keyframes`${shake}`;
+
+export const ShakeDiv = styled.div`
+  animation: 7s ${bounceAnimation} infinite;
+`;
+import { RiInstagramFill } from "react-icons/ri";
+import { FaFacebookSquare } from "react-icons/fa";
 import BGContactDesctop_1x from "../../assets/Unionbg@1x.png";
 import BGContactDesctop_2x from "../../assets/Unionbg@2x.png";
 export const MainContainer = styled.main`
@@ -64,14 +73,42 @@ background-color: azure;
             
 `
 
-export const SocialMediaLinkWrapper = styled.div`display:flex;
+export const SocialMediaLinkWrapper = styled.div`
+display:flex;
 gap:20px;
 margin-bottom: 40px;`;
+
 export const SocialMediaLink = styled.a`
   display: inline-flex;
-  
+
   width: 40px;
   height: 40px;
+ 
+`;
+
+export const FacebookIcon = styled(FaFacebookSquare)`
+  font-size: 40px;
+  fill: #bddfef;
+  transition: fill 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    fill: #8cd4fa;
+  }
+  &:active {
+    fill: #001244;
+  }
+`;
+
+export const InstaIcon = styled(RiInstagramFill)`
+  font-size: 40px;
+  fill: #bddfef;
+  transition: fill 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover {
+    fill: #8cd4fa;
+    
+  }
+  &:active {
+    fill: #001244;
+  }
 `;
 
 export const H3 = styled.h3`

@@ -1,6 +1,6 @@
-import Hero_img1 from "../../assets/rectangle/Rectangle1_1x.png";
-import Hero_img2 from "../../assets/rectangle/Rectangle2_1x.png";
-import Hero_img3 from "../../assets/rectangle/Rectangle3_1x.png";
+import Hero_img2 from "../../assets/rectangle/Rectangle1_1x.png";
+import Hero_img3  from "../../assets/rectangle/Rectangle2_1x.png";
+import Hero_img1 from "../../assets/rectangle/Rectangle3_1x.png";
 import Hero_img4 from "../../assets/rectangle/Rectangle4_1x.png";
 import Hero_img5 from "../../assets/rectangle/RectangleCenter_1x.png";
 import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
