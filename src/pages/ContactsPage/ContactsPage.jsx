@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { bounce } from "react-animations";
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
 
@@ -11,14 +13,14 @@ import {
   Text,
   MainContainer,
   RotatedBackground,
+  FacebookIcon,
+  InstaIcon,
+  ShakeDiv,
 } from "./ContactsPage.styled";
-import { RiInstagramFill } from "react-icons/ri";
-import { FaFacebookSquare } from "react-icons/fa";
+
 import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
-import { Link } from "react-router-dom";
 
 const ContactsPage = () => {
-  
   return (
     <MainContainer
       style={{
@@ -27,7 +29,7 @@ const ContactsPage = () => {
         alignItems: "center",
       }}
     >
-      <RotatedBackground/>
+      <RotatedBackground />
       <LinkContainer>
         <Link to="/">
           <p style={{ color: "#94B0B7", fontSize: "18px" }}> Головна /</p>
@@ -59,7 +61,7 @@ const ContactsPage = () => {
               aria-label="link to Instagram"
               title="Instagram"
             >
-              <RiInstagramFill style={{ fontSize: 40, fill: "#BDDFEF" }} />
+              <InstaIcon />
             </SocialMediaLink>
             <SocialMediaLink
               href="https://www.facebook.com/SolomkoLiudmyla"
@@ -68,20 +70,21 @@ const ContactsPage = () => {
               aria-label="link to Facebook"
               title="Facebook"
             >
-              <FaFacebookSquare style={{ fontSize: 40, fill: "#BDDFEF" }} />
+              <FacebookIcon />
             </SocialMediaLink>
           </SocialMediaLinkWrapper>
           {/* <SocialLinks /> */}
-          <MakeAppointmentButton handleClick={() => alert("Запишись")}>
-            Записатися на прийом
-          </MakeAppointmentButton>
+          <ShakeDiv>
+            <MakeAppointmentButton handleClick={() => alert("Запишись")}>
+              Записатися на прийом
+            </MakeAppointmentButton>
+          </ShakeDiv>
         </ContactsWrapper>
         <Map />
         {/* <MapWrapper></MapWrapper> */}
       </InfoWrapper>
     </MainContainer>
   );
-  };
-  
-  export default ContactsPage;
-  
+};
+
+export default ContactsPage;
