@@ -70,7 +70,8 @@ return () => clearTimeout(timer);
   console.log(termsAndConditions);
   return (
     <section>
-      <Container_Wrapper id="form">
+      <Container_Wrapper id="form" style={{    display: "flex",
+    justifyContent: "center"}}>
         <Block>
           <AppointmentImg src={AppointmentJpg} alt="Appointment foto" />
 
