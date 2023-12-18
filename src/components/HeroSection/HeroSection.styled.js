@@ -100,6 +100,8 @@ export const IMG_Wrapper_Center = styled.div`
 `;
 
 export const IMG_Wrapper = styled.div`
+width: 280px;
+height: 280px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -107,7 +109,7 @@ export const IMG_Wrapper = styled.div`
   transform-origin: ${(props) => props.x} ${(props) => props.y};
   /* transition: transform 0.3s ease; */
   border-radius: 20px;
-
+ 
   box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
 
   background-size: cover;
@@ -122,6 +124,5 @@ export const IMG_Wrapper = styled.div`
 `;
 
 export const About_us_Image = styled.img`
-  width: 280px;
-  height: 280px;
+
 `;
