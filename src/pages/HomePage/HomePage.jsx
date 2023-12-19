@@ -10,9 +10,9 @@ import {
 } from "./HomePage.styled";
 
 const HomePage = () => {
-  return (
+    return (
     <Main_Container>
-      <HeroSection />
+      <HeroSection handleClick={()=>alert("kyky")} />
       <AboutUsSection />
       <AdvantagesSection />
       <FeedBacks_Section>
@@ -20,7 +20,7 @@ const HomePage = () => {
           <h2>Відгуки</h2>
         </Container_Wrapper>
       </FeedBacks_Section>
-      <Appointment_Section />
+      <Appointment_Section/>
     </Main_Container>
   );
 };

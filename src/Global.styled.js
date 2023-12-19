@@ -45,10 +45,10 @@ font-size: 40px;
 line-height: normal;
 }
 h3{
-  font-family: var(--font-title);
+font-family: var(--font-title);
 font-size: 24px;
 color: #0D3F7C;
-},
+}
 h4,
 h5,
 h6,
@@ -91,13 +91,18 @@ section{
 `;
 
 export const Link_styled = styled(Link)`
-font-family: Balsamiq Sans;
-font-size: 24px;
-text-align: center;
-  /* color: #0d3f7c; */
-  color: #FFF
-  &:hover,
+  font-family: Balsamiq Sans;
+  font-size: 24px;
+  text-align: center;
+  color: #0d3f7c;
+
+  &:hover {
+    color: #318fb5;
+  }
   &:focus {
-    color: #ffffff;
+    color: #001244;
+  }
+  &:active {
+    color: #001244;
   }
 `;
