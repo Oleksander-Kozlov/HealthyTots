@@ -8,10 +8,10 @@ import {
   SearchContainer,
 } from "./BlogPage.styled";
 import { IoIosSearch } from "react-icons/io";
-
+import { IoCloseCircle } from "react-icons/io5";
 import data from "../../../blogcards.json";
 import BlogCard from "../../components/BlogCard/BlogCard";
-import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+import { LinkContainer } from "../../components/BlogDetailsPage/BlogDetailsPage.styled";
 import { Link, useSearchParams } from "react-router-dom";
 
 const BlogPage = () => {
@@ -66,6 +66,14 @@ const BlogPage = () => {
             value={blogTitle}
             onChange={({target}) => onChange(target.value)}
           />
+
+          
+          {blogTitle.length > 0 ? (
+            <button >
+              <IoCloseCircle color="#318FB5" size={24} />
+            </button>
+            ) : <></>}
+
         </SearchContainer>
 
         <BlogCardsContainer>

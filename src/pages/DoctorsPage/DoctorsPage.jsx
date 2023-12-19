@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Appointment_Section from "../../components/Appointment/AppointmentSection";
 import DoctorCard from "../../components/DoctorCard/DoctorCard";
 // import DoctorsList from "../../components/DoctorsList/DoctorsList";
-import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+import { LinkContainer } from "../../components/BlogDetailsPage/BlogDetailsPage.styled";
 import { DoctorsContainer, UlContainer } from "./DoctorsPage.styled";
 import doctors from "../../../doctors.json";
 

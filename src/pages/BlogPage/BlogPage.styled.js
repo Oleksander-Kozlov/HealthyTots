@@ -19,6 +19,9 @@ export const SearchContainer = styled.div`
   gap: 12px;
   border-radius: 16px;
   border: 1px solid var(--Blue-main, #8cd4fa);
+  &:hover{
+    background-color: #EBF5FA;
+  }
 `;
 export const InputBlogSearch = styled.input`
   height: 22px;
@@ -26,6 +29,9 @@ export const InputBlogSearch = styled.input`
   font-size: 18px;
   border: none;
   outline: none;
+  &:hover{
+    background-color: #EBF5FA;
+  }
 `;
 export const BlogCardsContainer = styled.div`
   display: grid;
