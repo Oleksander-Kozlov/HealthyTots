@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LinkContainer } from "../../components/BlogDetailsPage/BlogDetailsPage.styled";
 import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
 import Map from "../../components/Map/Map";
 
@@ -17,7 +18,7 @@ import {
   ShakeDiv,
 } from "./ContactsPage.styled";
 
-import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+// import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
 
 const ContactsPage = () => {
   return (
