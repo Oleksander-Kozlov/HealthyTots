@@ -10,6 +10,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
 import BGContactDesctop_1x from "../../assets/Unionbg@1x.png";
 import BGContactDesctop_2x from "../../assets/Unionbg@2x.png";
+import { Link } from "react-router-dom";
 export const MainContainer = styled.main`
 position:relative;
 overflow:hidden;
@@ -134,3 +135,26 @@ font-weight: 400;
 line-height: 150%; /* 36px */
 `;
 
+export const LinkToForm = styled(Link)`
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 16px 32px;
+  border-radius: 20px;
+  background: #0d3f7c;
+  color: #fff;
+
+  font-family: Balsamiq Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  &:hover {
+    background: #318fb5;
+    /* hover */
+    box-shadow: 0px 4px 12px 4px rgba(13, 63, 124, 0.25);
+  }
+  &:active {
+    background: rgba(0, 18, 68, 1);
+  }
+`;
