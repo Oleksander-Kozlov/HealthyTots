@@ -21,8 +21,8 @@ const HeroSection = ({handleClick}) => {
   return (
     <section
       style={{
-        paddingTop: "40px",
-
+        paddingTop: "20px",
+marginTop:"80px",
         paddingBottom: "40px",
 
         display: "flex",

@@ -6,7 +6,7 @@ display: flex;
     align-items: center;
   /* text-align: center; */
   padding: 0px;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   background-color: White;
   
   /* position: fixed;  
