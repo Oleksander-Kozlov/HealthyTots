@@ -31,9 +31,9 @@ const ContactsPage = () => {
       <RotatedBackground />
       <LinkContainer>
         <Link to="/">
-          <p style={{ color: "#94B0B7", fontSize: "18px" }}> Головна /</p>
+          <p style={{ color: "#94B0B7", fontSize: "20px" }}> Головна /</p>
         </Link>
-        <p style={{ fontSize: "18px" }}>&nbsp;Контакти</p>
+        <p style={{ fontSize: "20px" }}>&nbsp;Контакти</p>
       </LinkContainer>
 
       <H2>Контакти</H2>
