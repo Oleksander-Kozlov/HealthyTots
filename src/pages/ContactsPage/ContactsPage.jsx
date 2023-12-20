@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import MakeAppointmentButton from "../../components/MakeAppointmentButton/MakeAppointmentButton";
+
 import Map from "../../components/Map/Map";
 
 import {
@@ -14,7 +14,8 @@ import {
   RotatedBackground,
   FacebookIcon,
   InstaIcon,
-  ShakeDiv,
+  
+  LinkToForm,
 } from "./ContactsPage.styled";
 
 import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
@@ -77,11 +78,11 @@ const ContactsPage = () => {
             </SocialMediaLink>
           </SocialMediaLinkWrapper>
           {/* <SocialLinks /> */}
-          <ShakeDiv>
-            <MakeAppointmentButton handleClick={() => alert("Запишись")}>
-              Записатися на прийом
-            </MakeAppointmentButton>
-          </ShakeDiv>
+          
+            
+              <LinkToForm to="/#form">Записатися на прийом</LinkToForm>
+            
+       
         </ContactsWrapper>
         <Map />
         {/* <MapWrapper></MapWrapper> */}
