@@ -25,9 +25,9 @@ const Header = () => {
           6865917!4d29.2426667!16s%2Fg%2F11t3_f2_tj?entry=ttu"><TiLocation color="#8CD4FA" size={24} /><p>м.Ладижин, Наконечного 131Є</p>
         </Contact_container>
         <img src={logoHT} alt="logoHT" />
-          <p>
+          
             <Contact_container href="tel:+380975240670"><PiPhoneFill color="#8CD4FA" size={24} />+ 38 (097) 5240670</Contact_container>
-          </p>
+          
       </Header_upperLine>
 
       <Navigation_Container>
