@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
 
 // import emailjs from '@emailjs/browser';
@@ -14,10 +15,11 @@ import {
 import AppointmentJpg from "../../img/Appointment.jpg";
 import { Formik, Field, Form } from "formik";
 import * as yup from "yup";
-import {  useState } from "react";
+import { useState } from "react";
 // import { PopupContainer, PopupInnerContainer } from "./AppointmentPopup/AppointmentPopup";
 import AppointmentPopup from "./AppointmentPopup/AppointmentPopup";
 import { useEffect } from "react";
+
 
 
 // const phoneRegExp =
@@ -33,9 +35,9 @@ const schema = yup.object().shape({
     .oneOf([true], "You must accept the terms and conditions")
 });
 
-const Appointment_Section = () => {
-    const [termsAndConditions, setTermsAndConditions] = useState(false);
-    const [showPopUp, setShowPopUp] = useState(false);
+function AppointmentSection({forwardedRef} ) {
+  const [termsAndConditions, setTermsAndConditions] = useState(false);
+  const [showPopUp, setShowPopUp] = useState(false);
   //   const handleSubmit = (values, { resetForm }) => {
   //     alert(JSON.stringify(values));
   //     resetForm();
@@ -48,42 +50,48 @@ const Appointment_Section = () => {
     termsAndConditions: false,
   };
 
-    // function sendemail(object) {
+  // function sendemail(object) {
 
-    //   emailjs.send(service_46pydvw, 'template_etiy58a', object, 'BgVuFq4bE7bcGiPtg')
-    //     .then((result) => {
-    //         console.log(result.text);
-    //     }, (error) => {
-    //         console.log(error.text);
-    //     });
+  //   emailjs.send(service_46pydvw, 'template_etiy58a', object, 'BgVuFq4bE7bcGiPtg')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
 
-    // }
-    
+  // }
+
   useEffect(() => {
     const timer = setTimeout(() => {
-    setShowPopUp(false);
-  }, 2500);
-return () => clearTimeout(timer);
-}, [showPopUp]);
-    
+      setShowPopUp(false);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, [showPopUp]);
 
   console.log(termsAndConditions);
   return (
     <section>
-      <Container_Wrapper id="form" style={{    display: "flex",
-    justifyContent: "center"}}>
+      <Container_Wrapper
+        
+        style={{ display: "flex", justifyContent: "center" }}
+      >
         <Block>
           <AppointmentImg src={AppointmentJpg} alt="Appointment foto" />
 
           <FormContainer>
-            <h2>Записатися на прийом</h2>
-            <p style={{ textAlign: "left", color: "var(--Text-color, #0C151C)",
-/* Text secondary */
-fontFamily: "Roboto",
-fontSize: "18px",
-fontStyle: "normal",
-fontWeight: "400",
-lineHeight: "120%",}}>
+            <h2 ref={forwardedRef}>Записатися на прийом</h2>
+            <p
+              style={{
+                textAlign: "left",
+                color: "var(--Text-color, #0C151C)",
+                /* Text secondary */
+                fontFamily: "Roboto",
+                fontSize: "18px",
+                fontStyle: "normal",
+                fontWeight: "400",
+                lineHeight: "120%",
+              }}
+            >
               Ми вам перетелефонуємо для підтвердження запису у робочі години
             </p>
             <Formik
@@ -92,9 +100,10 @@ lineHeight: "120%",}}>
               onSubmit={(values, { resetForm }) => {
                 console.log(values);
                 //   sendemail(values)
-                setShowPopUp(true)
+                setShowPopUp(true);
                 resetForm();
-              }}>
+              }}
+            >
               {({ values, errors, touched, isSubmitting }) => (
                 <Form>
                   <FormContainer2>
@@ -122,8 +131,7 @@ lineHeight: "120%",}}>
                       type="text"
                       name="massage"
                       placeholder="Повідомлення"
-                    value={values.massage}
-                    
+                      value={values.massage}
                     />{" "}
                     <div style={{ display: "flex", alignItems: "flex-start" }}>
                       <Field
@@ -137,7 +145,8 @@ lineHeight: "120%",}}>
                           textAlign: "start",
                           marginLeft: "12px",
                           marginBottom: "20px",
-                        }}>
+                        }}
+                      >
                         Я погоджуюсь з політикою конфіденційності та публічним
                         договором
                       </span>
@@ -154,12 +163,18 @@ lineHeight: "120%",}}>
                 </Form>
               )}
             </Formik>
-                  </FormContainer>
-                  {showPopUp ?<AppointmentPopup/>:<div/>}
+          </FormContainer>
+          {showPopUp ? <AppointmentPopup /> : <div />}
         </Block>
-          </Container_Wrapper>
-         
+      </Container_Wrapper>
     </section>
   );
+}
+
+AppointmentSection.propTypes = {
+  forwardedRef : PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
+  ]),
 };
-export default Appointment_Section;
+export default AppointmentSection;
