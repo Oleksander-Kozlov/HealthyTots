@@ -26,10 +26,13 @@ const ContactsPage = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        paddingTop: "24px",
+        paddingRight: "120px",
+        paddingLeft: "120px",
       }}
     >
       <RotatedBackground />
-      <LinkContainer>
+      <LinkContainer style={{ marginTop: "24px", marginBottom: "48px" }}>
         <Link to="/">
           <p style={{ color: "#94B0B7", fontSize: "20px" }}> Головна /</p>
         </Link>
