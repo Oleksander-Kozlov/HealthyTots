@@ -59,7 +59,7 @@ export const InfoWrapper = styled.div`
   box-shadow: 0px -4px 12px 4px rgba(13, 63, 124, 0.2),
     0px 4px 12px 0px rgba(13, 63, 124, 0.2);
   width: 1200px;
-  margin-bottom: 48px;
+  
 `;
 export const ContactsWrapper = styled.div`
   padding: 60px;

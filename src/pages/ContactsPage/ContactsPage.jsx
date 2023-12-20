@@ -29,6 +29,7 @@ const ContactsPage = () => {
         paddingTop: "24px",
         paddingRight: "120px",
         paddingLeft: "120px",
+        paddingBottom: "48px",
       }}
     >
       <RotatedBackground />
