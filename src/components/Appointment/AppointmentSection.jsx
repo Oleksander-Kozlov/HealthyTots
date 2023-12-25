@@ -73,7 +73,7 @@ function AppointmentSection({forwardedRef} ) {
     <section>
       <Container_Wrapper
         
-        style={{ display: "flex", justifyContent: "center" }}
+        style={{ display: "flex", justifyContent: "center" }} id="form"
       >
         <Block>
           <AppointmentImg src={AppointmentJpg} alt="Appointment foto" />
