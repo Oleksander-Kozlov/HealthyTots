@@ -4,8 +4,8 @@ import data from "../../../blogcards.json";
 
 // import image from "../../assets/BlogCards/BlogCard.jpeg"
 import image from "../../assets/BlogCards/BlogCard.jpeg";
-import BlogCard from "../../components/BlogCard/BlogCard";
-import { BlogCardsContainer } from "../BlogPage/BlogPage.styled";
+import BlogCard from "../BlogCard/BlogCard";
+import { BlogCardsContainer } from "../../pages/BlogPage/BlogPage.styled";
 
 import {
   BlogContainer,

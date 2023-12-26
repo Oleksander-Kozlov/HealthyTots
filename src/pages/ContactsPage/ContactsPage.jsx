@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 import Map from "../../components/Map/Map";
 
 import {
@@ -18,7 +17,7 @@ import {
   LinkToForm,
 } from "./ContactsPage.styled";
 
-import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+// import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
 
 const ContactsPage = () => {
   return (

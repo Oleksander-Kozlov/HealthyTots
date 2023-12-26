@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { AppWrapper } from "./App.styled";
 import SharedLayout from "./components/SharedLayouts/SharedLayout";
 import { GlobalStyle } from "./Global.styled";
-import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
+import BlogDetailsPage from "./components/BlogDetailsPage/BlogDetailsPage";
 
 // import "./App.css";
 // import NotFoundPage from "./components/NotFound/NotFound";
