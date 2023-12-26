@@ -7,18 +7,24 @@ import doc_img3 from "../../assets/doctorImg/doctor3.png";
 import doc_img4 from "../../assets/doctorImg/doctor4.png";
 import doc_img5 from "../../assets/doctorImg/doctor5.png";
 
+
 // eslint-disable-next-line react/prop-types
 const DoctorCard = ({ data }) => {
   const docImgs = {
-    1: doc_img1,
+    1: "/HealthyTots/assets/doctorImg/doctor1.png",
     2: doc_img2,
-    3: doc_img3,
+    3: "/assets/doctorImg/doctor1.png",
     4: doc_img4,
     5: doc_img5,
   };
   function getImageById(id) {
     return docImgs[id] || null;
+
+  
   }
+  console.log('====================================');
+  console.log(getImageById(3));
+  console.log('====================================');
 
   return (
     <CardContainer>
