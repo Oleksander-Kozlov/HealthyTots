@@ -1,23 +1,34 @@
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 export const Header_container = styled.header`
-display: flex;
+  position: relative;
+  &::before {
+    content: " ";
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-color: #bddfef;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
     flex-direction: column;
     align-items: center;
-  /* text-align: center; */
-  padding: 0px;
-  /* margin-bottom: 80px; */
-  background-color: White;
-  
-  /* position: fixed;  
+    /* text-align: center; */
+    padding: 0px;
+    /* margin-bottom: 80px; */
+    background-color: White;
+
+    /* position: fixed;  
 top: 0;  
 z-index: 100;  
 width: 100%;   */
-/* position: sticky;
+    /* position: sticky;
   top: 0;
   z-index: 10; */
-
-
+  }
 `;
 
 // header {
@@ -32,20 +43,26 @@ width: 100%;   */
 //   }
   
 export const Header_upperLine = styled.div`
+  position: relative;
   display: flex;
+  padding: 40px 20px 12px 20px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
   
-  justify-content: space-around;
-    gap:143px;
+  @media screen and (min-width: 768px) {
+    gap: 143px;
     padding-top: 20px;
     padding-bottom: 20px;
     align-items: center;
     width: 1440px;
+  }
 `;
 
 export const Contact_container = styled.a`
-  display: flex;
+  @media screen and (min-width: 768px){ display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 8px;}
 `;
 
 export const Navigation_Container = styled.div`
