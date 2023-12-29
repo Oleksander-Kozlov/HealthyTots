@@ -1,7 +1,9 @@
 import styled, { keyframes } from "styled-components";
 import { pulse } from "react-animations";
 export const Section = styled.section`
-padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 36px;
   @media screen and (min-width: 768px) {
     padding-top: 20px;
     padding-bottom: 40px;
@@ -13,6 +15,10 @@ padding: 20px;
 `;
 
 export const Hero_Container_Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -65,13 +71,18 @@ export const HeroBtn = styled.button`
 
 export const IMG_Block_Wrapper = styled.div`
   position: relative;
+  width: 360px;
 
-  width: 584px;
   display: flex;
   justify-content: center;
+
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 16px;
+  @media screen and (min-width: 768px) {
+    width: 584px;
+    gap: 24px;
+  }
 `;
 // Создание ключевых кадров для анимации
 
@@ -122,26 +133,38 @@ export const IMG_Wrapper_Center = styled.div`
 `;
 
 export const IMG_Wrapper = styled.div`
-  width: 280px;
-  height: 280px;
   position: relative;
+  width: 150px;
+  height: 150px;
+
   display: flex;
   justify-content: center;
-
   transform-origin: ${(props) => props.x} ${(props) => props.y};
-  /* transition: transform 0.3s ease; */
-  border-radius: 20px;
-
-  box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
-
-  background-size: cover;
-  background-repeat: no-repeat;
-
   &:hover {
     z-index: 100;
     background-color: transparent;
     animation: ${zoomAnimation} 2s 500ms both;
     box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
+  }
+  @media screen and (min-width: 768px) {
+    width: 280px;
+    height: 280px;
+
+    transform-origin: ${(props) => props.x} ${(props) => props.y};
+    /* transition: transform 0.3s ease; */
+    border-radius: 20px;
+
+    box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:hover {
+      z-index: 100;
+      background-color: transparent;
+      animation: ${zoomAnimation} 2s 500ms both;
+      box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
+    }
   }
 `;
 
