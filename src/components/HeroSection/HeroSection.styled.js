@@ -1,6 +1,28 @@
 import styled, { keyframes } from "styled-components";
 import { pulse } from "react-animations";
+export const Section = styled.section`
+padding: 20px;
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-top: 80px;
 
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const Hero_Container_Wrapper = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    width: 768px;
+    padding: 40px 120px;
+    overflow: hidden;
+  }
+`;
 export const Hero_Wrapper = styled.div`
   width: 590px;
 
@@ -100,8 +122,8 @@ export const IMG_Wrapper_Center = styled.div`
 `;
 
 export const IMG_Wrapper = styled.div`
-width: 280px;
-height: 280px;
+  width: 280px;
+  height: 280px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -109,7 +131,7 @@ height: 280px;
   transform-origin: ${(props) => props.x} ${(props) => props.y};
   /* transition: transform 0.3s ease; */
   border-radius: 20px;
- 
+
   box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
 
   background-size: cover;
@@ -123,6 +145,4 @@ height: 280px;
   }
 `;
 
-export const About_us_Image = styled.img`
-
-`;
+export const About_us_Image = styled.img``;
