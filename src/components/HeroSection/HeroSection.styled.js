@@ -120,9 +120,9 @@ export const IMG_Block_Wrapper = styled.div`
   margin-bottom: 28px;
 
   @media screen and (min-width: 1440px) {
+    position: relative;
     width: 590px;
     gap: 28px;
-   
   }
 `;
 // Создание ключевых кадров для анимации
@@ -175,20 +175,19 @@ export const IMG_Wrapper_Center = styled.div`
   @media screen and (max-width: 359.98px) {
     width: 150px;
   }
-  &:hover ${BackgroundBlur} {
-    /* backdrop-filter: blur(8px); */
-    z-index: 101;
-  }
-  &:hover {
-    z-index: 102;
-    box-shadow: 0px 0px 8px 8px rgba(13, 63, 124, 0.25);
-    border-radius: 20px;
+ 
+  @media screen and (max-width: 767.98px) {
+    &:hover {
+      scale: 1.5;
+      z-index: 102;
+      box-shadow: 0px 0px 8px 8px rgba(13, 63, 124, 0.25);
+      border-radius: 20px;
 
-    background-color: transparent;
-    scale: 1.5;
+      background-color: transparent;
+    }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1040px) {
     width: 280px;
     &:hover {
       animation: ${zoomAnimation1} 2s 500ms both;
@@ -214,9 +213,15 @@ export const IMG_Wrapper = styled.div`
   :focus {
     z-index: 100;
     background-color: transparent;
-    scale: 2.1;
 
     box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25);
+  }
+  @media screen and (max-width: 767.98px) {
+    &:hover,
+  :focus {
+    /* scale: 2.1; */
+
+    }
   }
   @media screen and (min-width: 1440px) {
     width: 280px;
