@@ -15,6 +15,7 @@ import {
 } from "./Header.styled";
 import { Link_styled } from "../../Global.styled";
 import SvgLogo from "../SvgIcons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -33,7 +34,9 @@ const Header = () => {
         )}
         {true && <SlMenu color="#8CD4FA" size={40} />}
         {/* <img src={logoHT} alt="logoHT" /> */}
-        <SvgLogo/>
+        <Link to="/">
+          <SvgLogo />
+        </Link>
         <Contact_container href="tel:+380975240670">
           <PiPhoneFill color="#8CD4FA" size={24} />{" "}
           {false && <p>+38 (097) 5240670</p>}
