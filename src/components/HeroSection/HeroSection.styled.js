@@ -5,6 +5,7 @@ position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 36px;
+  margin-bottom:12px;
   @media screen and (min-width: 768px) {
     padding-top: 20px;
     padding-bottom: 40px;
