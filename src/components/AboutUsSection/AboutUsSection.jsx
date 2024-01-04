@@ -1,17 +1,21 @@
-import logoHT from "../../assets/logoHT.png";
-import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
+import logoHT from "../../assets/rectangle/hero_img_center_158px@1x.png";
+
 import {
+  About_Us_Container_Wrapper,
   About_us_foto_text,
   About_us_Image,
   About_us_text,
+  H2_About_Us,
 } from "./AboutUSSection.styled";
 const AboutUsSection = () => {
   return (
     <section>
-      <Container_Wrapper>
-        <h2>Про нас</h2>
+      <About_Us_Container_Wrapper>
+        <H2_About_Us>Про нас</H2_About_Us>
         <About_us_foto_text>
-          <About_us_Image src={logoHT} alt="logoHT" />
+          <About_us_Image>
+            < img src={logoHT} alt="logoHT" />
+          </About_us_Image>
           <About_us_text>
             Клініка &quot;Healthy Tots&quot; - це інноваційний медичний заклад,
             що спеціалізується на наданні високоякісної медичної допомоги. Наша
@@ -23,7 +27,7 @@ const AboutUsSection = () => {
             команди.
           </About_us_text>
         </About_us_foto_text>
-      </Container_Wrapper>
+      </About_Us_Container_Wrapper>
     </section>
   );
 };
