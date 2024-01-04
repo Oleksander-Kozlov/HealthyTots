@@ -22,7 +22,7 @@ export const Hero_Container_Wrapper = styled.div`
   /* align-items: center; */
 
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 8px;
   width: 360px;
 
   @media screen and (max-width: 359.98px) {
@@ -230,7 +230,7 @@ export const IMG_Wrapper = styled.div`
   position: relative;
   width: 158px;
   height: 158px;
-  border-radius: 20px;
+  border-radius:45px;
   overflow: hidden;
 
   @media screen and (max-width: 359.98px) {
@@ -238,10 +238,9 @@ export const IMG_Wrapper = styled.div`
     height: 150px;
     &:hover,
     :focus {
-      scale: 2.2;
+      scale: 210%;
       z-index: 100;
       /* border-radius:0; */
-     
     }
   }
 
@@ -253,8 +252,9 @@ export const IMG_Wrapper = styled.div`
   } */
   &:hover,
   :focus {
-    scale: 2.2;
+    scale: 210%;
     z-index: 100;
+    border-radius:20px;
   }
   @media screen and (max-width: 767.98px) {
     &:hover,
