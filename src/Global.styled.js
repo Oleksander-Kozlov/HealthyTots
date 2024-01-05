@@ -45,9 +45,13 @@ font-size: 40px;
 line-height: normal;
 }
 h3{
+
 font-family: var(--font-title);
-font-size: 24px;
+font-size: 16px;
 color: #0D3F7C;
+ @media screen and (min-width: 768px) {
+  font-size: 24px;
+ }
 }
 h4,
 h5,
