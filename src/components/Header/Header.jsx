@@ -14,7 +14,7 @@ import {
   
 } from "./Header.styled";
 import { Link_styled } from "../../Global.styled";
-import SvgLogo from "../SvgIcons";
+import {SvgLogo} from "../SvgIcons";
 import { Link } from "react-router-dom";
 
 const Header = () => {
