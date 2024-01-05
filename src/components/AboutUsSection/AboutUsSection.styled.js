@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const About_Us_Section = styled.div`
   padding: 28px 0px;
+  margin-bottom: 0;
 `;
 export const About_Us_Container_Wrapper = styled.div`
   padding: 0px 20px;

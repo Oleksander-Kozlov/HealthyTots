@@ -4,12 +4,13 @@ import {
   About_Us_Container_Wrapper,
   About_us_foto_text,
   About_us_Image,
+  About_Us_Section,
   About_us_text,
   H2_About_Us,
-} from "./AboutUSSection.styled";
+} from "../AboutUsSection/AboutUsSection.styled";
 const AboutUsSection = () => {
   return (
-    <section>
+    <About_Us_Section>
       <About_Us_Container_Wrapper>
         <H2_About_Us>Про нас</H2_About_Us>
         <About_us_foto_text>
@@ -28,7 +29,7 @@ const AboutUsSection = () => {
           </About_us_text>
         </About_us_foto_text>
       </About_Us_Container_Wrapper>
-    </section>
+    </About_Us_Section>
   );
 };
 export default AboutUsSection;
