@@ -7,11 +7,14 @@ import {
   LogoLinkContainer,
   LinkStyledFooter,
   StyledText,
+  Nav_And_Logo_Wrapper,
+  StyledTextH3,
+  Contact_container_Footer,
 } from "./Footer.styled";
-import logoHT from "../../assets/logoHT.png";
+// import logoHT from "../../assets/logoHT.png";
+import { SvgLogo } from "../SvgIcons";
 
-
-import { Contact_container } from "../Header/Header.styled";
+// import { Contact_container } from "../Header/Header.styled";
 import SocialLinks from "./SocialLinks/SocialLinks";
 import { PiCopyrightBold, PiPhoneFill } from "react-icons/pi";
 import { TiLocation } from "react-icons/ti";
@@ -20,12 +23,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <UpperFooterContainer>
-        <LogoLinkContainer>
-          <img
-            src={logoHT}
-            alt="logoHT"
-            style={{ width: "122px", height: "94px" }}
-          />
+        <Nav_And_Logo_Wrapper>
           <Navigation_Footer>
             <LinkStyledFooter to="/">Головна </LinkStyledFooter>
             <LinkStyledFooter to="/doctors">Лікарі</LinkStyledFooter>
@@ -33,25 +31,29 @@ const Footer = () => {
             <LinkStyledFooter to="/blog">Блог</LinkStyledFooter>
             <LinkStyledFooter to="/contacts">Контакти</LinkStyledFooter>
           </Navigation_Footer>
-        </LogoLinkContainer>
-
+          <LogoLinkContainer>
+            <SvgLogo size={122} />
+          </LogoLinkContainer>
+        </Nav_And_Logo_Wrapper>
         <Contacts>
-          <StyledText>Адреса:</StyledText>
-          <Contact_container>
-          <TiLocation color="#8CD4FA" size={24} />
-            <StyledText>м.Ладижин,Наконечного 131Є</StyledText>
-          </Contact_container>
+          <StyledTextH3>Адреса:</StyledTextH3>
+          <Contact_container_Footer>
+            <TiLocation color="#8CD4FA" size={16} />
+            <StyledText> м.Ладижин, Наконечного 131Є</StyledText>
+          </Contact_container_Footer>
 
-          <Contact_container>
-          <PiPhoneFill color="#8CD4FA" size={24} />
-            <StyledText style={{ color: "#BDDFEF" }}>+ 38 (097) 5240670</StyledText>
-          </Contact_container>
+          <Contact_container_Footer style={{marginBottom: "20px"}}>
+            <PiPhoneFill color="#8CD4FA" size={16} />
+            <StyledText style={{ color: "#BDDFEF" }}>
+              + 38 (097) 5240670
+            </StyledText>
+          </Contact_container_Footer>
           <SocialLinks />
         </Contacts>
       </UpperFooterContainer>
 
       <CopyrightContainer>
-        <PiCopyrightBold color="#8CD4FA"/>
+        <PiCopyrightBold color="#8CD4FA" />
         <StyledText>Healthy Tots. Всі права захищені. 2024</StyledText>
       </CopyrightContainer>
     </FooterContainer>
