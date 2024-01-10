@@ -5,7 +5,7 @@ export const Advantages_section = styled.div`
 `;
 
 export const Advantages_Container_Wrapper = styled.div`
-  padding: 0px 20px;
+  padding: 28px 20px;
   @media screen and (min-width: 1440px) {
     width: 1440px;
     padding: 40px 120px;
