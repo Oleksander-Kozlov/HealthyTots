@@ -32,10 +32,13 @@ export const Nav_And_Logo_Wrapper = styled.div`
   margin-bottom: 28px;
 `;
 export const LogoLinkContainer = styled.div`
-display: flex;
-align-items: center;
-gap: 121px;
-`
+  margin: auto;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    align-items: center;
+    gap: 121px;
+  }
+`;
 
 
 export const Navigation_Footer = styled.nav`
@@ -47,14 +50,19 @@ gap: 12px;
 `
 
 export const LinkStyledFooter = styled(Link)`
-font-family: Balsamiq Sans;
-font-size: 24px;
-text-align: center;
-  /* color: #0d3f7c; */
-  color: #BDDFEF;
+  text-align: center;
+  font-family: Balsamiq Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #bddfef;
   &:hover,
   &:focus {
     color: #ffffff;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
   }
 `;
 
