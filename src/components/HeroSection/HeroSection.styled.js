@@ -49,7 +49,7 @@ export const Hero_Container_Wrapper = styled.div`
   }
 `;
 export const H1andButton_Wrapper = styled.div`
-  width: 360px;
+  /* width: 360px; */
   display: flex;
   flex-direction: column;
   align-items: left;
