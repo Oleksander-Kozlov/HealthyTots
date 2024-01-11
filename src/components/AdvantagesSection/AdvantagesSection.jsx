@@ -1,27 +1,35 @@
-import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
+
 import {
+ 
+  Advantages_Container_Wrapper,
   Advantages_items,
-  Advantages_item_Img,
+  Advantages_section,
+  
   Item,
   TextContainer,
 } from "./AdvantagesSection.styled";
-import ExperiencedDoctors from '../../assets/AdvantagesSectionSvg/ExperiencedDoctors.svg'
-import IndividualApproach from "../../assets/AdvantagesSectionSvg/IndividualApproach.svg"
-import FullTreatment from '../../assets/AdvantagesSectionSvg/FullTreatment.svg'
-import CozyEnvironment from '../../assets/AdvantagesSectionSvg/CozyEnvironment.svg'
-import PreventionAndEducation from '../../assets/AdvantagesSectionSvg/PreventionAndEducation.svg'
-import ModernEquipment from '../../assets/AdvantagesSectionSvg/ModernEquipment.svg'
+// import ExperiencedDoctors1 from '../../assets/AdvantagesSectionSvg/ExperiencedDoctors.svg'
+// import IndividualApproach1 from "../../assets/AdvantagesSectionSvg/IndividualApproach.svg"
+// import FullTreatment1 from '../../assets/AdvantagesSectionSvg/FullTreatment.svg'
+// import CozyEnvironment1 from '../../assets/AdvantagesSectionSvg/CozyEnvironment.svg'
+// import PreventionAndEducation1 from '../../assets/AdvantagesSectionSvg/PreventionAndEducation.svg'
+// import ModernEquipment1 from '../../assets/AdvantagesSectionSvg/ModernEquipment.svg'
+import { CozyEnvironment, CozyEnvironmentSmall, ExperiencedDoctors, ExperiencedDoctorsSmall, FullTreatment, FullTreatmentSmall, IndividualApproach, IndividualApproachSmall, ModernEquipment, ModernEquipmentSmall, PreventionAndEducation, PreventionAndEducationSmall } from "../SvgIcons";
+import { H2_About_Us } from "../AboutUsSection/AboutUsSection.styled";
 
 const AdvantagesSection = () => {
   return (
-    <section>
-      <Container_Wrapper style={{backgroundColor:"#EBF5FA"}}>
-        <h2>Наші переваги</h2>
+    <Advantages_section>
+      <Advantages_Container_Wrapper style={{ backgroundColor: "#EBF5FA" }}>
+        <H2_About_Us>Наші переваги</H2_About_Us>
 
-        <Advantages_items >
-
+        <Advantages_items>
           <Item>
-            <Advantages_item_Img src={ExperiencedDoctors} alt="ExperiencedDoctors" />
+            {/* <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}> */}
+            <ExperiencedDoctors />
+            <ExperiencedDoctorsSmall />
+            {/* </div> */}
+
             <h3>Досвідчені лікарі</h3>
             <TextContainer>
               Наші лікарі мають багаторічний досвід у наданні медичної допомоги
@@ -31,7 +39,8 @@ const AdvantagesSection = () => {
           </Item>
 
           <Item>
-            <Advantages_item_Img src={IndividualApproach} alt="IndividualApproach" />
+            <IndividualApproach />
+            <IndividualApproachSmall />
             <h3>Індивідуальний підхід</h3>
             <TextContainer>
               Ми віримо в унікальність кожної дитини. Наші лікарі враховують
@@ -40,8 +49,9 @@ const AdvantagesSection = () => {
             </TextContainer>
           </Item>
 
-          <Item>  
-            <Advantages_item_Img src={FullTreatment} alt="FullTreatment" />
+          <Item>
+            <FullTreatment />
+            <FullTreatmentSmall />
             <h3>Комплексне лікування</h3>
             <TextContainer>
               У нас ви можете за один візит отримати консультативний огляд, при
@@ -50,32 +60,39 @@ const AdvantagesSection = () => {
           </Item>
 
           <Item>
-            <Advantages_item_Img src={CozyEnvironment} alt="CozyEnvironment" />
+            <CozyEnvironment />
+            <CozyEnvironmentSmall />
             <h3>Затишне середовище</h3>
-            <TextContainer >
-            У нас тепла та приємна атмосфера для вас та вашого малюка. Mи надзвичайно любимо свою роботу та втілюємо все найкраще: від іграшок до знань
+            <TextContainer>
+              У нас тепла та приємна атмосфера для вас та вашого малюка. Mи
+              надзвичайно любимо свою роботу та втілюємо все найкраще: від
+              іграшок до знань
             </TextContainer>
           </Item>
 
           <Item>
-            <Advantages_item_Img src={PreventionAndEducation} alt="PreventionAndEducation" />
+            <PreventionAndEducation />
+            <PreventionAndEducationSmall />
             <h3>Профілактика та освіта</h3>
             <TextContainer>
-            Ми покладаємо великий наголос на профілактичні заходи та освіту батьків щодо дитячого здоров&apos;я. Віримо, що проактивний підхід сприяє здоровому розвитку дітей.
+              Ми покладаємо великий наголос на профілактичні заходи та освіту
+              батьків щодо дитячого здоров&apos;я. Віримо, що проактивний підхід
+              сприяє здоровому розвитку дітей.
             </TextContainer>
           </Item>
 
           <Item>
-            <Advantages_item_Img src={ModernEquipment} alt="ModernEquipment" />
+            <ModernEquipment />
+            <ModernEquipmentSmall />
             <h3>Сучасне oбладнання</h3>
             <TextContainer>
-            Використовуючи сучасні технології та методи лікування, ми забезпечуємо найкращі стандарти медичної допомоги для дітей.
+              Використовуючи сучасні технології та методи лікування, ми
+              забезпечуємо найкращі стандарти медичної допомоги для дітей.
             </TextContainer>
           </Item>
-
         </Advantages_items>
-      </Container_Wrapper>
-    </section>
+      </Advantages_Container_Wrapper>
+    </Advantages_section>
   );
 };
 

@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
 
 export const FollowUsContainer = styled.div`
-      display: flex;
+  display: flex;
+  gap: 28px;
+  /* margin-top: 40px; */
+  @media screen and (min-width: 768px) {
     gap: 40px;
-    margin-top: 40px;
-  
-`
+  }
+`;
 
 export const LinkContainer = styled.a`
   /* width: 44px;

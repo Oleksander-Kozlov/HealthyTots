@@ -10,7 +10,7 @@ const Button = styled.button`
   color: #fff;
 
   font-family: Balsamiq Sans;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -19,10 +19,13 @@ const Button = styled.button`
     /* hover */
     box-shadow: 0px 4px 12px 4px rgba(13, 63, 124, 0.25);
   }
-  &:active{
+  &:active {
     background: rgba(0, 18, 68, 1);
   }
 
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
+  }
 `;
 
 const MakeAppointmentButton = ({ children , handleClick})=> {

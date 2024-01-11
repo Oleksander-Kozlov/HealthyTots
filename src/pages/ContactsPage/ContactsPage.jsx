@@ -17,7 +17,7 @@ import {
   LinkToForm,
 } from "./ContactsPage.styled";
 
-// import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
 
 const ContactsPage = () => {
   return (

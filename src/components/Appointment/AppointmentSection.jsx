@@ -1,16 +1,21 @@
 import PropTypes from "prop-types";
-import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
+// import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
 
 // import emailjs from '@emailjs/browser';
 import {
   AppointmentImg,
+  Appointment_section,
   Block,
   ErrorMessage,
+  FieldCheckbox,
   FormContainer,
   FormContainer2,
+  H2_Appointment,
   Input,
   InputMessage,
+  Placeholder_Container,
   SubmitButton,
+  TextAreaBox,  
 } from "./Appointment.styled";
 import AppointmentJpg from "../../img/Appointment.jpg";
 import { Formik, Field, Form } from "formik";
@@ -70,104 +75,104 @@ function AppointmentSection({forwardedRef} ) {
 
   console.log(termsAndConditions);
   return (
-    <section>
-      <Container_Wrapper
+    <Appointment_section>
+      {/* <Appointment_Container_Wrapper
         
         style={{ display: "flex", justifyContent: "center" }} id="form"
-      >
-        <Block>
-          <AppointmentImg src={AppointmentJpg} alt="Appointment foto" />
+      > */}
+      <Block>
+        <AppointmentImg src={AppointmentJpg} alt="Appointment foto" />
 
-          <FormContainer>
-            <h2 ref={forwardedRef}>Записатися на прийом</h2>
-            <p
-              style={{
-                textAlign: "left",
-                color: "var(--Text-color, #0C151C)",
-                /* Text secondary */
-                fontFamily: "Roboto",
-                fontSize: "18px",
-                fontStyle: "normal",
-                fontWeight: "400",
-                lineHeight: "120%",
-              }}
-            >
-              Ми вам перетелефонуємо для підтвердження запису у робочі години
-            </p>
-            <Formik
-              initialValues={initialValues}
-              validationSchema={schema}
-              onSubmit={(values, { resetForm }) => {
-                console.log(values);
-                //   sendemail(values)
-                setShowPopUp(true);
-                resetForm();
-              }}
-            >
-              {({ values, errors, touched, isSubmitting }) => (
-                <Form>
-                  <FormContainer2>
-                    <Field
-                      as={Input}
-                      name="name"
-                      type="text"
-                      placeholder="Ім’я та прізвище*"
-                      value={values.name}
-                      // onChange={handleChange}
-                      //   onFocus={handleFocus}
-                    />
-                    {errors.name && touched.name ? (
-                      <ErrorMessage>{errors.name}</ErrorMessage>
-                    ) : null}
-                    <Field
-                      as={Input}
-                      type="text"
-                      name="phone"
-                      placeholder="Номер телефону*"
-                      value={values.phone}
-                    />
+        <FormContainer>
+          <H2_Appointment ref={forwardedRef}>
+            Записатися на прийом
+          </H2_Appointment>
+          <p
+            style={{
+              textAlign: "left",
+              color: "var(--Text-color, #0C151C)",
+              /* Text secondary */
+              fontFamily: "Roboto",
+              fontSize: "18px",
+              fontStyle: "normal",
+              fontWeight: "400",
+              lineHeight: "120%",
+            }}
+          >
+            Ми вам перетелефонуємо для підтвердження запису у робочі години
+          </p>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={schema}
+            onSubmit={(values, { resetForm }) => {
+              console.log(values);
+              //   sendemail(values)
+              setShowPopUp(true);
+              resetForm();
+            }}
+          >
+            {({ values, errors, touched, isSubmitting }) => (
+              <Form>
+                <FormContainer2>
+                  <Field
+                    as={Input}
+                    name="name"
+                    type="text"
+                    placeholder="Ім’я та прізвище*"
+                    value={values.name}
+                    // onChange={handleChange}
+                    //   onFocus={handleFocus}
+                  />
+                  {errors.name && touched.name ? (
+                    <ErrorMessage>{errors.name}</ErrorMessage>
+                  ) : null}
+                  <Field
+                    as={Input}
+                    type="text"
+                    name="phone"
+                    placeholder="Номер телефону*"
+                    value={values.phone}
+                  />
+                  <TextAreaBox>
                     <Field
                       as={InputMessage}
                       type="text"
                       name="massage"
-                      placeholder="Повідомлення"
                       value={values.massage}
-                    />{" "}
-                    <div style={{ display: "flex", alignItems: "flex-start" }}>
-                      <Field
-                        type="checkbox"
-                        name="termsAndConditions"
-                        value={setTermsAndConditions(false)}
-                      />
-                      <span
-                        htmlFor="termsAndConditions"
-                        style={{
-                          textAlign: "start",
-                          marginLeft: "12px",
-                          marginBottom: "20px",
-                        }}
-                      >
-                        Я погоджуюсь з політикою конфіденційності та публічним
-                        договором
-                      </span>
-                      {errors.termsAndConditions &&
-                      touched.termsAndConditions ? (
-                        <ErrorMessage>{errors.termsAndConditions}</ErrorMessage>
-                      ) : null}
-                    </div>
-                  </FormContainer2>
+                    ></Field>{" "}
+                    <Placeholder_Container>Повідомлення</Placeholder_Container>
+                  </TextAreaBox>
+                  <div style={{ display: "flex", alignItems: "flex-start" }}>
+                    <Field
+                      as={FieldCheckbox}
+                      type="checkbox"
+                      name="termsAndConditions"
+                      value={setTermsAndConditions(false)}
+                    />
+                    <termsAndCondition
+                      htmlFor="termsAndConditions"
+                      style={{ textAlign: "left", marginLeft: "10px", fontSize: "10px" }}
+                    >
+                      Я погоджуюсь з політикою конфіденційності та публічним
+                      договором
+                    </termsAndCondition>
+                  </div>
+                  {errors.termsAndConditions && touched.termsAndConditions ? (
+                    <ErrorMessage>{errors.termsAndConditions}</ErrorMessage>
+                  ) : null}
+                </FormContainer2>
 
-                  <SubmitButton type="submit" disabled={isSubmitting}>
-                    Записатися
-                  </SubmitButton>
-                </Form>
-              )}
-            </Formik>
-          </FormContainer>
-          {showPopUp ? <AppointmentPopup /> : <div />}
-        </Block>
-      </Container_Wrapper>
-    </section>
+                <SubmitButton type="submit" disabled={isSubmitting}>
+                  Записатися
+                </SubmitButton>
+              </Form>
+            )}
+          </Formik>
+        </FormContainer>
+        {showPopUp ? <AppointmentPopup /> : <div />}
+      </Block>
+      {/* </Appointment_Container_Wrapper> */}
+    </Appointment_section>
   );
 }
 
