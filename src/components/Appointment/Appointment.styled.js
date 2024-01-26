@@ -112,7 +112,7 @@ export const TextAreaBox = styled.div`
 `;
 export const InputMessage = styled(Input).attrs({ as: "input" })`
   height: 95px;
-  text-align: right;
+  /* text-align: right; */
   position: relative;
   
   
