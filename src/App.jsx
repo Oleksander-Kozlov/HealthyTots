@@ -13,6 +13,7 @@ import DoctorsPage from "./pages/DoctorsPage/DoctorsPage";
 import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import ServicesPage from "./pages/Services/ServicesPage";
+import Service from "./components/Service/Service";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="doctors" element={<DoctorsPage />} />
           <Route path="services" element={<ServicesPage />} />
+          <Route path="services/:id" element={<Service />} />
           <Route path="blog" element={<BlogPage />} />
           <Route path="blog/:id" element={<BlogDetailsPage />} />
           <Route path="contacts" element={<ContactsPage />} />
