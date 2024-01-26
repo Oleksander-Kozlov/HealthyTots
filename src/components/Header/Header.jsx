@@ -34,11 +34,10 @@ const Header = () => {
           м.Ладижин, Наконечного 131Є
         </Contact_container>
 
-        {true && (
+        
           <BurgerMenu_icon></BurgerMenu_icon>
-          // <SlMenu color="#8CD4FA" size={40} style={{ cursor: "pointer" }} />
-        )}
-        {/* <img src={logoHT} alt="logoHT" /> */}
+          
+       
         <Link to="/">
           <SvgLogo />
         </Link>
