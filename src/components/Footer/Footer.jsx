@@ -10,6 +10,7 @@ import {
   Nav_And_Logo_Wrapper,
   StyledTextH3,
   Contact_container_Footer,
+  Contact_tel_container_Footer,
 } from "./Footer.styled";
 // import logoHT from "../../assets/logoHT.png";
 import { SvgLogo } from "../SvgIcons";
@@ -42,12 +43,12 @@ const Footer = () => {
             <StyledText> м.Ладижин, Наконечного 131Є</StyledText>
           </Contact_container_Footer>
 
-          <Contact_container_Footer style={{marginBottom: "20px"}}>
+          <Contact_tel_container_Footer>
             <PiPhoneFill color="#8CD4FA" size={16} />
             <StyledText style={{ color: "#BDDFEF" }}>
               + 38 (097) 5240670
             </StyledText>
-          </Contact_container_Footer>
+          </Contact_tel_container_Footer>
           <SocialLinks />
         </Contacts>
       </UpperFooterContainer>

@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 
 export const PopupContainer = styled.div`
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
@@ -21,15 +21,19 @@ export const PopupInnerContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  width: 587px;
-  height: 297px;
+  width: fit-content;
+  height: fit-content;
   margin: auto;
-  
+
   border-radius: 60px;
   z-index: 1;
   background: #ebf5fa;
   padding: 40px;
-  
+
+  @media screen and (min-width: 768px) {
+    width: 587px;
+    height: 297px;
+  }
 `;
 export const IconOkey = styled.div`
 width: 80px;
