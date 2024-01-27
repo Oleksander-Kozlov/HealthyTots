@@ -2,13 +2,15 @@ import styled, { keyframes } from "styled-components";
 import { pulse } from "react-animations";
 export const Section = styled.section`
   position: relative;
+  display: flex;
+  justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 36px;
   margin-bottom: 12px;
   @media screen and (min-width: 768px) {
     padding: 20px 0;
-   
+
     margin: 24px 0;
 
     /* display: flex;
