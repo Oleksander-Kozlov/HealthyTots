@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterContainer = styled.footer`
 padding: 28px 0;
   background-color: #0d3f7c;
-  width: 100vw;
+  width: 100%;
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;

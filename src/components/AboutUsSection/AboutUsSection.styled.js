@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const About_Us_Section = styled.div`
+export const About_Us_Section = styled.section`
   padding: 28px 0px;
   margin-bottom: 0;
   @media screen and (min-width: 768px) {
@@ -12,7 +12,7 @@ export const About_Us_Container_Wrapper = styled.div`
     padding: 0 40px;
   }
   @media screen and (min-width: 1440px) {
-    width: 1440px;
+    /* width: 1440px; */
     padding: 40px 120px;
     overflow: hidden;
   }

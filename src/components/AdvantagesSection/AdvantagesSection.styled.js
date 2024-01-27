@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const Advantages_section = styled.div`
+export const Advantages_section = styled.section`
   
   margin-bottom: 0;
  
@@ -11,7 +11,7 @@ export const Advantages_Container_Wrapper = styled.div`
     padding: 40px 40px;
   }
   @media screen and (min-width: 1440px) {
-    width: 1440px;
+    /* width: 1440px; */
     padding: 40px 120px;
     overflow: hidden;
   }

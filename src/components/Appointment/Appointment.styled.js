@@ -247,7 +247,7 @@ export const SubmitButton = styled.button`
   }
   @media screen and (min-width: 1440px) {
     font-size: 24px;
-  }
+    width: 198px;}
 `;
 export const ErrorMessage = styled.span`
   color: rgba(218, 20, 20, 1);
