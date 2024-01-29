@@ -1,31 +1,44 @@
 import styled from "styled-components";
-export const About_Us_Section = styled.div`
+export const About_Us_Section = styled.section`
   padding: 28px 0px;
   margin-bottom: 0;
+  @media screen and (min-width: 768px) {
+    padding: 40px 0;
+  }
 `;
 export const About_Us_Container_Wrapper = styled.div`
   padding: 0px 20px;
+  @media screen and (min-width: 768px) {
+    padding: 0 40px;
+  }
   @media screen and (min-width: 1440px) {
-    width: 1440px;
+    /* width: 1440px; */
     padding: 40px 120px;
     overflow: hidden;
   }
 `;
 export const H2_About_Us = styled.h2`
-margin-bottom: 20px;
-align-self: stretch;
-color:  #F27B57;
-text-align: center;
-font-family: Balsamiq Sans;
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-
+  margin-bottom: 20px;
+  align-self: stretch;
+  color: #f27b57;
+  text-align: center;
+  font-family: Balsamiq Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @media screen and (min-width: 768px) {
+   margin-bottom: 40px;
+  }
 `;
 
 export const About_us_foto_text = styled.div`
-  
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr  1fr ;
+    justify-content: center;
+    gap:20px;
+  }
   @media screen and (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
@@ -38,6 +51,11 @@ export const About_us_Image = styled.div`
   margin-bottom: 20px;
   border-radius: 20px;
   overflow: hidden;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    width: 334px;
+    height: 312px;
+  }
   @media screen and (min-width: 1440px) {
     width: 486px;
     height: 419px;
@@ -47,6 +65,9 @@ export const About_us_Image = styled.div`
 `;
 export const About_us_text = styled.p`
   text-align: left;
+  @media screen and (min-width: 768px) {
+    font-size:16px;
+  }
   @media screen and (min-width: 1440px) {
     text-align: left;
   }

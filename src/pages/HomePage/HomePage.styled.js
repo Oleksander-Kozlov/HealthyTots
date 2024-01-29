@@ -11,7 +11,7 @@ export const Container_Wrapper = styled.div`
   padding: 40px 120px;
   overflow: hidden;
   @media screen and (min-width: 1440px) {
-    width: 1440px;
+    /* width: 1440px; */
   }
 `;
 

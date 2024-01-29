@@ -1,18 +1,20 @@
 import styled, { keyframes } from "styled-components";
 import { pulse } from "react-animations";
 export const Section = styled.section`
-position: relative;
+  position: relative;
+  display: flex;
+  justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-top: 36px;
-  margin-bottom:12px;
+  margin-bottom: 12px;
   @media screen and (min-width: 768px) {
-    padding-top: 20px;
-    padding-bottom: 40px;
-    margin-top: 80px;
+    padding: 20px 0;
 
-    display: flex;
-    justify-content: center;
+    margin: 24px 0;
+
+    /* display: flex;
+    justify-content: center; */
   }
 `;
 
@@ -32,10 +34,9 @@ export const Hero_Container_Wrapper = styled.div`
     width: 100vw;
   }
   @media screen and (min-width: 768px) and (max-width: 1339.98px) {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0px 40px;
     flex-direction: row-reverse;
-    width: 768px;
+    width: 688px;
   }
 
   @media screen and (min-width: 1440px) {

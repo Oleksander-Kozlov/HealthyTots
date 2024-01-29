@@ -13,6 +13,9 @@ export const Appointment_section = styled.section`
   padding-bottom: 0;
   padding-top: 0;
   margin-bottom: 28px;
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
   @media screen and (min-width: 1440px) {
     margin-bottom: 80px;
   }
@@ -26,17 +29,21 @@ export const Block = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   background: rgba(140, 212, 250, 0.2);
   padding: 28px;
   gap: 16px;
 
   @media screen and (min-width: 768px) {
+    padding: 20px;
     border-radius: 44px;
+    flex-direction: row;
+    max-width: 688px;
+    gap: 20px;
   }
   @media screen and (min-width: 1440px) {
     border-radius: 60px;
-    width: 960px;
+    max-width: 960px;
     display: flex;
     justify-content: space-between;
     gap: 126px;
@@ -44,9 +51,17 @@ export const Block = styled.div`
 `;
 
 export const AppointmentImg = styled.img`
-  width: 100%;
+  width: 304px;
+  height: 342px;
   border-radius: 24px;
   margin-bottom: 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 257px;
+    height: 427px;
+
+    margin: 0;
+  }
   @media screen and (min-width: 1440px) {
     width: 406px;
     height: 559px;
@@ -57,7 +72,13 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  align-items: flex-start;
+  font-size: 14px;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    gap: 8px;
+    text-align: left;
+  }
+  /* align-items: flex-start; */
   @media screen and (min-width: 1440px) {
     width: 528px;
   }
@@ -74,13 +95,33 @@ export const H2_Appointment = styled.h2`
   font-weight: 700;
   line-height: normal;
   margin-bottom: -8px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+    margin-bottom: -8px;
+  }
+`;
+
+export const P_Appointment = styled.p`
+  text-align: left;
+  color: #0c151c;
+  /* Text secondary */
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 36/18;margin-bottom:0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 `;
 
 export const Input = styled.input`
   /* color: black; */
   display: flex;
   /* width: 504px; */
-  padding: 20px 12px;
+  padding: 12px;
   align-items: center;
   gap: 10px;
   border-radius: 12px;
@@ -100,19 +141,24 @@ export const Input = styled.input`
   }
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 21.6/18
+    line-height: 21/18
   }
 `;
 export const TextAreaBox = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  
-  
+
+  @media screen and (min-width: 768px) {
+    height: 95px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 114px;
+  }
 `;
 export const InputMessage = styled(Input).attrs({ as: "input" })`
   height: 95px;
-  text-align: right;
+  /* text-align: right; */
   position: relative;
   
   
@@ -134,14 +180,14 @@ export const Placeholder_Container = styled.div`
 export const FieldCheckbox = styled.input`
   width: 28px;
   height: 28px;
-  .span{
-
+  .span {
   }
-
-
-
+  @media screen and (min-width: 768px) {
+    width: 16px;
+    height: 16px;
+  }
 `;
-export const termsAndCondition = styled.div`
+export const TermsAndCondition = styled.div`
   text-align: left;
   /* margin-left: 12px; */
   margin-bottom: 20px;
@@ -150,6 +196,9 @@ export const termsAndCondition = styled.div`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
+  @media screen and (min-width: 768px){
+    margin: 0;
+  }
   
 `;
 
@@ -159,37 +208,47 @@ export const FormContainer2 = styled.div`
   display: flex;
   flex-direction: column;
 
-  gap: 20px;
-  margin-bottom:16px;
+  gap: 16px;
+  margin-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
   @media screen and (min-width: 1440px) {
     width: 432px;
+    gap: 20px;
   }
 `;
 export const SubmitButton = styled.button`
-color: white;
+  color: white;
+  width: 100%;
+  padding: 16px 32px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 
-padding: 16px 32px;
-justify-content: center;
-text-align: center;
-align-items: center;
+  border-radius: 20px;
+  background: var(--Blue-accent, #0d3f7c);
 
-border-radius: 20px;
-background: var(--Blue-accent, #0D3F7C);
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 
-font-family: var(--font-title);
-font-size: 24px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-
-&:hover{
-    background: #318FB5;
+  &:hover {
+    background: #318fb5;
   }
-  &:active{
+  &:active {
     background: #001244;
   }
-
-`
+  @media screen and (min-width: 768px) {
+    width: 164px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 24px;
+    width: 198px;}
+`;
 export const ErrorMessage = styled.span`
   color: rgba(218, 20, 20, 1);
   font-size: 12px;
