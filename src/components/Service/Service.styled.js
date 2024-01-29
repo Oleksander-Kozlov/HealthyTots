@@ -8,11 +8,12 @@ export const ServicesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 `;
 
 export const Table = styled.table`
   border-radius: 20px;
-  border: 1px solid var(--Blue-secondary, #BDDFEF);
+  /* border: 1px solid var(--Blue-secondary, #BDDFEF); */
 background: #FFF;
 border-spacing: 0;
  border-collapse: separate;
@@ -24,6 +25,9 @@ border-spacing: 0;
  border: 1px solid black;
  box-shadow: 1 0 0 2px var(--inner-border-color, black);
 } */
+&:last-child {
+    border-radius: 20px;
+  }
 `
 
 export const TableHeader = styled.tr`
@@ -34,8 +38,10 @@ border-radius: 20px;
 `
 
 export const TableColumn = styled.td`
-  border: 1px solid var(--Blue-secondary, #BDDFEF);
+  /* border: 1px solid var(--Blue-secondary, #BDDFEF); */
   text-align: start;
   padding: 7px 16px;
-  
+  /* &:last-child {
+    border-radius: 20px;
+  } */
 `;
