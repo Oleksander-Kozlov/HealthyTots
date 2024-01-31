@@ -57,7 +57,7 @@ export const Nav_And_Logo_Wrapper = styled.div`
     
   }
 `;
-export const LogoLinkContainer = styled.div`
+export const LogoLinkContainer = styled(Link)`
   margin: auto;
   @media screen and (min-width: 768px) {
     flex-direction: row-reverse;

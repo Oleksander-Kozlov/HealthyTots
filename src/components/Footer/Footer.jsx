@@ -32,9 +32,9 @@ const Footer = () => {
             <LinkStyledFooter to="/blog">Блог</LinkStyledFooter>
             <LinkStyledFooter to="/contacts">Контакти</LinkStyledFooter>
           </Navigation_Footer>
-          <LogoLinkContainer>
+          <LogoLinkContainer to="/">
             <SvgLogoFooter/>
-            {/* <SvgLogo width={122} height={94}></SvgLogo> */}
+            
           </LogoLinkContainer>
         </Nav_And_Logo_Wrapper>
         <Contacts>
