@@ -1,8 +1,5 @@
-
+import { Link } from "react-router-dom";
 import { TiLocation } from "react-icons/ti";
-import { PiPhoneFill } from "react-icons/pi";
-
-
 import {
   BurgerMenu_icon,
   Contact_container,
@@ -12,11 +9,10 @@ import {
   Navigation,
   Navigation_Container,
   Phone_Number,
-  
+  Phone_icon,
 } from "./Header.styled";
 import { Link_styled } from "../../Global.styled";
-import {SvgLogo} from "../SvgIcons";
-import { Link } from "react-router-dom";
+import { SvgLogo } from "../SvgIcons";
 
 const Header = () => {
   return (
@@ -32,13 +28,13 @@ const Header = () => {
           м.Ладижин, Наконечного 131Є
         </Contact_container>
 
-        <BurgerMenu_icon></BurgerMenu_icon>
+        <BurgerMenu_icon size={40}></BurgerMenu_icon>
 
         <Link to="/">
           <SvgLogo width={87} height={66} />
         </Link>
         <Contact_container_tel href="tel:+380975240670">
-          <PiPhoneFill color="#8CD4FA" size={24} />
+          <Phone_icon />
           <Phone_Number> +38 (097) 5240670</Phone_Number>
         </Contact_container_tel>
       </Header_upperLine>

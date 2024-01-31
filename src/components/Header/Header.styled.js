@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { Link } from "react-router-dom";
+import { PiPhoneFill } from "react-icons/pi";
 import { SlMenu } from "react-icons/sl";
 export const Header_container = styled.header`
   position: relative;
@@ -23,7 +23,15 @@ export const Header_container = styled.header`
   }
 `;
 
-
+export const Phone_icon = styled(PiPhoneFill)`
+  color: #8cd4fa;
+  width: 40px;
+  height: 40px;
+  @media screen and (min-width: 768px){
+    width: 24px;
+    height: 24px;
+  }
+`;
 export const BurgerMenu_icon = styled(SlMenu)`
   cursor: pointer;
   color: #8cd4fa;
