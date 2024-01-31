@@ -82,7 +82,7 @@ export const About_us_text = styled.p`
   
     font-size: 24px;
 
-    line-height: 36/24
+    line-height: 36/24;
 
     text-align: left;
     max-width: 588px;
