@@ -128,8 +128,9 @@ export const IMG_Block_Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
+   @media screen and (max-width: 767.98px) {
   margin-bottom: 28px;
-
+   }
   @media screen and (min-width: 1440px) {
     position: relative;
     width: 590px;
@@ -146,12 +147,13 @@ const zoomAnimation = keyframes`
   10%{ transform: rotate(90deg);
   }
  
+  50%{transform: scale(2.13);   z-index: 100;}
   
-  75%{transform: scale(2.2);   z-index: 100;
+  90%{transform: scale(2.13);   z-index: 100;
       
   }
   100% {
-    transform: scale(2.2);  /* Возврат к исходному размеру */
+    transform: rotate(360deg); z-index:0;  /* Возврат к исходному размеру */
   };
   `;
 // Создание ключевых кадров для анимации
@@ -164,67 +166,44 @@ const zoomAnimation1 = keyframes`
     transform: scale(2.5); z-index: 100; 
   }
   100% {
-    transform: scale(2.2);/* Возврат к исходному размеру */
+    transform: scale(2);/* Возврат к исходному размеру */
   };
   `;
-export const BackgroundBlur = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: rgba(200, 212, 181, 0.8); */
-  backdrop-filter: blur(8px); /* початкове значення - без розмиття */
-  z-index: -1; /* фон повинен бути за зображенням */
-  transition: backdrop-filter 0.3s ease; /* для плавного змінювання ефекту розмиття */
-`;
+
 export const IMG_Wrapper_Center = styled.div`
   position: absolute;
   top: 26%;
-  left: 28%;
+  left: 27%;
   width: 158px;
   box-shadow: 0px 0px 8px 8px rgba(13, 63, 124, 0.3);
   border-radius: 20px;
   overflow: hidden;
   &:hover {
-    /* z-index: 102; */
+    animation: ${zoomAnimation1} 2s 500ms both;
     box-shadow: 0px 0px 8px 8px rgba(13, 63, 124, 0.5);
     background-color: transparent;
   }
 
   @media screen and (max-width: 359.98px) {
     width: 150px;
-    left: 29%;
+    left: 26.5%;
 
     &:hover {
-      scale: 2;
+   
     }
   }
 
   @media screen and (min-width: 768px) {
-    left: 30%;
-
-    /* &:hover {
-      scale: 2;
-    } */
+    left: 28.5%;
   }
-  @media screen and (max-width: 1339.98px) {
-    
-
-    &:hover {
-      scale: 2;
-    }
-  }
+  
 
   @media screen and (min-width: 1440px) {
     width: 280px;
     left: 26%;
 
     &:hover {
-      animation: ${zoomAnimation1} 2s 500ms both;
-     box-shadow: none;
     }
-    
   }
 `;
 
@@ -232,65 +211,39 @@ export const IMG_Wrapper = styled.div`
   position: relative;
   width: 158px;
   height: 158px;
-  border-radius:45px;
+  border-radius: 45px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transform-origin: ${(props) => props.x} ${(props) => props.y};
+
+  &:hover,
+  :focus {
+    z-index: 100;
+    border-radius: 20px;
+    animation: ${zoomAnimation} 2s 500ms both;
+  }
 
   @media screen and (max-width: 359.98px) {
     width: 150px;
     height: 150px;
-    &:hover,
+    /* &:hover,
     :focus {
       scale: 210%;
       z-index: 100;
-      /* border-radius:0; */
-    }
+      animation: none;
+    } */
   }
 
-  display: flex;
-  justify-content: center;
-  transform-origin: ${(props) => props.x} ${(props) => props.y};
-  /* &:hover&${BackgroundBlur} {
-    z-index: 101;
-  } */
-  &:hover,
-  :focus {
-    scale: 210%;
-    z-index: 100;
-    border-radius:20px;
-  }
-  @media screen and (max-width: 767.98px) {
-    &:hover,
-    :focus {
-      /* scale: 2.1; */
-    }
-  }
   @media screen and (min-width: 1440px) {
     width: 280px;
     height: 280px;
     border-radius: 20px;
     overflow: hidden;
     transform-origin: ${(props) => props.x} ${(props) => props.y};
-    /* transition: transform 0.3s ease; */
-
-    /* box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25); */
 
     background-size: cover;
     background-repeat: no-repeat;
-
-    &:hover {
-      ${BackgroundBlur} {
-        backdrop-filter: blur(8px);
-        width: 100vw;
-        height: 100vh;
-        border-radius: 20px;
-      }
-      z-index: 100;
-      background-color: transparent;
-      animation: ${zoomAnimation} 2s 500ms both;
-      /* box-shadow: 0px 0px 12px 12px rgba(13, 63, 124, 0.25); */
-      /* box-shadow: 0px 0px 8px 8px rgba(13, 63, 124, 0.5); */
-    }
   }
 `;
 
-export const About_us_Image = styled.img``;

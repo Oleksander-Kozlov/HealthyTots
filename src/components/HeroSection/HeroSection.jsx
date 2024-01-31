@@ -31,9 +31,7 @@ import hero_img_center_560 from "../../assets/rectangle/hero_img_center_560px@2x
 
 import MakeAppointmentButton from "../MakeAppointmentButton/MakeAppointmentButton";
 import {
-  // About_us_Image,
-  BackgroundBlur,
-  // BouncyDiv,
+
   H1,
   H1andButton_Wrapper,
   Hero_Container_Wrapper,
@@ -49,25 +47,11 @@ const HeroSection = ({ handleClick }) => {
   return (
     <Section>
       <Hero_Container_Wrapper>
-        <IMG_Block_Wrapper>
-          <BackgroundBlur></BackgroundBlur>
-          {/* <img
-                  srcset="./images\portfolio\img1_356.jpg 356w,
-                ./images\portfolio\img1_360.jpg 360w,
-                ./images\portfolio\img1_396.jpg 396w,
-                ./images\portfolio\img1_712.jpg 712w,
-                ./images\portfolio\img1_720.jpg 720w,
-                ./images\portfolio\img1_792.jpg 792w
-                "
-                sizes="(min-width: 1200px) 360px, (min-width: 768px) 356px, (min-width: 480px) 396px, 100vw"
-                 
-                  src="./images\portfolio\img1_396.jpg"
-                  alt="exemple app"
-                  width="396"
-                  height="280"/> */}
+        <IMG_Block_Wrapper>          
+  
 
           <IMG_Wrapper x="left" y="top">
-            {/* <About_us_Image src={Hero_img1} alt="Hero_img1" /> */}
+            
             <img
               srcSet={`${hero_img_1_158} 152w,    ${hero_img_1_316} 302w,   ${hero_img_1_280} 280w,   ${hero_img_1_560} 560w  `}
               sizes="(max-width: 1439.98px) 152px, 280px"
@@ -76,7 +60,7 @@ const HeroSection = ({ handleClick }) => {
             />
           </IMG_Wrapper>
           <IMG_Wrapper x="right" y="top">
-            {/* <About_us_Image src={Hero_img2} alt="Hero_img2" /> */}
+            
             <img
               srcSet={`${hero_img_2_158} 152w,    ${hero_img_2_316} 302w,   ${hero_img_2_280} 280w,   ${hero_img_2_560} 560w  `}
               sizes="(max-width: 1439px) 152px, 280px"
@@ -85,7 +69,7 @@ const HeroSection = ({ handleClick }) => {
             />
           </IMG_Wrapper>
           <IMG_Wrapper x="left" y="bottom">
-            {/* <About_us_Image src={Hero_img3} alt="Hero_img3" /> */}
+            
             <img
               srcSet={`${hero_img_3_158} 152w,    ${hero_img_3_316} 302w,   ${hero_img_3_280} 280w,   ${hero_img_3_560} 560w  `}
               sizes="(max-width: 1439.98px) 152px, 280px"
@@ -94,7 +78,7 @@ const HeroSection = ({ handleClick }) => {
             />
           </IMG_Wrapper>
           <IMG_Wrapper x="right" y="bottom">
-            {/* <About_us_Image src={Hero_img4} alt="Hero_img4" /> */}
+          
             <img
               srcSet={`${hero_img_4_158} 152w,    ${hero_img_4_316} 302w,   ${hero_img_4_280} 280w,   ${hero_img_4_560} 560w  `}
               sizes="(max-width: 1439.98px) 152px, 280px"
@@ -103,7 +87,6 @@ const HeroSection = ({ handleClick }) => {
             />
           </IMG_Wrapper>
           <IMG_Wrapper_Center>
-            {/* <About_us_Image src={Hero_img5} alt="Hero_img_center" /> */}
             <img
               srcSet={`${hero_img_center_158} 152w,    ${hero_img_center_316} 302w,   ${hero_img_center_280} 280w,   ${hero_img_center_560} 560w  `}
               sizes="(max-width: 1439.98px) 152px, 280px"
@@ -117,11 +100,11 @@ const HeroSection = ({ handleClick }) => {
             Healthy Tots: де кожен<br></br> маленький пацієнт - великий
             пріоритет.
           </H1>
-          {/* <BouncyDiv> */}
+     
           <MakeAppointmentButton handleClick={handleClick}>
             Записатися на прийом
           </MakeAppointmentButton>
-          {/* </BouncyDiv> */}
+         
         </H1andButton_Wrapper>
       </Hero_Container_Wrapper>
     </Section>
