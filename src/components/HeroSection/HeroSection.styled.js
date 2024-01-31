@@ -33,7 +33,7 @@ export const Hero_Container_Wrapper = styled.div`
     padding-right: 0;
     width: 100vw;
   }
-  @media screen and (min-width: 768px) and (max-width: 1339.98px) {
+  @media screen and (min-width: 768px) and (max-width: 1439.98px) {
     padding: 0px 40px;
     flex-direction: row-reverse;
     width: 688px;
@@ -54,6 +54,7 @@ export const H1andButton_Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
+  padding-left:10px;
 
   @media screen and (min-width: 768px) {
     width: 590px;
@@ -133,7 +134,7 @@ export const IMG_Block_Wrapper = styled.div`
    }
   @media screen and (min-width: 1440px) {
     position: relative;
-    width: 590px;
+    /* width: 590px; */
     gap: 28px;
   }
 `;
@@ -141,19 +142,19 @@ export const IMG_Block_Wrapper = styled.div`
 
 const zoomAnimation = keyframes`
   0% {
-    /* Исходный размер */ 
+    opacity:0.5;/* Исходный размер */ 
   } 
   
-  10%{ transform: rotate(90deg);
-  }
+  10%{   opacity:1;}
  
   50%{transform: scale(2.13);   z-index: 100;}
   
-  90%{transform: scale(2.13);   z-index: 100;
+  /* 80%{transform: scale(2.13);   z-index: 100;} */
+  90%{}
       
-  }
+  
   100% {
-    transform: rotate(360deg); z-index:0;  /* Возврат к исходному размеру */
+    z-index:0;  /* Возврат к исходному размеру */
   };
   `;
 // Создание ключевых кадров для анимации
@@ -189,18 +190,16 @@ export const IMG_Wrapper_Center = styled.div`
     left: 26.5%;
 
     &:hover {
-   
     }
   }
 
   @media screen and (min-width: 768px) {
     left: 28.5%;
   }
-  
 
   @media screen and (min-width: 1440px) {
     width: 280px;
-    left: 26%;
+    left: 32%;
 
     &:hover {
     }
