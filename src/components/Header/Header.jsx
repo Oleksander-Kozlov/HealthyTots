@@ -1,8 +1,5 @@
-
+import { Link } from "react-router-dom";
 import { TiLocation } from "react-icons/ti";
-import { PiPhoneFill } from "react-icons/pi";
-
-
 import {
   BurgerMenu_icon,
   Contact_container,
@@ -12,17 +9,14 @@ import {
   Navigation,
   Navigation_Container,
   Phone_Number,
-  
+  Phone_icon,
 } from "./Header.styled";
 import { Link_styled } from "../../Global.styled";
-import {SvgLogo} from "../SvgIcons";
-import { Link } from "react-router-dom";
+import { SvgLogo } from "../SvgIcons";
 
 const Header = () => {
   return (
-
     <Header_container>
-      
       <Header_upperLine>
         <Contact_container
           href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9D%D0%B0%D0%BA%D0%BE%D0%BD%D0%B5%D1%87%D0%BD%D0%BE%D0%B3%D0%BE,+131%D0%84,
@@ -34,33 +28,26 @@ const Header = () => {
           м.Ладижин, Наконечного 131Є
         </Contact_container>
 
-        
-          <BurgerMenu_icon></BurgerMenu_icon>
-          
-       
+        <BurgerMenu_icon size={40}></BurgerMenu_icon>
+
         <Link to="/">
-          <SvgLogo />
+          <SvgLogo width={87} height={66} />
         </Link>
-        <Contact_container_tel
-          href="tel:+380975240670"
-         
-        >
-          <PiPhoneFill color="#8CD4FA" size={24} />
+        <Contact_container_tel href="tel:+380975240670">
+          <Phone_icon />
           <Phone_Number> +38 (097) 5240670</Phone_Number>
         </Contact_container_tel>
       </Header_upperLine>
 
-     
-        <Navigation_Container>
-          <Navigation>
-            <Link_styled to="/">Головна</Link_styled>
-            <Link_styled to="/doctors">Лікарі</Link_styled>
-            <Link_styled to="/services">Послуги</Link_styled>
-            <Link_styled to="/blog">Блог</Link_styled>
-            <Link_styled to="/contacts">Контакти</Link_styled>
-          </Navigation>
-        </Navigation_Container>
-      
+      <Navigation_Container>
+        <Navigation>
+          <Link_styled to="/">Головна</Link_styled>
+          <Link_styled to="/doctors">Лікарі</Link_styled>
+          <Link_styled to="/services">Послуги</Link_styled>
+          <Link_styled to="/blog">Блог</Link_styled>
+          <Link_styled to="/contacts">Контакти</Link_styled>
+        </Navigation>
+      </Navigation_Container>
     </Header_container>
   );
 };

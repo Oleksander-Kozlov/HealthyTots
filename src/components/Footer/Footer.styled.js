@@ -1,5 +1,16 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { SvgLogo } from "../SvgIcons";
+
+export const SvgLogoFooter = styled(SvgLogo)`
+  width: 87px;
+  height: 66px;
+  @media screen and (min-width: 1440px) {
+    width: 122px;
+    height: 94px;
+  }
+`;
+
 export const FooterContainer = styled.footer`
 padding: 28px 0;
   background-color: #0d3f7c;
@@ -9,7 +20,7 @@ padding: 28px 0;
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 48px 120px;
+    padding: 48px 0;
   }
 `;
 
@@ -26,7 +37,7 @@ export const UpperFooterContainer = styled.div`
   }
   @media screen and (min-width: 1440px) {
     width: 960px;
-    /* gap: 50px; */
+    /* gap: 100px; */
     height: 226px;
 
     padding: 0 120px;
@@ -46,7 +57,7 @@ export const Nav_And_Logo_Wrapper = styled.div`
     
   }
 `;
-export const LogoLinkContainer = styled.div`
+export const LogoLinkContainer = styled(Link)`
   margin: auto;
   @media screen and (min-width: 768px) {
     flex-direction: row-reverse;
