@@ -14,9 +14,13 @@ const AboutUsSection = () => {
       <About_Us_Container_Wrapper>
         <H2_About_Us>Про нас</H2_About_Us>
         <About_us_foto_text>
-          <About_us_Image>
-            < img src={logoHT} alt="logoHT" width="334px" height="312px"/>
-          </About_us_Image>
+          {/* <About_us_Image> */}
+            <About_us_Image
+              src={logoHT}
+              alt="logoHT"
+              
+            />
+          {/* </About_us_Image> */}
           <About_us_text>
             Клініка &quot;Healthy Tots&quot; - це інноваційний медичний заклад,
             що спеціалізується на наданні високоякісної медичної допомоги. Наша

@@ -33,24 +33,32 @@ export const H2_About_Us = styled.h2`
 `;
 
 export const About_us_foto_text = styled.div`
+  display: flex;
+  flex-direction:column;
+  align-items:center;
   @media screen and (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr  1fr ;
+    flex-direction: row;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
   }
   @media screen and (min-width: 1440px) {
-    display: flex;
+    gap: 126px;
+    /* display: flex;
     justify-content: space-between;
-    /* align-items: center; */
+    align-items: center;
     gap: 136px;
-    margin-top: 60px;
+    margin-top: 60px; */
   }
 `;
-export const About_us_Image = styled.div`
+export const About_us_Image = styled.img`
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
   border-radius: 20px;
   overflow: hidden;
+
+  width: 320px;
+  height: 284px;
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
     width: 334px;
@@ -65,10 +73,18 @@ export const About_us_Image = styled.div`
 `;
 export const About_us_text = styled.p`
   text-align: left;
+  max-width: 320px;
   @media screen and (min-width: 768px) {
-    font-size:16px;
+    font-size: 16px;
+    max-width: 334px;
   }
   @media screen and (min-width: 1440px) {
+  
+    font-size: 24px;
+
+    line-height: 36/24
+
     text-align: left;
+    max-width: 588px;
   }
 `;
