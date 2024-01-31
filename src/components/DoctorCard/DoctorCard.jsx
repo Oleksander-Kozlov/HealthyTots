@@ -11,9 +11,9 @@ import doc_img5 from "../../assets/doctorImg/doctor5.png";
 // eslint-disable-next-line react/prop-types
 const DoctorCard = ({ data }) => {
   const docImgs = {
-    1: "/HealthyTots/assets/doctorImg/doctor1.png",
+    1: doc_img1,
     2: doc_img2,
-    3: "/assets/doctorImg/doctor1.png",
+    3: doc_img3,
     4: doc_img4,
     5: doc_img5,
   };

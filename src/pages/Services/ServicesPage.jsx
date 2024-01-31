@@ -86,7 +86,7 @@ const ServicesPage = () => {
             <CardContainer>
               <IMG_Wrapper>
                 <img
-                  srcSet={`${checkUp_mob_99} 99w,    ${checkUp_mob_198} 198w, ${checkUp_desktop_tab_248} 248w, ${checkUp_desktop_tab_456} 456w, `}
+                  srcSet={`${checkUp_mob_99} 99w,    ${checkUp_mob_198} 198w, ${checkUp_desktop_tab_248} 284w, ${checkUp_desktop_tab_456} 456w, `}
                   sizes="(max-width: 1439.98px) 99px, 456px"
                   src={checkUp_mob_99}
                   alt="checkUp"
