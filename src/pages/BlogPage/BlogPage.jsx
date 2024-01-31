@@ -69,8 +69,8 @@ const BlogPage = () => {
 
           
           {blogTitle.length > 0 ? (
-            <button >
-              <IoCloseCircle color="#318FB5" size={24} />
+            <button style={{backgroundColor: "transparent", display: "flex"}}>
+              <IoCloseCircle color="#318FB5" size={24}  textAlign="center" />
             </button>
             ) : <></>}
 
