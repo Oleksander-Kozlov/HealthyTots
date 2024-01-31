@@ -11,9 +11,9 @@ import {
   StyledTextH3,
   Contact_container_Footer,
   Contact_tel_container_Footer,
+  SvgLogoFooter,
 } from "./Footer.styled";
-// import logoHT from "../../assets/logoHT.png";
-import { SvgLogo } from "../SvgIcons";
+
 
 // import { Contact_container } from "../Header/Header.styled";
 import SocialLinks from "./SocialLinks/SocialLinks";
@@ -33,7 +33,8 @@ const Footer = () => {
             <LinkStyledFooter to="/contacts">Контакти</LinkStyledFooter>
           </Navigation_Footer>
           <LogoLinkContainer>
-            <SvgLogo size={122} />
+            <SvgLogoFooter/>
+            {/* <SvgLogo width={122} height={94}></SvgLogo> */}
           </LogoLinkContainer>
         </Nav_And_Logo_Wrapper>
         <Contacts>

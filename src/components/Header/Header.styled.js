@@ -48,7 +48,7 @@ export const Header_upperLine = styled.div`
     align-items: center;
   }
   @media screen and (min-width: 1440px) {
-    width: 1440px;
+    /* width: 1440px; */
   }
 `;
 
