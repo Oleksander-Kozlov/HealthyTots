@@ -10,25 +10,11 @@ import doc_img5 from "../../assets/doctorImg/doctor5.png";
 
 // eslint-disable-next-line react/prop-types
 const DoctorCard = ({ data }) => {
-  const docImgs = {
-    1: "/HealthyTots/assets/doctorImg/doctor1.png",
-    2: doc_img2,
-    3: "/assets/doctorImg/doctor1.png",
-    4: doc_img4,
-    5: doc_img5,
-  };
-  function getImageById(id) {
-    return docImgs[id] || null;
 
-  
-  }
-  console.log('====================================');
-  console.log(getImageById(3));
-  console.log('====================================');
 
   return (
     <CardContainer>
-      <DocotorImg src={getImageById(data.id)} alt="Doctors Foto" />
+      <DocotorImg src={data.image} alt="Doctors Foto" />
       <DescriptionContainer>
         <Name>{data.name}</Name>
         <Title>{data.title}</Title>
