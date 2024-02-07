@@ -41,6 +41,23 @@ export const BlogCardsContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   /* margin-top: 32px; */
 `;
+export const NotFoundContainer = styled.div`
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+width: 1200px;
+height: 241px;
+
+`; 
+export const NotFound = styled.p`
+color: var(--Grey-non-acttive, #94B0B7);
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%;
+`
 
 export const Paginate = styled(ReactPaginate)`
   display: flex;

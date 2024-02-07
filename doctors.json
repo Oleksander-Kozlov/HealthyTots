@@ -1,6 +1,6 @@
 [
     {
-      "image":"../../assets/doctorImg/doctor1.png",  
+      "image":"src/assets/doctorImg/doctor1.png",  
       "id": "1",
       "name": "Соломко Людмила Василівна",
       "title": "Педіатриня, неонатологиня",

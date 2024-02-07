@@ -6,10 +6,18 @@ import { CardContainer, DescriptionContainer, DocotorImg, Name, Text, Title } fr
 
 
 const DoctorCard = ({ data }) => {
+  const docImgs = {
+    1: doc_img1,
+    2: doc_img2,
+    3: doc_img3,
+    4: doc_img4,
+    5: doc_img5,
+  };
+  function getImageById(id) {
+    return docImgs[id] || null;
+  }
 
-
-  return (
-    <CardContainer>
+  return ( <CardContainer>
       <DocotorImg src={data.image} alt="Doctors Foto" />
       <DescriptionContainer>
         <Name>{data.name}</Name>

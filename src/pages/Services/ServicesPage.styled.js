@@ -34,8 +34,23 @@ border: 1px solid var(--Blue-main, #8CD4FA);
 background: #EBF5FA;
 align-self: stretch;
 justify-content: space-between;
+@media screen and (min-width: 374.98px) {
+  width: 284px;
+  height: 398px;
+  padding: 24px;
+  }
+
+  /* @media screen and (min-width: 1440px) {
+    width: 332px;
+    height: 438px;
+    padding: 24px;
+  } */
 `
 
 export const IMG_Wrapper = styled.div`
+/* @media screen and (min-width: 359.98px) {
+  width: 248px;
+  }  */
+
 
   `

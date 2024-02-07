@@ -4,6 +4,8 @@ import {
   BlogCardsContainer,
   BlogContainer,
   InputBlogSearch,
+  NotFound,
+  NotFoundContainer,
   Paginate,
   SearchContainer,
 } from "./BlogPage.styled";
@@ -27,9 +29,13 @@ const BlogPage = () => {
     const nextParams = title !== "" ? { title } : {};
     setSearchParams(nextParams);
   };
-// _____________________________SearchParams_______________________________
+  const clearSearchParams = () => {
+    setSearchParams({});
+  };
+  console.log("visibleBlogs", visibleBlogs);
+  // _____________________________SearchParams_______________________________
 
-  const itemsPerPage = 6
+  const itemsPerPage = 6;
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = visibleBlogs.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(visibleBlogs.length / itemsPerPage);
@@ -39,19 +45,16 @@ const BlogPage = () => {
     setItemOffset(newOffset);
   };
 
-
   return (
-
-    <section style={{ marginBottom: "48px", paddingBottom: "0px", paddingTop:"4px" }}>
-       
-
+    <section
+      style={{ marginBottom: "48px", paddingBottom: "0px", paddingTop: "4px" }}>
       <BlogContainer>
         <LinkContainer>
-        <Link to="/">
-          <p style={{ color: "#94B0B7" }}> Головна /</p>
-        </Link>
-        <p style={{ fontSize: "14px" }}>&nbsp;Блог</p>
-      </LinkContainer>
+          <Link to="/">
+            <p style={{ color: "#94B0B7" }}> Головна /</p>
+          </Link>
+          <p style={{ fontSize: "14px" }}>&nbsp;Блог</p>
+        </LinkContainer>
         <h2>Блог</h2>
 
         <SearchContainer>
@@ -64,16 +67,16 @@ const BlogPage = () => {
             required
             placeholder="Пошук статті"
             value={blogTitle}
-            onChange={({target}) => onChange(target.value)}
+            onChange={({ target }) => onChange(target.value)}
           />
 
-          
-          {blogTitle.length > 0 ? (
-            <button >
-              <IoCloseCircle color="#318FB5" size={24} />
+          {blogTitle.length > 0 && (
+            <button
+              style={{ backgroundColor: "transparent", display: "flex" }}
+              onClick={clearSearchParams}>
+              <IoCloseCircle color="#318FB5" size={24} textAlign="center" />
             </button>
-            ) : <></>}
-
+          )}
         </SearchContainer>
 
         <BlogCardsContainer>
@@ -81,16 +84,22 @@ const BlogPage = () => {
             return <BlogCard key={data.id} data={data} />;
           })}
         </BlogCardsContainer>
+        {visibleBlogs.length === 0 && (
+          <NotFoundContainer>
+            <NotFound>На жаль, за вашим запитом нічого не знайдено</NotFound>
+          </NotFoundContainer>
+        )}
+
         <Paginate
-        breakLabel="..."
-        nextLabel=""
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel=""
+          breakLabel="..."
+          nextLabel=""
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel=""
           renderOnZeroPageCount={null}
           activeClassName="selected"
-      />
+        />
       </BlogContainer>
     </section>
   );
