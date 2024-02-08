@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
 import Map from "../../components/Map/Map";
 
 import {
-  ContactsWrapper,
-  H2,
-  H3,
+  ContactH3,
   InfoWrapper,
   SocialMediaLink,
   SocialMediaLinkWrapper,
@@ -13,49 +12,42 @@ import {
   RotatedBackground,
   FacebookIcon,
   InstaIcon,
-  
   LinkToForm,
+  LinkContainerContactPage,
+  ContactsDiv,
+  CotactTitle,
 } from "./ContactsPage.styled";
 
-import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
 
 const ContactsPage = () => {
   return (
     <MainContainer
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        paddingTop: "24px",
-        paddingRight: "120px",
-        paddingLeft: "120px",
-        paddingBottom: "48px",
-      }}
+   
     >
       <RotatedBackground />
-      <LinkContainer style={{ marginTop: "24px", marginBottom: "48px" }}>
-        <Link to="/">
-          <p style={{ color: "#94B0B7", fontSize: "20px" }}> Головна /</p>
-        </Link>
-        <p style={{ fontSize: "20px" }}>&nbsp;Контакти</p>
-      </LinkContainer>
+      <LinkContainerContactPage style={{}}>
+        <NavLink to="/">
+          <p style={{color:"#94b0b7"}}> Головна /</p>
+        </NavLink>
+        <p >&nbsp;Контакти</p>
+      </LinkContainerContactPage>
 
-      <H2>Контакти</H2>
+      <CotactTitle>Контакти</CotactTitle>
       <InfoWrapper>
-        <ContactsWrapper>
-          <H3>Адреса</H3>
+        <ContactsDiv>
+          <ContactH3>Адреса</ContactH3>
           <Text>м.Ладижин, Наконечного 131Є</Text>
-          <H3>Часи прийому:</H3>
+          <ContactH3>Часи прийому:</ContactH3>
           <Text>
             Пн. - Пт.: 09:00 - 19:00
             <br />
             Сб. - Нд.: 11:00 - 17:00
           </Text>
-          <H3>Teлефон:</H3>
+          <ContactH3>Teлефон:</ContactH3>
           <Text> + 38 (097) 5240670</Text>
-          <H3>Пошта:</H3>
+          <ContactH3>Пошта:</ContactH3>
           <Text>Solomko_neo@ukr.net</Text>
-          <H3>Ми у соціальних мережах:</H3>
+          <ContactH3>Ми у соціальних мережах:</ContactH3>
           <SocialMediaLinkWrapper>
             <SocialMediaLink
               href="https://www.instagram.com/healthytots.pediatriya/?igshid=MzMyNGUyNmU2YQ%3D%3D"
@@ -82,7 +74,7 @@ const ContactsPage = () => {
               <LinkToForm to="/#form">Записатися на прийом</LinkToForm>
             
        
-        </ContactsWrapper>
+        </ContactsDiv>
         <Map />
         {/* <MapWrapper></MapWrapper> */}
       </InfoWrapper>
