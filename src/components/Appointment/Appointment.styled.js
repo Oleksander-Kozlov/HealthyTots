@@ -71,21 +71,22 @@ export const AppointmentImg = styled.img`
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   font-size: 14px;
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    gap: 8px;
+    gap: 28px;
     text-align: left;
   }
   /* align-items: flex-start; */
   @media screen and (min-width: 1440px) {
     width: 528px;
+    gap: 48px;
   }
 `;
 
 export const H2_Appointment = styled.h2`
-  margin-bottom: 20px;
+  
   align-self: stretch;
   color: #f27b57;
   text-align: center;
@@ -98,7 +99,12 @@ export const H2_Appointment = styled.h2`
 
   @media screen and (min-width: 768px) {
     font-size: 28px;
-    margin-bottom: -8px;
+    margin-bottom: -20px;
+    
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 28px;
+    margin-bottom: -36px;
   }
 `;
 
@@ -109,11 +115,12 @@ export const P_Appointment = styled.p`
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
-  line-height: 36/18;margin-bottom:0;
+  line-height: 36/18;
+  margin-bottom:0;
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    margin-bottom: 20px;
+ 
   }
 `;
 

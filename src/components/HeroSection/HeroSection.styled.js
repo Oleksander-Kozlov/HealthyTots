@@ -54,7 +54,7 @@ export const H1andButton_Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding-left:10px;
+  padding-left: 10px;
 
   @media screen and (min-width: 768px) {
     width: 590px;
@@ -129,9 +129,9 @@ export const IMG_Block_Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
-   @media screen and (max-width: 767.98px) {
-  margin-bottom: 28px;
-   }
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 28px;
+  }
   @media screen and (min-width: 1440px) {
     position: relative;
     /* width: 590px; */
@@ -143,14 +143,17 @@ export const IMG_Block_Wrapper = styled.div`
 const zoomAnimation = keyframes`
   0% {
     opacity:0.5;/* Исходный размер */ 
+    
   } 
   
   10%{   opacity:1;}
  
-  50%{transform: scale(2.13);   z-index: 100;}
+ 
   
-  /* 80%{transform: scale(2.13);   z-index: 100;} */
-  90%{}
+  50%{transform: scale(2.13);   z-index: 100; }
+  
+
+  
       
   
   100% {
@@ -245,4 +248,3 @@ export const IMG_Wrapper = styled.div`
     background-repeat: no-repeat;
   }
 `;
-

@@ -1,17 +1,18 @@
 import { styled } from "styled-components";
 
 export const CardContainer = styled.div`
-display: flex;
-width: 1152px;
-height: 373px;
-padding: 24px;
-gap: 40px;
-border-radius: 24px;
-border: 1px solid var(--Blue-main, #8CD4FA);
-background: #EBF5FA;
-align-self: stretch;
-
-`
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    width: 1152px;
+    height: 373px;
+    padding: 24px;
+    gap: 40px;
+    border-radius: 24px;
+    border: 1px solid var(--Blue-main, #8cd4fa);
+    background: #ebf5fa;
+    align-self: stretch;
+  }
+`;
 export const DocotorImg = styled.img`
 width: 287px;
 height: 373px;
