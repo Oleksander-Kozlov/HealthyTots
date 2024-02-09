@@ -104,14 +104,14 @@ export const InfoWrapper = styled.div`
     align-items: stretch;
   }
   @media screen and (min-width: 1440px) {
-    margin-bottom: 48px;
+    
 
     gap: 126px;
     flex-direction: row;
     align-items: stretch;
 
     border-radius: 60px;
-    width: 1200px;
+   
   }
 `;
 export const ContactsDiv = styled.div`
@@ -175,10 +175,11 @@ export const ContactH3 = styled.h3`
   font-size: 16px;
   @media screen and (min-width: 768px) {
     font-size: 24px;
+    margin: 0;
+    margin-bottom: 16px;
   }
 
   @media screen and (min-width: 1440px) {
-    margin-bottom: 16px;
     font-size: 24px;
   }
 `;
