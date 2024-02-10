@@ -33,6 +33,7 @@ import certificate_tab_568 from "../../assets/Services/certificate@2x_tab_568.pn
 import certificate_desktop_332 from "../../assets/Services/certificate@1x_desktop_332.png";
 import certificate_desktop_664 from "../../assets/Services/certificate@2x_desktop_664.png";
 
+
 const ServicesPage = () => {
   return (
     <section
@@ -110,6 +111,10 @@ const ServicesPage = () => {
             </CardContainer>
           </Link>
         </CardsWraper>
+
+        
+
+
       </ServicesContainer>
     </section>
   );
