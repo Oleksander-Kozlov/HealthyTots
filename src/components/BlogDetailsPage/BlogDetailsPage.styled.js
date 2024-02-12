@@ -9,10 +9,10 @@ export const BlogContainer = styled.div`
   align-items: center;
 `;
 export const LinkContainer = styled.div`
- 
   display: flex;
   align-self: start;
   margin-bottom: 16px;
+
 `;
 export const Wrapper = styled.div`
   padding: 0 120px;

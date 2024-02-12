@@ -14,8 +14,9 @@ const BlogCard = ({ data }) => {
     <BlogCardContainer to={`${data.id}`}>
       {/* <BlogCardContainer> */}
       <Image src={image} alt={data.title} />
-      <BlogCard_h3 style={{ margin: " 0px" }}>{data.title}</BlogCard_h3>
+      <BlogCard_h3 >{data.title}</BlogCard_h3>
       <p>{data.text}</p>
+      
       <ButtonRead>Читати</ButtonRead>
       {/* </BlogCardContainer> */}
     </BlogCardContainer>

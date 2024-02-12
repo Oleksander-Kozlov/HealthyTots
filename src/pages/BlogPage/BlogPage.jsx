@@ -10,13 +10,15 @@ import {
   NotFoundContainer,
   Paginate,
   SearchContainer,
+
 } from "./BlogPage.styled";
+import{  NavLinks,} from "../ContactsPage/ContactsPage.styled"
 import { IoIosSearch } from "react-icons/io";
 import { IoCloseCircle } from "react-icons/io5";
 import data from "../../../blogcards.json";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import { LinkContainer } from "../../components/BlogDetailsPage/BlogDetailsPage.styled";
-import { Link, useSearchParams } from "react-router-dom";
+import {useSearchParams } from "react-router-dom";
 
 const BlogPage = () => {
   const [itemOffset, setItemOffset] = useState(0);
@@ -51,10 +53,10 @@ const BlogPage = () => {
     <BlogSection>
       <BlogContainer>
         <LinkContainer>
-          <Link to="/">
+          <NavLinks to="/">
             <p style={{ color: "#94B0B7" }}> Головна /</p>
-          </Link>
-          <p style={{ fontSize: "14px" }}>&nbsp;Блог</p>
+          </NavLinks>
+          <p >&nbsp;Блог</p>
         </LinkContainer>
         <BlogH2>Блог</BlogH2>
 
@@ -74,7 +76,8 @@ const BlogPage = () => {
           {blogTitle.length > 0 && (
             <button
               style={{ backgroundColor: "transparent", display: "flex" }}
-              onClick={clearSearchParams}>
+              onClick={clearSearchParams}
+            >
               <IoCloseCircle color="#318FB5" size={24} textAlign="center" />
             </button>
           )}
