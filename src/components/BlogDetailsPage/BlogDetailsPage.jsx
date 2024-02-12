@@ -1,4 +1,4 @@
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // import { getProductById } from "../fakeAPI";
 import data from "../../../blogcards.json";
 
@@ -42,7 +42,7 @@ const BlogDetailsPage = () => {
 useEffect(() => {
   const updateColumns = () => {
     const screenWidth = window.innerWidth;
-    if (screenWidth <= 1440) {
+    if (screenWidth <= 1339) {
       setColumns(2);
     } else {
       setColumns(3);
@@ -59,11 +59,11 @@ useEffect(() => {
 }, []);
   
   const { id } = useParams();
+
   const cutCurrentBlog = data.filter((blog) => blog.id !== id);
 
   const item = data.filter((item) => item.id.includes(id))[0];
-  // console.log("BlogDetailsPageid", `../../${item.image}`)
-  // console.log(item);
+  
   return (
     <BlogSection>
       <BlogContainer>
@@ -122,13 +122,7 @@ useEffect(() => {
         </BlogCardsContainer>
       </BlogContainer>
     </BlogSection>
-
-    // <section><BlogContainer>
-
-    // {/* </Wrapper> */}
-
-    // </BlogContainer>
-    // </section>
+   
   );
 };
 
