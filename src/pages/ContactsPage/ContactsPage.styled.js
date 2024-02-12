@@ -63,13 +63,22 @@ export const LinkContainerContactPage = styled.div`
   }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLinks = styled(Link)`
   font-size: 12px;
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
   @media screen and (min-width: 1440px) {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  + p {
+    font-size: 12px;
+    @media screen and (min-width: 768px) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: 1440px) {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -104,14 +113,14 @@ export const InfoWrapper = styled.div`
     align-items: stretch;
   }
   @media screen and (min-width: 1440px) {
-    margin-bottom: 48px;
+    
 
     gap: 126px;
     flex-direction: row;
     align-items: stretch;
 
     border-radius: 60px;
-    width: 1200px;
+   
   }
 `;
 export const ContactsDiv = styled.div`
@@ -175,10 +184,11 @@ export const ContactH3 = styled.h3`
   font-size: 16px;
   @media screen and (min-width: 768px) {
     font-size: 24px;
+    margin: 0;
+    margin-bottom: 16px;
   }
 
   @media screen and (min-width: 1440px) {
-    margin-bottom: 16px;
     font-size: 24px;
   }
 `;
