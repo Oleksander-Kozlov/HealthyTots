@@ -3,6 +3,8 @@ import { useState } from "react";
 import {
   BlogCardsContainer,
   BlogContainer,
+  BlogH2,
+  BlogSection,
   InputBlogSearch,
   NotFound,
   NotFoundContainer,
@@ -46,8 +48,7 @@ const BlogPage = () => {
   };
 
   return (
-    <section
-      style={{ marginBottom: "48px", paddingBottom: "0px", paddingTop: "4px" }}>
+    <BlogSection>
       <BlogContainer>
         <LinkContainer>
           <Link to="/">
@@ -55,7 +56,7 @@ const BlogPage = () => {
           </Link>
           <p style={{ fontSize: "14px" }}>&nbsp;Блог</p>
         </LinkContainer>
-        <h2>Блог</h2>
+        <BlogH2>Блог</BlogH2>
 
         <SearchContainer>
           <IoIosSearch color="#94B0B7" size={24} />
@@ -101,7 +102,7 @@ const BlogPage = () => {
           activeClassName="selected"
         />
       </BlogContainer>
-    </section>
+    </BlogSection>
   );
 };
 
