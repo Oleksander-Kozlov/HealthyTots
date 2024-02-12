@@ -21,18 +21,10 @@ import {
   TitleContainer,
 } from "./BlogDetailsPage.styled";
 import { NavLinks } from "../../pages/ContactsPage/ContactsPage.styled";
+import { useEffect, useState } from "react";
 
-// function shuffle(array) {
-//   var currentIndex = array.length, temporaryValue, randomIndex;
-//   while (0 !== currentIndex) {
-//     randomIndex = Math.floor(Math.random() * currentIndex);
-//     currentIndex -= 1;
-//     temporaryValue = array[currentIndex];
-//     array[currentIndex] = array[randomIndex];
-//     array[randomIndex] = temporaryValue;
-//   }
-//   return array;
-// }
+
+
 function getRandomElements(array, numberOfElements) {
   // Fisher-Yates shuffle algorithm
   for (let i = array.length - 1; i > 0; i--) {
@@ -45,6 +37,27 @@ function getRandomElements(array, numberOfElements) {
 }
 
 const BlogDetailsPage = () => {
+  const [columns, setColumns] = useState(3); // Початкова кількість карточок в ряду
+
+useEffect(() => {
+  const updateColumns = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 1440) {
+      setColumns(2);
+    } else {
+      setColumns(3);
+    }
+  };
+
+  updateColumns(); 
+  window.addEventListener("resize", updateColumns);
+
+  return () => {
+   
+    window.removeEventListener("resize", updateColumns);
+  };
+}, []);
+  
   const { id } = useParams();
   const cutCurrentBlog = data.filter((blog) => blog.id !== id);
 
@@ -103,7 +116,7 @@ const BlogDetailsPage = () => {
           </div>
         </TitleContainer>
         <BlogCardsContainer style={{ marginTop: "48px", marginBottom: "16px" }}>
-          {getRandomElements(cutCurrentBlog, 3).map((data) => {
+          {getRandomElements(cutCurrentBlog, columns).map((data) => {
             return <BlogCard key={data.id} data={data} />;
           })}
         </BlogCardsContainer>
