@@ -8,13 +8,17 @@ import {
 } from "./Service.styled";
 
 import data from "../../../services.json";
+import AppointmentSection from "../Appointment/AppointmentSection";
+
 
 const Service = () => {
   const { id } = useParams();
 
   const item = data.filter((item) => item.id.includes(id))[0];
   // console.log("BlogDetailsPageid", `../../${item.image}`)
+  
 
+  
   return (
     <ServicesContainer>
       <LinkContainer style={{ marginBottom: "0px" }}>
@@ -85,6 +89,7 @@ const Service = () => {
           </Table>
         );
       })}
+      <AppointmentSection/>
     </ServicesContainer>
   );
 };

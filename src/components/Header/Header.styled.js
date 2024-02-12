@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { PiPhoneFill } from "react-icons/pi";
 import { SlMenu } from "react-icons/sl";
+import { Link } from "react-router-dom";
 export const Header_container = styled.header`
   position: relative;
   &::before {
@@ -121,3 +122,43 @@ display: none;
 //     gap: 8px;
 //     font-size: 18px;
 // `
+
+
+export const BurgerMenu = styled.div`
+position: fixed;
+ z-index: 9999;
+ background-color: gray;
+ opacity: 0.98;
+ left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; 
+`
+
+export const BurgerContainer = styled.div`
+display: flex;
+flex-direction: column;
+margin-top: 43px;
+`
+export const Burger_link_styled = styled(Link)`
+height: 43px;
+font-family: Balsamiq Sans;
+font-size: 16px;
+display: flex;
+align-items: center;
+color: #0D3F7C;
+background-color: white;
+border-bottom: 1px solid #BDDFEF;
+padding-left: 20px;
+opacity: 1;
+/* &:hover {
+  color: #318fb5;
+}
+&:focus {
+  color: #001244;
+}
+&:active {
+  color: #001244;
+} */
+`;
