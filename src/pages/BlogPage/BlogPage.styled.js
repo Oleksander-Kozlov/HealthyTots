@@ -27,7 +27,7 @@ export const BlogContainer = styled.div`
     padding: 0 120px;
     /* padding-bottom: 32px; */
     overflow: hidden;
-    max-width: 1440px;
+  
   }
 `;
 
