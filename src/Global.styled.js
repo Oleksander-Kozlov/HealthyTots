@@ -85,8 +85,7 @@ button {
   border: none;
 }
 section{
-    /* display: flex;
-    justify-content: center; */
+ 
     padding-bottom: 20px;
     padding-top: 20px;
     margin-bottom: 80px;

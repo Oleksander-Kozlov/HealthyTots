@@ -1,17 +1,15 @@
 import { styled } from "styled-components";
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
-export const BlogCardContainer = styled(Link)`
+export const BlogCardContainer = styled(NavLink)`
   box-sizing: border-box;
 
   display: flex;
-  /* display: grid; */
-  /* grid-template-rows: repeat(4, auto); */
-  /* grid-template-columns: 1fr; */
+ 
   justify-items: start;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+ 
   width: 320px;
   padding: 24px 20px;
   border-radius: 20px;
@@ -52,6 +50,7 @@ export const Image = styled.img`
 export const BlogCard_h3 = styled.h3`
   margin-top: 0;
   margin-bottom: 12px;
+  flex-basis: 20%;
   @media screen and (min-width: 768px) {
     margin: 0;
   }

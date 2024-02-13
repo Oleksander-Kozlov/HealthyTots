@@ -74,7 +74,9 @@ const Header = () => {
                 return (
                   <Burger_link_styled
                     to={item.link}
-                    onClick={() => handleCloseMenu()}>
+                    key={item.link}
+                    onClick={() => handleCloseMenu()}
+                  >
                     {item.name}
                   </Burger_link_styled>
                 );
@@ -99,7 +101,12 @@ const Header = () => {
         <Navigation>
           {navBar.map((item) => {
             return (
-              <Link_styled to={item.link} onClick={() => handleCloseMenu()}>
+              <Link_styled
+                to={item.link}
+                key={item.link}
+                state={item.link}
+                onClick={() => handleCloseMenu()}
+              >
                 {item.name}
               </Link_styled>
             );
