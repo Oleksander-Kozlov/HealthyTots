@@ -1,5 +1,3 @@
-
-import { NavLink } from "react-router-dom";
 import Map from "../../components/Map/Map";
 
 import {
@@ -16,6 +14,7 @@ import {
   LinkContainerContactPage,
   ContactsDiv,
   CotactTitle,
+  NavLinks,
 } from "./ContactsPage.styled";
 
 
@@ -26,9 +25,9 @@ const ContactsPage = () => {
     >
       <RotatedBackground />
       <LinkContainerContactPage style={{}}>
-        <NavLink to="/">
+        <NavLinks to="/">
           <p style={{color:"#94b0b7"}}> Головна /</p>
-        </NavLink>
+        </NavLinks>
         <p >&nbsp;Контакти</p>
       </LinkContainerContactPage>
 

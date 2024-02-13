@@ -26,7 +26,7 @@ export const DoctorsContainer = styled.div`
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
     padding: 0 120px;
 
     overflow: hidden;
@@ -35,8 +35,12 @@ export const DoctorsContainer = styled.div`
 export const DoctorsH2 = styled.h2`
   font-size: 24px;
   margin: 28px 0;
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
   @media screen and (min-width: 1440px) {
     margin: 48px 0;
+    font-size: 40px;
   }
 `;
 export const UlContainer = styled.ul`
