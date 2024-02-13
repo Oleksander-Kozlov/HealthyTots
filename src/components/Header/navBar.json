@@ -1,0 +1,22 @@
+ [
+    {
+      "name": "Головна",
+      "link": "/"
+    },
+    {
+      "name": "Лікарі",
+      "link": "/doctors"
+    },
+    {
+      "name": "Послуги",
+      "link": "/services"
+    },
+    {
+      "name": "Блог",
+      "link": "/blog"
+    },
+    {
+      "name": "Контакти",
+      "link": "/contacts"
+    }
+  ]
