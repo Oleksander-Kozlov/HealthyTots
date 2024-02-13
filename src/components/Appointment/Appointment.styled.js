@@ -43,7 +43,7 @@ export const Block = styled.div`
   }
   @media screen and (min-width: 1440px) {
     border-radius: 60px;
-    max-width: 960px;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     gap: 126px;
