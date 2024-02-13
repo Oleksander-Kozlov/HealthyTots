@@ -9,6 +9,7 @@ import doc_img5 from "../../assets/doctorImg/doctor5.png";
 
 
 
+
 const DoctorCard = ({ data }) => {
   const docImgs = {
     1: doc_img1,
@@ -17,18 +18,23 @@ const DoctorCard = ({ data }) => {
     4: doc_img4,
     5: doc_img5,
   };
+
+
   function getImageById(id) {
-    return docImgs[id] || null;
+    return docImgs[id] 
   }
 
-  return ( <CardContainer>
-      <DocotorImg src={getImageById(data.id)} alt="Doctors Foto" />
-      <DescriptionContainer>
-        <Name>{data.name}</Name>
-        <Title>{data.title}</Title>
-        <Text>{data.text}</Text>
-      </DescriptionContainer>
-    </CardContainer>
+  return (
+    <>
+      <CardContainer>
+        <DocotorImg src={getImageById(data.id)} alt="Doctors Foto" />
+        <DescriptionContainer>
+          <Name>{data.name}</Name>
+          <Title>{data.title}</Title>
+          <Text>{data.text}</Text>
+        </DescriptionContainer>
+      </CardContainer>
+    </>
   );
 };
   
