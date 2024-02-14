@@ -3,93 +3,108 @@ import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
 import {
   ServicesContainer,
   Table,
+  TableCell,
   TableColumn,
   TableHeader,
+  TableTitle,
 } from "./Service.styled";
 
 import data from "../../../services.json";
 import AppointmentSection from "../Appointment/AppointmentSection";
-
+import {
+  CotactTitle,
+  NavLinks,
+} from "../../pages/ContactsPage/ContactsPage.styled";
 
 const Service = () => {
   const { id } = useParams();
 
   const item = data.filter((item) => item.id.includes(id))[0];
   // console.log("BlogDetailsPageid", `../../${item.image}`)
-  
 
-  
   return (
     <ServicesContainer>
       <LinkContainer style={{ marginBottom: "0px" }}>
-        <Link to="/">
+        <NavLinks to="/">
           {" "}
           <p style={{ color: "#94B0B7" }}> Головна /</p>
-        </Link>
-        <Link to="/services">
+        </NavLinks>
+        <NavLinks to="/services">
           {" "}
           <p style={{ color: "#94B0B7" }}>&nbsp;Послуги&nbsp; </p>
-        </Link>
-        <p style={{ fontSize: "14px" }}>/&nbsp;{item.title}</p>
+        </NavLinks>
+        <p>/&nbsp;{item.title}</p>
       </LinkContainer>
-      <h2 style={{ margin: "0px", justifyContent: "start", fontSize: "24px" }}>
+      <CotactTitle style={{ margin: "0px", justifyContent: "start" }}>
         {item.title}
-      </h2>
+      </CotactTitle>
       {item.table.map((tab) => {
         return (
           <Table key={tab.id}>
             <TableHeader>
-              <th>
+              <TableTitle>
+                {/* <h3
+                  style={{
+                    margin: "0px",
+                    textAlign: "start",
+                    // paddingLeft: "16px",
+                  }}
+                > */}
+                {tab.header.fieldOne}
+                {/* </h3> */}
+              </TableTitle>
+              <TableTitle>
                 <h3
                   style={{
                     margin: "0px",
                     textAlign: "start",
-                    paddingLeft: "16px",
-                  }}>
-                  {tab.header.fieldOne}
-                </h3>
-              </th>
-              <th>
-                <h3
-                  style={{
-                    margin: "0px",
-                    textAlign: "start",
-                    paddingLeft: "16px",
-                  }}>
+                    // paddingLeft: "16px",
+                  }}
+                >
                   {tab.header.fieldTwo}
                 </h3>
-              </th>
+              </TableTitle>
 
               {tab.header.fieldThre ? (
-                <th>
+                <TableTitle>
                   <h3
                     style={{
                       margin: "0px",
                       textAlign: "start",
-                      paddingLeft: "16px",
-                    }}>
+                      // paddingLeft: "16px",
+                    }}
+                  >
                     {tab.header.fieldThre}
                   </h3>
-                </th>
+                </TableTitle>
               ) : (
                 <></>
               )}
             </TableHeader>
+
             {tab.body.map((val, key) => {
               return (
-                <tr key={key}>
-                  <TableColumn style={{
-                    weight: "130px"
-                  }}>{val.name}</TableColumn>
-                  {val.country ? <TableColumn>{val.country}</TableColumn> : <></>}
+                <TableCell key={key}>
+                  <TableColumn
+                    style={{
+                      weight: "130px",
+                    }}
+                  >
+                    {val.name}
+                  </TableColumn>
+                  {val.country ? (
+                    <TableColumn>{val.country}</TableColumn>
+                  ) : (
+                    <></>
+                  )}
                   <TableColumn>{val.value}</TableColumn>
-                </tr>
+                </TableCell>
               );
             })}
           </Table>
         );
       })}
-      <AppointmentSection/>
+      <AppointmentSection />
     </ServicesContainer>
   );
 };

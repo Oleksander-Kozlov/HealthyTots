@@ -8,40 +8,52 @@ export const ServicesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 `;
 
 export const Table = styled.table`
   border-radius: 20px;
-  /* border: 1px solid var(--Blue-secondary, #BDDFEF); */
-background: #FFF;
-border-spacing: 0;
- border-collapse: separate;
- overflow: hidden;
- /* .rounded-corners {
- border-spacing: 0;
- border-collapse: separate;
- border-radius: 10px;
- border: 1px solid black;
- box-shadow: 1 0 0 2px var(--inner-border-color, black);
-} */
-&:last-child {
-    border-radius: 20px;
+  outline: 1.5px solid var(--Blue-secondary, #bddfef);
+  background: #fff;
+  border-spacing: 0;
+  border-collapse: separate;
+  overflow: hidden;
+  width: 320px;
+  @media screen and (max-width: 359.98px) {
+    width: 300px;
   }
-`
+  @media screen and (min-width: 768px) {
+    width: 688px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1200px;
+  }
+`;
 
 export const TableHeader = styled.tr`
-background: var(--Blue-secondary, #BDDFEF);
-border-radius: 20px;
-    border: 1px solid var(--Blue-secondary, #BDDFEF);
-    
-`
+  background: var(--Blue-secondary, #bddfef);
+  border-radius: 20px;
+  border: 1px solid var(--Blue-secondary, #bddfef);
+  color: var(--Blue-accent, #0d3f7c);
+  font-family: "Balsamiq Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
 
 export const TableColumn = styled.td`
-  /* border: 1px solid var(--Blue-secondary, #BDDFEF); */
   text-align: start;
-  padding: 7px 16px;
-  /* &:last-child {
-    border-radius: 20px;
-  } */
+  padding: 8px 16px;
+
+  outline: 1px solid var(--Blue-secondary, #bddfef);
+`;
+
+export const TableTitle = styled.th`
+  padding: 8px 16px;
+`;
+
+export const TableCell = styled.tr`
+  text-align: start;
+  padding: 8px 16px;
+  border-radius: 20px;
 `;
