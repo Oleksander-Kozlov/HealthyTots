@@ -12,7 +12,9 @@ export const ServicesContainer = styled.div`
 
 export const Table = styled.table`
   border-radius: 20px;
-  outline: 1.5px solid var(--Blue-secondary, #bddfef);
+
+  border: 1.5px solid #bddfef;
+
   background: #fff;
   border-spacing: 0;
   border-collapse: separate;
