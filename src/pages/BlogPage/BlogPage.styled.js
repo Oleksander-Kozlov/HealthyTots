@@ -5,6 +5,9 @@ export const BlogSection = styled.section`
   padding-top: 52px;
   padding-bottom: 28px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media screen and (min-width: 768px) {
     padding-top: 28px;
   }
@@ -26,9 +29,9 @@ export const BlogContainer = styled.div`
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;
-
+    width: 1440px;
     padding: 0 120px;
-    /* padding-bottom: 32px; */
+
     overflow: hidden;
   }
 `;

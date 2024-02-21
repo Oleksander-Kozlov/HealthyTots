@@ -9,6 +9,7 @@ export const DoctorSection = styled.main`
   }
   @media screen and (min-width: 1440px) {
     padding-top: 48px;
+    width: 1440px;
   }
 `;
 

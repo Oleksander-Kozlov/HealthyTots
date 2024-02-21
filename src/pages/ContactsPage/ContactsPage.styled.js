@@ -20,7 +20,7 @@ export const MainContainer = styled.main`
   }
 
   @media screen and (min-width: 1440px) {
-    padding: 48px 120px;
+    padding: 24px 120px;
  ;
   }
 `;
