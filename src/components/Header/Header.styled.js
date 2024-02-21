@@ -22,6 +22,7 @@ export const Header_container = styled.header`
     padding: 0px;   
     background-color: white;   
   }
+ 
 `;
 
 export const Phone_icon = styled(PiPhoneFill)`
@@ -44,7 +45,7 @@ export const BurgerMenu_icon = styled(SlMenu)`
 `;
 export const Header_upperLine = styled.div`
   position: relative;
-  
+
   display: flex;
   align-items: center;
   align-self: stretch;
@@ -57,7 +58,7 @@ export const Header_upperLine = styled.div`
     align-items: center;
   }
   @media screen and (min-width: 1440px) {
-    /* width: 1440px; */
+    padding: 20px 120px;
   }
 `;
 
