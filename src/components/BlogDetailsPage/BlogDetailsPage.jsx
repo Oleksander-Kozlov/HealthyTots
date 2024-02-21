@@ -1,13 +1,11 @@
 import { useParams } from "react-router-dom";
 // import { getProductById } from "../fakeAPI";
-import data from "../../../blogcards.json";
+import data from "../../assets/blogcards.json";
 
-// import image from "../../assets/BlogCards/BlogCard.jpeg"
 import image from "../../assets/BlogCards/BlogCard.jpeg";
 import BlogCard from "../BlogCard/BlogCard";
 import {
   BlogCardsContainer,
-  
   BlogSection,
 } from "../../pages/BlogPage/BlogPage.styled";
 
@@ -23,8 +21,6 @@ import {
 import { NavLinks } from "../../pages/ContactsPage/ContactsPage.styled";
 import { useEffect, useState } from "react";
 
-
-
 function getRandomElements(array, numberOfElements) {
   // Fisher-Yates shuffle algorithm
   for (let i = array.length - 1; i > 0; i--) {
@@ -39,31 +35,30 @@ function getRandomElements(array, numberOfElements) {
 const BlogDetailsPage = () => {
   const [columns, setColumns] = useState(3); // Початкова кількість карточок в ряду
 
-useEffect(() => {
-  const updateColumns = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth <= 1339) {
-      setColumns(2);
-    } else {
-      setColumns(3);
-    }
-  };
+  useEffect(() => {
+    const updateColumns = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 1339) {
+        setColumns(2);
+      } else {
+        setColumns(3);
+      }
+    };
 
-  updateColumns(); 
-  window.addEventListener("resize", updateColumns);
+    updateColumns();
+    window.addEventListener("resize", updateColumns);
 
-  return () => {
-   
-    window.removeEventListener("resize", updateColumns);
-  };
-}, []);
-  
+    return () => {
+      window.removeEventListener("resize", updateColumns);
+    };
+  }, []);
+
   const { id } = useParams();
 
   const cutCurrentBlog = data.filter((blog) => blog.id !== id);
 
   const item = data.filter((item) => item.id.includes(id))[0];
-  
+
   return (
     <BlogSection>
       <BlogContainer>
@@ -122,7 +117,6 @@ useEffect(() => {
         </BlogCardsContainer>
       </BlogContainer>
     </BlogSection>
-   
   );
 };
 
