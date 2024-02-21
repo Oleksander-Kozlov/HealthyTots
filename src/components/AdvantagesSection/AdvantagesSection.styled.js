@@ -6,7 +6,7 @@ import {
   IndividualApproach,
   ModernEquipment,  
   PreventionAndEducation,  
-} from "../SvgIcons";
+} from "../../assets/svg/SvgIcons";
 
 const advantagesSectionSvgStyle = styled.svg`
   width: 80px;

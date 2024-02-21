@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { SvgLogo } from "../SvgIcons";
+import { SvgLogo } from "../../assets/svg/SvgIcons.jsx";
 
 export const SvgLogoFooter = styled(SvgLogo)`
   width: 87px;

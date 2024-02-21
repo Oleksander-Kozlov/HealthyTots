@@ -15,7 +15,7 @@ import {
 import{  NavLinks,} from "../ContactsPage/ContactsPage.styled"
 import { IoIosSearch } from "react-icons/io";
 import { IoCloseCircle } from "react-icons/io5";
-import data from "../../assets/blogcards.json";
+import data from "../../assets/JSONs/blogcards.json";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import { LinkContainer } from "../../components/BlogDetailsPage/BlogDetailsPage.styled";
 import {useSearchParams } from "react-router-dom";

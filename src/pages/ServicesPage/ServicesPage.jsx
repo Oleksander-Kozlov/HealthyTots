@@ -8,33 +8,33 @@ import {
   ServicesContainer,
   ServicesSection,
 } from "./ServicesPage.styled";
-
-import consultation_mob_112 from "../../assets/Services/consultation@1x_mob_112.png";
-import consultation_mob_224 from "../../assets/Services/consultation@2x_mob_224.png";
-import consultation_tab_284 from "../../assets/Services/consultation@1x_tab_284.png";
-import consultation_tab_568 from "../../assets/Services/consultation@2x_tab_568.png";
-import consultation_desktop_332 from "../../assets/Services/consultation@1x_desktop_332.png";
-import consultation_desktop_664 from "../../assets/Services/consultation@2x_desktop_664.png";
-
-import vactination_mob_112 from "../../assets/Services/vactination@1x_mob_112.png";
-import vactination_mob_224 from "../../assets/Services/vactination@2x_mob_224.png";
-import vactination_tab_284 from "../../assets/Services/vactination@x1_tab_284.png";
-import vactination_tab_568 from "../../assets/Services/vactination@2x_tab_568.png";
-import vactination_desktop_332 from "../../assets/Services/vactination@x1_desktop_332.png";
-import vactination_desktop_664 from "../../assets/Services/vactination@x2_desktop_664.png";
-
-import checkUp_mob_99 from "../../assets/Services/checkUp@1x_mob_112.png";
-import checkUp_mob_198 from "../../assets/Services/checkUp@2x_mob_224.png";
-import checkUp_desktop_tab_248 from "../../assets/Services/checkUp@1x_desktop_tab_248.png";
-import checkUp_desktop_tab_456 from "../../assets/Services/checkUp@2x_desktop_tab_456.png";
-
-import certificate_mob_112 from "../../assets/Services/certificate@1x_mob_112.png";
-import certificate_mob_224 from "../../assets/Services/certificate@2x_mob_224.png";
-import certificate_tab_284 from "../../assets/Services/certificate@1x_tab_284.png";
-import certificate_tab_568 from "../../assets/Services/certificate@2x_tab_568.png";
-import certificate_desktop_332 from "../../assets/Services/certificate@1x_desktop_332.png";
-import certificate_desktop_664 from "../../assets/Services/certificate@2x_desktop_664.png";
 import { NavLinks } from "../ContactsPage/ContactsPage.styled";
+
+import consultation_mob_112 from "../../assets/img/ServiceTable/consultation@1x_mob_112.png";
+import consultation_mob_224 from "../../assets/img/ServiceTable/consultation@2x_mob_224.png";
+import consultation_tab_284 from "../../assets/img/ServiceTable/consultation@1x_tab_284.png";
+import consultation_tab_568 from "../../assets/img/ServiceTable/consultation@2x_tab_568.png";
+import consultation_desktop_332 from "../../assets/img/ServiceTable/consultation@1x_desktop_332.png";
+import consultation_desktop_664 from "../../assets/img/ServiceTable/consultation@2x_desktop_664.png";
+
+import vactination_mob_112 from "../../assets/img/ServiceTable/vactination@1x_mob_112.png";
+import vactination_mob_224 from "../../assets/img/ServiceTable/vactination@2x_mob_224.png";
+import vactination_tab_284 from "../../assets/img/ServiceTable/vactination@x1_tab_284.png";
+import vactination_tab_568 from "../../assets/img/ServiceTable/vactination@2x_tab_568.png";
+import vactination_desktop_332 from "../../assets/img/ServiceTable/vactination@x1_desktop_332.png";
+import vactination_desktop_664 from "../../assets/img/ServiceTable/vactination@x2_desktop_664.png";
+
+import checkUp_mob_99 from "../../assets/img/ServiceTable/checkUp@1x_mob_112.png";
+import checkUp_mob_198 from "../../assets/img/ServiceTable/checkUp@2x_mob_224.png";
+import checkUp_desktop_tab_248 from "../../assets/img/ServiceTable/checkUp@1x_desktop_tab_248.png";
+import checkUp_desktop_tab_456 from "../../assets/img/ServiceTable/checkUp@2x_desktop_tab_456.png";
+
+import certificate_mob_112 from "../../assets/img/ServiceTable/certificate@1x_mob_112.png";
+import certificate_mob_224 from "../../assets/img/ServiceTable/certificate@2x_mob_224.png";
+import certificate_tab_284 from "../../assets/img/ServiceTable/certificate@1x_tab_284.png";
+import certificate_tab_568 from "../../assets/img/ServiceTable/certificate@2x_tab_568.png";
+import certificate_desktop_332 from "../../assets/img/ServiceTable/certificate@1x_desktop_332.png";
+import certificate_desktop_664 from "../../assets/img/ServiceTable/certificate@2x_desktop_664.png";
 
 const ServicesPage = () => {
   return (

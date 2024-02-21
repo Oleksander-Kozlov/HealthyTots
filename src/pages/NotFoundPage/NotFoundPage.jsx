@@ -4,7 +4,7 @@ import {
   RightSideContainer,
 } from "./NotFoundPage.styled";
 
-import NotFoundSvg from "../../assets/NotFound.svg";
+import NotFoundSvg from "../../assets/svg/NotFound.svg";
 
 const NotFoundPage = () => {
   return (

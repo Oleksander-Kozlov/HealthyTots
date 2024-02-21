@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
-import BGContactDesctop_1x from "../../assets/Unionbg@1x.png";
-import BGContactDesctop_2x from "../../assets/Unionbg@2x.png";
+import BGContactDesctop_1x from "../../assets/img/backgroundImg/Unionbg@1x.png";
+import BGContactDesctop_2x from "../../assets/img/backgroundImg/Unionbg@2x.png";
 export const MainContainer = styled.main`
   position: relative;
   overflow: hidden;

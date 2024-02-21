@@ -8,7 +8,7 @@ import {
   UlContainer,
 } from "./DoctorsPage.styled";
 import { NavLinks } from "../ContactsPage/ContactsPage.styled";
-import doctor from "../../assets/doctors.json";
+import doctor from "../../assets/JSONs/doctors.json";
 import { useEffect, useState } from "react";
 
 

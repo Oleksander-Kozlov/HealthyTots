@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 // import { Link } from "react-router-dom";
-import image from "../../assets/BlogCards/BlogCard.jpeg";
+import image from "../../assets/img/blogCardsImg/blogCard.jpeg";
 import {
   BlogCardContainer,
   Image,

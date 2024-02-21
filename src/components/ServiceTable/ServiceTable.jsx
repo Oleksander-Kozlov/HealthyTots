@@ -9,7 +9,7 @@ import {
   TableTitle,
 } from "./ServiceTable.styled";
 
-import data from "../../assets/services.json";
+import data from "../../assets/JSONs/services.json";
 import AppointmentSection from "../Appointment/AppointmentSection";
 import {
   CotactTitle,
