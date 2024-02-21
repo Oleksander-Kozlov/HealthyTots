@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 // import { getProductById } from "../fakeAPI";
 import data from "../../assets/JSONs/blogcards.json";
 
-import image from "../../assets/BlogCards/BlogCard.jpeg";
+import image from "../../assets/img/blogCardsImg/blogCard.jpeg";
 import BlogCard from "../BlogCard/BlogCard";
 import {
   BlogCardsContainer,

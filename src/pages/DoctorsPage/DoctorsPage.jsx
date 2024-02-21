@@ -1,6 +1,6 @@
 import Appointment_Section from "../../components/Appointment/AppointmentSection";
 import DoctorCard from "../../components/DoctorCard/DoctorCard";
-import { LinkContainer } from "../../components/BlogDetailsPage/BlogDetailsPage.styled";
+import { LinkContainer } from "../../pages/BlogDetailsPage/BlogDetailsPage.styled";
 import {
   DoctorSection,
   DoctorsContainer,

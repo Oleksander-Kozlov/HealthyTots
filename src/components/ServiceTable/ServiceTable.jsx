@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+import { LinkContainer } from "../../pages/BlogDetailsPage/BlogDetailsPage.styled";
 import {
   ServicesContainer,
   Table,
@@ -21,7 +21,7 @@ const Service = () => {
   console.log("useParams", id);
 
   const item = data.filter((item) => item.id.includes(id))[0];
-  console.log("BlogDetailsPageid", `../../${item.image}`)
+  console.log("BlogDetailsPageid", `../../${item.image}`);
 
   return (
     <ServicesContainer>

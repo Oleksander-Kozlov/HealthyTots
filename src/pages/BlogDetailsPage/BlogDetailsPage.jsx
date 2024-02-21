@@ -1,9 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 import data from "../../assets/JSONs/blogcards.json";
-
-import BlogCard from "../../components/BlogCard/BlogCard";
 import { BlogCardsContainer } from "../BlogPage/BlogPage.styled";
-import image from "assets/img/blogCardsImg/blogCard.jpeg";
+
+
+import image1 from "../../assets/img/blogCardsImg/blogCard.jpeg"
 
 import {
   BlogContainer,
@@ -13,6 +13,7 @@ import {
   TextWrapper,
   TitleContainer,
 } from "./BlogDetailsPage.styled";
+import BlogCard from "../../components/BlogCard/BlogCard";
 
 function getRandomElements(array, numberOfElements) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -46,7 +47,7 @@ const BlogDetailsPage = () => {
         {/* <Wrapper> */}
         <h2>{item.title}</h2>
         <ImageTextContainer>
-          <ImageWraper src={image} alt="logoHT" />
+          <ImageWraper src={image1} alt="logoHT" />
           <TextWrapper>
             Лікарські візити можуть стати джерелом стресу для багатьох дітей.
             Вони часто асоціюють лікарні з несприятливими враженнями, які
