@@ -1,4 +1,6 @@
+import "../node_modules/modern-normalize/modern-normalize.css";
 import { createGlobalStyle, styled } from "styled-components";
+
 import BalsamiqSansBold from "./assets/fonts/BalsamiqSans-Bold.ttf";
 import RobotoRegular from "./assets/fonts/Roboto-Regular.ttf";
 // import styled from "styled-components";
@@ -24,7 +26,9 @@ export const GlobalStyle = createGlobalStyle`
   --Orange-main: #F27B57;
 }
 
+
 body {
+ 
   margin: 0;
   font-family: var(--font-text);
   font-size: 14px;

@@ -5,8 +5,14 @@ export const BlogSection = styled.section`
   padding-top: 52px;
   padding-bottom: 28px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media screen and (min-width: 768px) {
     padding-top: 28px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 24px;
   }
 `;
 
@@ -23,17 +29,21 @@ export const BlogContainer = styled.div`
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    width: 1440px;
     padding: 0 120px;
-    /* padding-bottom: 32px; */
+
     overflow: hidden;
-  
   }
 `;
 
 export const BlogH2 = styled.h2`
   font-size: 24px;
   margin: 28px 0;
+
+  @media screen and (min-width: 1440px) {
+    font-size: 40px;
+    margin: 48px 0 32px 0;
+  }
 `;
 export const SearchContainer = styled.div`
   display: flex;
@@ -48,6 +58,9 @@ export const SearchContainer = styled.div`
   }
   @media screen and (min-width: 768px) {
     width: 282px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 32px;
   }
 `;
 export const InputBlogSearch = styled.input`
@@ -64,7 +77,7 @@ export const BlogCardsContainer = styled.div`
   display: grid;
   justify-content: center;
   gap: 28px;
- 
+
   /* margin-top: 32px; */
   @media screen and (min-width: 768px) {
     gap: 32px;

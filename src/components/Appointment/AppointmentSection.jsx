@@ -19,12 +19,12 @@ import {
   TermsAndCondition,
   TextAreaBox,
 } from "./Appointment.styled";
-import AppointmentJpgMob_1x from "../../img/AppointmentJpgMob@1x.png";
-import AppointmentJpgMob_2x from "../../img/AppointmentJpgMob@2x.png";
-import AppointmentJpgTab_1x from "../../img/AppointmentJpgTab@1x.png";
-import AppointmentJpgTab_2x from "../../img/AppointmentJpgTab@2x.png";
-import AppointmentJpgDesk_1x from "../../img/AppointmentJpgDesk@1x.png";
-import AppointmentJpgDesk_2x from "../../img/AppointmentJpgDesk@2x.png";
+import AppointmentJpgMob_1x from "../../assets/img/AppoinmentImg/AppointmentJpgMob@1x.png";
+import AppointmentJpgMob_2x from "../../assets/img/appoinmentImg/AppointmentJpgMob@2x.png";
+import AppointmentJpgTab_1x from "../../assets/img/appoinmentImg/AppointmentJpgTab@1x.png";
+import AppointmentJpgTab_2x from "../../assets/img/appoinmentImg/AppointmentJpgTab@2x.png";
+import AppointmentJpgDesk_1x from "../../assets/img/appoinmentImg/AppointmentJpgDesk@1x.png";
+import AppointmentJpgDesk_2x from "../../assets/img/appoinmentImg/AppointmentJpgDesk@2x.png";
 
 import { Formik, Field, Form } from "formik";
 import * as yup from "yup";

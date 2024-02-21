@@ -2,8 +2,8 @@ import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookSquare } from "react-icons/fa";
-import BGContactDesctop_1x from "../../assets/Unionbg@1x.png";
-import BGContactDesctop_2x from "../../assets/Unionbg@2x.png";
+import BGContactDesctop_1x from "../../assets/img/backgroundImg/Unionbg@1x.png";
+import BGContactDesctop_2x from "../../assets/img/backgroundImg/Unionbg@2x.png";
 export const MainContainer = styled.main`
   position: relative;
   overflow: hidden;
@@ -20,10 +20,8 @@ export const MainContainer = styled.main`
   }
 
   @media screen and (min-width: 1440px) {
-    padding-top: 24px;
-    padding-right: 120px;
-    padding-left: 120px;
-    padding-bottom: 48px;
+    padding: 24px 120px;
+ ;
   }
 `;
 export const RotatedBackground = styled.div`
@@ -58,7 +56,7 @@ export const LinkContainerContactPage = styled.div`
   margin-bottom: 10px;
 
   @media screen and (min-width: 1440px) {
-    margin-top: 24px;
+   
     margin-bottom: 48px;
   }
 `;
@@ -91,6 +89,7 @@ export const CotactTitle = styled.h2`
   }
   @media screen and (min-width: 1440px) {
     font-size: 40px;
+    margin-bottom: 48px;
   }
 `;
 
@@ -113,14 +112,11 @@ export const InfoWrapper = styled.div`
     align-items: stretch;
   }
   @media screen and (min-width: 1440px) {
-    
-
     gap: 126px;
     flex-direction: row;
     align-items: stretch;
 
     border-radius: 60px;
-   
   }
 `;
 export const ContactsDiv = styled.div`

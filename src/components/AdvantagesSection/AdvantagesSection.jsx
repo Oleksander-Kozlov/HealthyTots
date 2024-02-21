@@ -1,11 +1,15 @@
 
 import {
- 
   Advantages_Container_Wrapper,
   Advantages_items,
   Advantages_section,
-  
+  CozyEnvironmentSvg,
+  ExperiencedDoctorsSvg,
+  FullTreatmentSvg,
+  IndividualApproachSvg,
   Item,
+  ModernEquipmentSvg,
+  PreventionAndEducationSvg,
   TextContainer,
 } from "./AdvantagesSection.styled";
 // import ExperiencedDoctors1 from '../../assets/AdvantagesSectionSvg/ExperiencedDoctors.svg'
@@ -14,7 +18,6 @@ import {
 // import CozyEnvironment1 from '../../assets/AdvantagesSectionSvg/CozyEnvironment.svg'
 // import PreventionAndEducation1 from '../../assets/AdvantagesSectionSvg/PreventionAndEducation.svg'
 // import ModernEquipment1 from '../../assets/AdvantagesSectionSvg/ModernEquipment.svg'
-import { CozyEnvironment, CozyEnvironmentSmall, ExperiencedDoctors, ExperiencedDoctorsSmall, FullTreatment, FullTreatmentSmall, IndividualApproach, IndividualApproachSmall, ModernEquipment, ModernEquipmentSmall, PreventionAndEducation, PreventionAndEducationSmall } from "../SvgIcons";
 import { H2_About_Us } from "../AboutUsSection/AboutUsSection.styled";
 
 const AdvantagesSection = () => {
@@ -25,10 +28,7 @@ const AdvantagesSection = () => {
 
         <Advantages_items>
           <Item>
-            {/* <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}> */}
-            <ExperiencedDoctors />
-            <ExperiencedDoctorsSmall />
-            {/* </div> */}
+            <ExperiencedDoctorsSvg />
 
             <h3>Досвідчені лікарі</h3>
             <TextContainer>
@@ -39,8 +39,7 @@ const AdvantagesSection = () => {
           </Item>
 
           <Item>
-            <IndividualApproach />
-            <IndividualApproachSmall />
+            <IndividualApproachSvg />
             <h3>Індивідуальний підхід</h3>
             <TextContainer>
               Ми віримо в унікальність кожної дитини. Наші лікарі враховують
@@ -50,8 +49,8 @@ const AdvantagesSection = () => {
           </Item>
 
           <Item>
-            <FullTreatment />
-            <FullTreatmentSmall />
+            <FullTreatmentSvg />
+
             <h3>Комплексне лікування</h3>
             <TextContainer>
               У нас ви можете за один візит отримати консультативний огляд, при
@@ -60,8 +59,8 @@ const AdvantagesSection = () => {
           </Item>
 
           <Item>
-            <CozyEnvironment />
-            <CozyEnvironmentSmall />
+            <CozyEnvironmentSvg />
+
             <h3>Затишне середовище</h3>
             <TextContainer>
               У нас тепла та приємна атмосфера для вас та вашого малюка. Mи
@@ -71,8 +70,8 @@ const AdvantagesSection = () => {
           </Item>
 
           <Item>
-            <PreventionAndEducation />
-            <PreventionAndEducationSmall />
+            <PreventionAndEducationSvg />
+
             <h3>Профілактика та освіта</h3>
             <TextContainer>
               Ми покладаємо великий наголос на профілактичні заходи та освіту
@@ -82,8 +81,8 @@ const AdvantagesSection = () => {
           </Item>
 
           <Item>
-            <ModernEquipment />
-            <ModernEquipmentSmall />
+            <ModernEquipmentSvg />
+
             <h3>Сучасне oбладнання</h3>
             <TextContainer>
               Використовуючи сучасні технології та методи лікування, ми

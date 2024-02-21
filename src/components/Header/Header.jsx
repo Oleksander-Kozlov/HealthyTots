@@ -15,7 +15,7 @@ import {
   Burger_link_styled,
 } from "./Header.styled";
 import { Link_styled } from "../../Global.styled";
-import { SvgLogo } from "../SvgIcons";
+import { SvgLogo } from "../../assets/svg/SvgIcons";
 import { useState } from "react";
 
 const Header = () => {

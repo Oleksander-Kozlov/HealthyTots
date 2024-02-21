@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 // import { Link } from "react-router-dom";
-import image from "../../assets/BlogCards/BlogCard.jpeg";
+import image from "../../assets/img/blogCardsImg/blogCard.jpeg";
 import {
   BlogCardContainer,
   Image,
@@ -12,13 +12,13 @@ import {
 const BlogCard = ({ data }) => {
   return (
     <BlogCardContainer to={`${data.id}`}>
-      {/* <BlogCardContainer> */}
+      
       <Image src={image} alt={data.title} />
       <BlogCard_h3 >{data.title}</BlogCard_h3>
-      <p>{data.text}</p>
+      <p style={{flexBasis: "20%"}}>{data.text}</p>
       
       <ButtonRead>Читати</ButtonRead>
-      {/* </BlogCardContainer> */}
+      
     </BlogCardContainer>
   );
 };

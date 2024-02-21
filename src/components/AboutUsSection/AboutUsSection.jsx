@@ -1,4 +1,4 @@
-import logoHT from "../../assets/rectangle/hero_img_center_158px@1x.png";
+import logoHT from "../../assets/img/heroImg/hero_img_center_158px@1x.png";
 
 import {
   About_Us_Container_Wrapper,

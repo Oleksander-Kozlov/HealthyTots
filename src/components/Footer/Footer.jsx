@@ -13,9 +13,6 @@ import {
   Contact_tel_container_Footer,
   SvgLogoFooter,
 } from "./Footer.styled";
-
-
-// import { Contact_container } from "../Header/Header.styled";
 import SocialLinks from "./SocialLinks/SocialLinks";
 import { PiCopyrightBold, PiPhoneFill } from "react-icons/pi";
 import { TiLocation } from "react-icons/ti";

@@ -1,4 +1,41 @@
 import styled from "styled-components";
+import {
+  CozyEnvironment,  
+  ExperiencedDoctors,  
+  FullTreatment,  
+  IndividualApproach,
+  ModernEquipment,  
+  PreventionAndEducation,  
+} from "../../assets/svg/SvgIcons";
+
+const advantagesSectionSvgStyle = styled.svg`
+  width: 80px;
+  height: 90px;
+  @media screen and (min-width: 768px) {
+    width: 120px;
+    height: 138px;
+  }
+`;
+
+export const ExperiencedDoctorsSvg = styled(ExperiencedDoctors)`
+ ${advantagesSectionSvgStyle}`;
+  export const ModernEquipmentSvg = styled(ModernEquipment)`
+ ${advantagesSectionSvgStyle}`;
+export const IndividualApproachSvg = styled(IndividualApproach)`
+  ${advantagesSectionSvgStyle}
+`;
+export const CozyEnvironmentSvg = styled(CozyEnvironment)`
+  ${advantagesSectionSvgStyle}
+`;
+
+export const PreventionAndEducationSvg = styled(PreventionAndEducation)`
+  ${advantagesSectionSvgStyle}
+`;
+
+
+export const FullTreatmentSvg = styled(FullTreatment)`
+  ${advantagesSectionSvgStyle}
+`;
 export const Advantages_section = styled.section`
   
   margin-bottom: 0;
@@ -7,6 +44,9 @@ export const Advantages_section = styled.section`
 
 export const Advantages_Container_Wrapper = styled.div`
   padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media screen and (min-width: 768px) {
     padding: 40px 40px;
   }
@@ -72,7 +112,7 @@ export const TextContainer = styled.p`
     text-align: center;
   }
   @media screen and (min-width: 1440px) {
-    max-width: 380px;
+    max-width: 384px;
     font-size: 18px;
   }
 `;
