@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 // import { getProductById } from "../fakeAPI";
-import data from "../../../blogcards.json";
+import data from "../../assets/blogcards.json";
 
 // import image from "../../assets/BlogCards/BlogCard.jpeg"
 import image from "../../assets/BlogCards/BlogCard.jpeg";
@@ -16,26 +16,14 @@ import {
   TitleContainer,
 } from "./BlogDetailsPage.styled";
 
-
-// function shuffle(array) {
-//   var currentIndex = array.length, temporaryValue, randomIndex;
-//   while (0 !== currentIndex) {
-//     randomIndex = Math.floor(Math.random() * currentIndex);
-//     currentIndex -= 1;
-//     temporaryValue = array[currentIndex];
-//     array[currentIndex] = array[randomIndex];
-//     array[randomIndex] = temporaryValue;
-//   }
-//   return array;
-// }
 function getRandomElements(array, numberOfElements) {
-  // Fisher-Yates shuffle algorithm
+  
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
 
-  // Select the first numberOfElements elements
+
   return array.slice(0, numberOfElements);
 }
 
@@ -45,8 +33,7 @@ const BlogDetailsPage = () => {
     blog.id !== id)
     
   const item = data.filter((item) => item.id.includes(id))[0];
-  // console.log("BlogDetailsPageid", `../../${item.image}`)
-  // console.log(item);
+  
   return (
     <BlogContainer>
       <LinkContainer>
@@ -103,12 +90,7 @@ const BlogDetailsPage = () => {
         </BlogCardsContainer>
     </BlogContainer>
 
-    // <section><BlogContainer>
 
-    // {/* </Wrapper> */}
-
-    // </BlogContainer>
-    // </section>
   );
 };
 
