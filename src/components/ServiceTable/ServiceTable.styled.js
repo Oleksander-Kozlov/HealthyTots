@@ -32,10 +32,10 @@ export const Table = styled.table`
 `;
 
 export const TableHeader = styled.tr`
-  background: var(--Blue-secondary, #bddfef);
+  background: #bddfef;
   border-radius: 20px;
-  border: 1px solid var(--Blue-secondary, #bddfef);
-  color: var(--Blue-accent, #0d3f7c);
+  border: 1px solid  #bddfef;
+  color:  #0d3f7c;
   font-family: "Balsamiq Sans";
   font-size: 14px;
   font-style: normal;

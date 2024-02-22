@@ -18,10 +18,10 @@ import {
 
 const Service = () => {
   const { id } = useParams();
-  console.log("useParams", id);
+ 
 
   const item = data.filter((item) => item.id.includes(id))[0];
-  console.log("BlogDetailsPageid", `../../${item.image}`);
+  
 
   return (
     <ServicesContainer>
@@ -42,66 +42,38 @@ const Service = () => {
       {item.table.map((tab) => {
         return (
           <Table key={tab.id}>
-            <TableHeader>
-              <TableTitle>
-                {/* <h3
-                  style={{
-                    margin: "0px",
-                    textAlign: "start",
-                    // paddingLeft: "16px",
-                  }}
-                > */}
-                {tab.header.fieldOne}
-                {/* </h3> */}
-              </TableTitle>
-              <TableTitle>
-                <h3
-                  style={{
-                    margin: "0px",
-                    textAlign: "start",
-                    // paddingLeft: "16px",
-                  }}
-                >
-                  {tab.header.fieldTwo}
-                </h3>
-              </TableTitle>
-
-              {tab.header.fieldThre ? (
-                <TableTitle>
-                  <h3
-                    style={{
-                      margin: "0px",
-                      textAlign: "start",
-                      // paddingLeft: "16px",
-                    }}
-                  >
-                    {tab.header.fieldThre}
-                  </h3>
-                </TableTitle>
-              ) : (
-                <></>
-              )}
-            </TableHeader>
-
-            {tab.body.map((val, key) => {
-              return (
-                <TableCell key={key}>
-                  <TableColumn
-                    style={{
-                      weight: "130px",
-                    }}
-                  >
-                    {val.name}
-                  </TableColumn>
-                  {val.country ? (
-                    <TableColumn>{val.country}</TableColumn>
-                  ) : (
-                    <></>
-                  )}
-                  <TableColumn>{val.value}</TableColumn>
-                </TableCell>
-              );
-            })}
+            <thead>
+              <TableHeader>
+                <TableTitle>{tab.header.fieldOne}</TableTitle>
+                <TableTitle>{tab.header.fieldTwo}</TableTitle>
+                {tab.header.fieldThre ? (
+                  <TableTitle>{tab.header.fieldThre}</TableTitle>
+                ) : (
+                  <></>
+                )}
+              </TableHeader>
+            </thead>
+            <tbody>
+              {tab.body.map((val, key) => {
+                return (
+                  <TableCell key={key}>
+                    <TableColumn
+                      style={{
+                        weight: "130px",
+                      }}
+                    >
+                      {val.name}
+                    </TableColumn>
+                    {val.country ? (
+                      <TableColumn>{val.country}</TableColumn>
+                    ) : (
+                      <></>
+                    )}
+                    <TableColumn>{val.value}</TableColumn>
+                  </TableCell>
+                );
+              })}
+            </tbody>
           </Table>
         );
       })}
