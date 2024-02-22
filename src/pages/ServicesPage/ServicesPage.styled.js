@@ -15,12 +15,14 @@ export const ServicesSection = styled.section`
 
 export const ServicesContainer = styled.div`
   display: flex;
-
   justify-items: center;
   flex-direction: column;
   gap: 28px;
+
   padding: 0 20px;
+
   overflow: hidden;
+
   @media screen and (max-width: 359.98px) {
     padding: 5px;
   }
@@ -45,11 +47,12 @@ export const CardsWraper = styled.div`
   justify-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 20px;
-
   grid-row-gap: 28px;
+
   @media screen and (max-width: 359.98px) {
     gap: 5px;
   }
+
   @media screen and (min-width: 768px) {
     grid-column-gap: 24px;
   }
@@ -66,12 +69,12 @@ export const CardContainer = styled.div`
   align-items: center;
   align-self: stretch;
   justify-content: space-between;
+
   width: 124px;
   height: 180px;
   padding: 12px;
-
   border-radius: 24px;
-  border: 1px solid var(--Blue-main, #8cd4fa);
+  border: 1px solid  #8cd4fa;
   background: #ebf5fa;
 
   @media screen and (min-width: 768px) {
@@ -91,6 +94,7 @@ export const IMG_Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  
   width: 112px;
   height: 136px;
 

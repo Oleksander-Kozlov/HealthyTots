@@ -12,12 +12,11 @@ import {
   FormContainer2,
   H2_Appointment,
   Input,
-  InputMessage,
   P_Appointment,
-  Placeholder_Container,
   SubmitButton,
   TermsAndCondition,
   TextAreaBox,
+  TextAreaInput,
 } from "./Appointment.styled";
 import AppointmentJpgMob_1x from "../../assets/img/AppoinmentImg/AppointmentJpgMob@1x.png";
 import AppointmentJpgMob_2x from "../../assets/img/appoinmentImg/AppointmentJpgMob@2x.png";
@@ -33,22 +32,21 @@ import { useState } from "react";
 import AppointmentPopup from "./AppointmentPopup/AppointmentPopup";
 import { useEffect } from "react";
 
-// const phoneRegExp =
-//   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const schema = yup.object().shape({
   name: yup.string().trim().required("Введіть ваше імʼя"),
-  //   phone: yup
-  //     .string()
-  //     .matches(phoneRegExp, "Phone number is not valid")
-  //     .required("Required"),
+  phone: yup
+    .string()
+    .matches(phoneRegExp, "Phone number is not valid")
+    .required("Required"),
   termsAndConditions: yup
     .boolean()
     .oneOf([true], "You must accept the terms and conditions"),
 });
 
 function AppointmentSection({ forwardedRef }) {
-  const [termsAndConditions, setTermsAndConditions] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
   //   const handleSubmit = (values, { resetForm }) => {
   //     alert(JSON.stringify(values));
@@ -80,19 +78,14 @@ function AppointmentSection({ forwardedRef }) {
     return () => clearTimeout(timer);
   }, [showPopUp]);
 
-  console.log(termsAndConditions);
   return (
     <Appointment_section>
-      {/* <Appointment_Container_Wrapper
-        
-        style={{ display: "flex", justifyContent: "center" }} id="form"
-      > */}
       <Block>
         <AppointmentImg
           src={AppointmentJpgTab_1x}
           alt="Appointment foto"
           srcSet={`${AppointmentJpgMob_1x} 304w,
-          ${AppointmentJpgMob_2x} 604w,
+        ${AppointmentJpgMob_2x} 604w,
         ${AppointmentJpgTab_1x} 257w,
         ${AppointmentJpgTab_2x} 514w,
         ${AppointmentJpgDesk_1x} 426w,
@@ -105,14 +98,13 @@ function AppointmentSection({ forwardedRef }) {
           <H2_Appointment ref={forwardedRef}>
             Записатися на прийом
           </H2_Appointment>
-          <P_Appointment >
+          <P_Appointment>
             Ми вам перетелефонуємо для підтвердження запису у робочі години
           </P_Appointment>
           <Formik
             initialValues={initialValues}
             validationSchema={schema}
             onSubmit={(values, { resetForm }) => {
-              console.log(values);
               //   sendemail(values)
               setShowPopUp(true);
               resetForm();
@@ -140,21 +132,24 @@ function AppointmentSection({ forwardedRef }) {
                     placeholder="Номер телефону*"
                     value={values.phone}
                   />
+                  {errors.phone && touched.phone ? (
+                    <ErrorMessage>{errors.phone}</ErrorMessage>
+                  ) : null}
                   <TextAreaBox>
                     <Field
-                      as={InputMessage}
+                      as={TextAreaInput}
                       type="text"
                       name="massage"
                       value={values.massage}
+                      placeholder="Повідомлення"
                     ></Field>{" "}
-                    <Placeholder_Container>Повідомлення</Placeholder_Container>
                   </TextAreaBox>
+
                   <div style={{ display: "flex", alignItems: "flex-start" }}>
                     <Field
                       as={FieldCheckbox}
                       type="checkbox"
                       name="termsAndConditions"
-                      value={setTermsAndConditions(false)}
                     />
                     <TermsAndCondition
                       htmlFor="termsAndConditions"
@@ -181,9 +176,7 @@ function AppointmentSection({ forwardedRef }) {
           </Formik>
         </FormContainer>
         {showPopUp ? <AppointmentPopup /> : <div />}
-        
       </Block>
-      {/* </Appointment_Container_Wrapper> */}
     </Appointment_section>
   );
 }

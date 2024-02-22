@@ -23,7 +23,6 @@ export const Appointment_section = styled.section`
 
 export const Appointment_Container_Wrapper = styled.div`
   overflow: hidden;
-  
 `;
 export const Block = styled.div`
   width: 100%;
@@ -86,7 +85,6 @@ export const FormContainer = styled.div`
 `;
 
 export const H2_Appointment = styled.h2`
-  
   align-self: stretch;
   color: #f27b57;
   text-align: center;
@@ -100,7 +98,6 @@ export const H2_Appointment = styled.h2`
   @media screen and (min-width: 768px) {
     font-size: 28px;
     margin-bottom: -20px;
-    
   }
   @media screen and (min-width: 1440px) {
     font-size: 28px;
@@ -116,11 +113,10 @@ export const P_Appointment = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 36/18;
-  margin-bottom:0;
+  margin-bottom: 0;
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
- 
   }
 `;
 
@@ -142,13 +138,12 @@ export const Input = styled.input`
   font-weight: 400;
   line-height: 16.8/14;
 
-
   &::placeholder {
     color: #94b0b7;
   }
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 21/18
+    line-height: 21/18;
   }
 `;
 export const TextAreaBox = styled.div`
@@ -167,10 +162,18 @@ export const InputMessage = styled(Input).attrs({ as: "input" })`
   height: 95px;
   /* text-align: right; */
   position: relative;
-  
-  
- 
 `;
+
+export const TextAreaInput = styled(Input).attrs({ as: "textarea" })`
+  height: 195px;
+  /* text-align: right; */
+  position: relative;
+  ::placeholder {
+    font-size: 0.8rem;
+    transform: translateY(-0.5rem);
+  }
+`;
+
 export const Placeholder_Container = styled.div`
   position: absolute;
   top: 12px; /* Зсуваємо від нижнього краю */
@@ -203,13 +206,10 @@ export const TermsAndCondition = styled.div`
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     margin: 0;
   }
-  
 `;
-
-
 
 export const FormContainer2 = styled.div`
   display: flex;
@@ -254,7 +254,8 @@ export const SubmitButton = styled.button`
   }
   @media screen and (min-width: 1440px) {
     font-size: 24px;
-    width: 198px;}
+    width: 198px;
+  }
 `;
 export const ErrorMessage = styled.span`
   color: rgba(218, 20, 20, 1);

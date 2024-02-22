@@ -37,8 +37,7 @@ const BlogPage = () => {
   const clearSearchParams = () => {
     setSearchParams({});
   };
-  console.log("visibleBlogs", visibleBlogs);
-  // _____________________________SearchParams_______________________________
+ 
 
   const itemsPerPage = 6;
   const endOffset = itemOffset + itemsPerPage;

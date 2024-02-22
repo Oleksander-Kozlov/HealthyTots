@@ -50,7 +50,7 @@ useEffect(() => {
           ))}
         </UlContainer>
       </DoctorsContainer>
-      <Appointment_Section style={{ maxWidth: "1200px" }} />
+      <Appointment_Section key="AppointmentOnDoctorPage"  style={{ maxWidth: "1200px" }} />
     </DoctorSection>
   );
 };
