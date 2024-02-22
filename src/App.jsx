@@ -10,6 +10,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import ServiceTable from "./components/ServiceTable/ServiceTable"
+import Agreement from "./components/Agreement/Agreement";
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="agreement/:id" element={<Agreement />} />
           <Route path="doctors" element={<DoctorsPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="services/:id" element={<ServiceTable />} />

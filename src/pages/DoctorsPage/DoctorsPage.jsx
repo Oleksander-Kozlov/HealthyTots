@@ -1,18 +1,22 @@
 import Appointment_Section from "../../components/Appointment/AppointmentSection";
 import DoctorCard from "../../components/DoctorCard/DoctorCard";
-import { LinkContainer } from "../../pages/BlogDetailsPage/BlogDetailsPage.styled";
+
 import {
   DoctorSection,
   DoctorsContainer,
   DoctorsH2,
   UlContainer,
 } from "./DoctorsPage.styled";
-import { NavLinks } from "../ContactsPage/ContactsPage.styled";
+
 import doctor from "../../assets/JSONs/doctors.json";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
+import LinkContainer from "../../components/LinkContainer/LinkContainer";
 
 
 const DoctorsPage = () => {
+  const {pathname} = useLocation();
+  
   const doctors = doctor
 const[parsedData, setParsedData] = useState([]);
 
@@ -36,12 +40,8 @@ useEffect(() => {
   return (
     <DoctorSection>
       <DoctorsContainer>
-        <LinkContainer style={{ marginBottom: 0 }}>
-          <NavLinks to="/">
-            <p style={{ color: "#94B0B7" }}> Головна /</p>
-          </NavLinks>
-          <p>&nbsp;Лікарі</p>
-        </LinkContainer>
+      <LinkContainer title={pathname} />
+       
         <DoctorsH2>Лікарі</DoctorsH2>
 
         <UlContainer>

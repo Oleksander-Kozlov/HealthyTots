@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
-
-
+import { useLocation, useSearchParams } from "react-router-dom";
+// import LinkContainer from "../../components/LinkContainer/LinkContainer";
+import LinkContainer from "../../components/LinkContainer/LinkContainer";
 import {
   BlogCardsContainer,
   BlogContainer,
@@ -14,14 +14,14 @@ import {
   SearchContainer,
 
 } from "./BlogPage.styled";
-import{  NavLinks} from "../ContactsPage/ContactsPage.styled"
 import { IoIosSearch } from "react-icons/io";
 import { IoCloseCircle } from "react-icons/io5";
 import data from "../../assets/JSONs/blogcards.json";
 import BlogCard from "../../components/BlogCard/BlogCard";
-import { LinkContainer } from "../../pages/BlogDetailsPage/BlogDetailsPage.styled";
+
 
 const BlogPage = () => {
+  const {pathname} = useLocation();
   const [itemOffset, setItemOffset] = useState(0);
   // _____________________________SearchParams_______________________________
 
@@ -52,12 +52,7 @@ const BlogPage = () => {
   return (
     <BlogSection>
       <BlogContainer>
-        <LinkContainer>
-          <NavLinks to="/">
-            <p style={{ color: "#94B0B7" }}> Головна /</p>
-          </NavLinks>
-          <p >&nbsp;Блог</p>
-        </LinkContainer>
+ <LinkContainer title={pathname} />
         <BlogH2>Блог</BlogH2>
 
         <SearchContainer>

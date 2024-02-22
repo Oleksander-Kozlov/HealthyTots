@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 // export const Appointment_Container = styled.div`
@@ -268,3 +269,10 @@ export const ErrorMessage = styled.span`
     width: 268px;
   }
 `;
+
+export const Link_styled = styled(Link)`
+font-family: Balsamiq Sans;
+  font-size: 12px;
+  text-align: center;
+  color: #0d3f7c;
+`

@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { LinkContainer } from "../BlogDetailsPage/BlogDetailsPage.styled";
+import { Link, useLocation } from "react-router-dom";
+
 import {
   CardContainer,
   CardsWraper,
@@ -8,7 +8,6 @@ import {
   ServicesContainer,
   ServicesSection,
 } from "./ServicesPage.styled";
-import { NavLinks } from "../ContactsPage/ContactsPage.styled";
 
 import consultation_mob_112 from "../../assets/img/ServiceTable/consultation@1x_mob_112.png";
 import consultation_mob_224 from "../../assets/img/ServiceTable/consultation@2x_mob_224.png";
@@ -35,17 +34,14 @@ import certificate_tab_284 from "../../assets/img/ServiceTable/certificate@1x_ta
 import certificate_tab_568 from "../../assets/img/ServiceTable/certificate@2x_tab_568.png";
 import certificate_desktop_332 from "../../assets/img/ServiceTable/certificate@1x_desktop_332.png";
 import certificate_desktop_664 from "../../assets/img/ServiceTable/certificate@2x_desktop_664.png";
+import LinkContainer from "../../components/LinkContainer/LinkContainer";
 
 const ServicesPage = () => {
+  const {pathname} = useLocation();
   return (
     <ServicesSection>
       <ServicesContainer>
-        <LinkContainer style={{ marginBottom: "0px" }}>
-          <NavLinks to="/">
-            <p style={{ color: "#94B0B7" }}> Головна /</p>
-          </NavLinks>
-          <p>&nbsp;Послуги</p>
-        </LinkContainer>
+      <LinkContainer title={pathname} />
         <ServiceH2>Послуги</ServiceH2>
         <CardsWraper>
           <Link to={`1`} style={{ justifySelf: "end" }}>

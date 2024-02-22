@@ -1,3 +1,5 @@
+import { useLocation } from "react-router";
+import LinkContainer from "../../components/LinkContainer/LinkContainer";
 import Map from "../../components/Map/Map";
 
 import {
@@ -11,25 +13,21 @@ import {
   FacebookIcon,
   InstaIcon,
   LinkToForm,
-  LinkContainerContactPage,
+  
   ContactsDiv,
-  CotactTitle,
-  NavLinks,
+  CotactTitle
+  
 } from "./ContactsPage.styled";
 
 
 const ContactsPage = () => {
+  const {pathname} = useLocation();
   return (
     <MainContainer
    
     >
       <RotatedBackground />
-      <LinkContainerContactPage style={{}}>
-        <NavLinks to="/">
-          <p style={{color:"#94b0b7"}}> Головна /</p>
-        </NavLinks>
-        <p >&nbsp;Контакти</p>
-      </LinkContainerContactPage>
+      <LinkContainer title={pathname} />
 
       <CotactTitle>Контакти</CotactTitle>
       <InfoWrapper>

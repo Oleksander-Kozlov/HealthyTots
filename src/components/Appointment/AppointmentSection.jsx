@@ -12,6 +12,7 @@ import {
   FormContainer2,
   H2_Appointment,
   Input,
+  Link_styled,
   P_Appointment,
   SubmitButton,
   TermsAndCondition,
@@ -27,7 +28,7 @@ import AppointmentJpgDesk_2x from "../../assets/img/appoinmentImg/AppointmentJpg
 
 import { Formik, Field, Form } from "formik";
 import * as yup from "yup";
-import { useState } from "react";
+import {  useState } from "react";
 // import { PopupContainer, PopupInnerContainer } from "./AppointmentPopup/AppointmentPopup";
 import AppointmentPopup from "./AppointmentPopup/AppointmentPopup";
 import { useEffect } from "react";
@@ -72,6 +73,8 @@ function AppointmentSection({ forwardedRef }) {
   // }
 
   useEffect(() => {
+    // const ref = useRef(null)
+  // const handleClick = ()  => {ref.current?.scrollIntoView({behavior:"smooth"})}
     const timer = setTimeout(() => {
       setShowPopUp(false);
     }, 2500);
@@ -159,8 +162,12 @@ function AppointmentSection({ forwardedRef }) {
                         fontSize: "10px",
                       }}
                     >
-                      Я погоджуюсь з політикою конфіденційності та публічним
-                      договором
+                      Я погоджуюсь з&nbsp;
+                      {/* to={`${data.id}`} */}
+
+                      <Link_styled to={"/agreement/0"} prop={0}>Умовами надання послуг</Link_styled>
+                      &nbsp;
+                      та&nbsp;<Link_styled to={"/agreement/1"} prop={1}>Політикою конфіденційності</Link_styled>
                     </TermsAndCondition>
                   </div>
                   {errors.termsAndConditions && touched.termsAndConditions ? (
