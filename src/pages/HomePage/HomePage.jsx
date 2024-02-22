@@ -24,9 +24,7 @@ function HomePage (){
   const handleClick = ()  => {ref.current?.scrollIntoView({behavior:"smooth"})}
     return (
       <Main_Container>
-        <HeroSection
-          handleClick={handleClick}
-        />
+        <HeroSection handleClick={handleClick} />
         <AboutUsSection />
         <AdvantagesSection />
         <FeedBacks_Section>
@@ -34,9 +32,7 @@ function HomePage (){
             <h2>Відгуки</h2>
           </Container_Wrapper>
         </FeedBacks_Section>
-        <Appointment_Section
-          forwardedRef={ref}
-        />
+        <Appointment_Section key="AppointmentOnHomePage" forwardedRef={ref} />
       </Main_Container>
     );
 }
