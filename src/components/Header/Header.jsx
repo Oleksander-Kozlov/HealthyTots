@@ -1,3 +1,4 @@
+import navBar from "../../assets/JSONs/navBar.json";
 import { Link } from "react-router-dom";
 import { TiLocation } from "react-icons/ti";
 import {
@@ -19,29 +20,6 @@ import { SvgLogo } from "../../assets/svg/SvgIcons";
 import { useState } from "react";
 
 const Header = () => {
-  const navBar = [
-    {
-      name: "Головна",
-      link: "/",
-    },
-    {
-      name: "Лікарі",
-      link: "/doctors",
-    },
-    {
-      name: "Послуги",
-      link: "/services",
-    },
-    {
-      name: "Блог",
-      link: "/blog",
-    },
-    {
-      name: "Контакти",
-      link: "/contacts",
-    },
-  ];
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
@@ -75,13 +53,11 @@ const Header = () => {
                   <Burger_link_styled
                     to={item.link}
                     key={item.link}
-                    onClick={() => handleCloseMenu()}
-                  >
+                    onClick={() => handleCloseMenu()}>
                     {item.name}
                   </Burger_link_styled>
                 );
               })}
-     
             </BurgerContainer>
           </BurgerMenu>
         ) : (
@@ -105,8 +81,7 @@ const Header = () => {
                 to={item.link}
                 key={item.link}
                 state={item.link}
-                onClick={() => handleCloseMenu()}
-              >
+                onClick={() => handleCloseMenu()}>
                 {item.name}
               </Link_styled>
             );

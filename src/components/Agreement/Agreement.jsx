@@ -7,6 +7,7 @@ import LinkContainer from "../LinkContainer/LinkContainer";
 const Agreement = () => {
   const { id } = useParams();
   console.log("item[id].title.title", item[id].title)
+  console.log("item[id]", item[id])
   window.scrollTo(0, 0)
   return (
     < div style={{ marginTop: "50px" }}>
@@ -21,7 +22,7 @@ const Agreement = () => {
         <p >&nbsp;{item[id].title}</p>
       </LinkContainerContactPage> */}
       <div style={{ marginTop: "50px" }} key={item[id].id}>
-        <AgreementTitle>{item[id].title}</AgreementTitle>
+        {/* <AgreementTitle>{item[id].title}</AgreementTitle> */}
         {item[id].steps.map((step, index) => (
           <div key={index}>
             <AgreementH3>{step.H3}</AgreementH3>
