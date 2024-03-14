@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
-
+import { InputMask } from '@react-input/mask';
 // export const Appointment_Container = styled.div`
 // height: 300px;
 // background-color: gray;
@@ -121,6 +121,33 @@ export const P_Appointment = styled.p`
   }
 `;
 
+export const StyledInputMask = styled(InputMask)`
+/* color: black; */
+display: flex;
+  /* width: 504px; */
+  padding: 12px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: #fff;
+  border: 0;
+  color: rgb(12, 21, 28);
+  /* color: #94b0b7; */
+  /* Text secondary */
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.8/14;
+
+  &::placeholder {
+    color: #94b0b7;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 21/18;
+  }
+`
 export const Input = styled.input`
   /* color: black; */
   display: flex;
@@ -131,7 +158,8 @@ export const Input = styled.input`
   border-radius: 12px;
   background: #fff;
   border: 0;
-  color: #94b0b7;
+  color: rgb(12, 21, 28);
+  /* color: #94b0b7; */
   /* Text secondary */
   font-family: Roboto;
   font-size: 14px;

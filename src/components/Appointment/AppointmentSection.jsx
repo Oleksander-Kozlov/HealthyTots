@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { InputMask } from '@react-input/mask';
 // import { Container_Wrapper } from "../../pages/HomePage/HomePage.styled";
 
 // import emailjs from '@emailjs/browser';
@@ -14,6 +15,7 @@ import {
   Input,
   Link_styled,
   P_Appointment,
+  StyledInputMask,
   SubmitButton,
   TermsAndCondition,
   TextAreaBox,
@@ -33,26 +35,27 @@ import {  useState } from "react";
 import AppointmentPopup from "./AppointmentPopup/AppointmentPopup";
 import { useEffect } from "react";
 
-const phoneRegExp =
-  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+
+const phoneRegExp = /^\+3\s{1}8\(?\d{3}\)\s{1}?\d{3}-?\d{2}-?\d{2}$/
+  // /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const schema = yup.object().shape({
-  name: yup.string().trim().required("Введіть ваше імʼя"),
+  name: yup.string().trim().min(3, "Мінімальна довжина імені три літери").required("Введіть Ваше імʼя"),
   phone: yup
     .string()
-    .matches(phoneRegExp, "Phone number is not valid")
-    .required("Required"),
+    .matches(phoneRegExp, "Номер телефону не є валідним")
+    .required("Введіть Ваш номер телефону"),
   termsAndConditions: yup
     .boolean()
-    .oneOf([true], "You must accept the terms and conditions"),
+    .oneOf([true], "Вам потрібно погодитися з Умовами надання послуг та Політикою конфіденційності"),
 });
 
 function AppointmentSection({ forwardedRef }) {
   const [showPopUp, setShowPopUp] = useState(false);
-  //   const handleSubmit = (values, { resetForm }) => {
-  //     alert(JSON.stringify(values));
-  //     resetForm();
-  //   };
+    // const handleSubmit = (values, { resetForm }) => {
+    //   alert(JSON.stringify(values));
+    //   resetForm();
+    // };
 
   const initialValues = {
     name: "",
@@ -108,6 +111,8 @@ function AppointmentSection({ forwardedRef }) {
             initialValues={initialValues}
             validationSchema={schema}
             onSubmit={(values, { resetForm }) => {
+              
+              
               //   sendemail(values)
               setShowPopUp(true);
               resetForm();
@@ -128,16 +133,21 @@ function AppointmentSection({ forwardedRef }) {
                   {errors.name && touched.name ? (
                     <ErrorMessage>{errors.name}</ErrorMessage>
                   ) : null}
-                  <Field
-                    as={Input}
+
+                  <Field name="phone">
+                    {({ field }) => <StyledInputMask
+                    {...field}
                     type="text"
-                    name="phone"
+                      mask="+3 8(___) ___-__-__"
+                      replacement={{ _: /\d/ }}
                     placeholder="Номер телефону*"
                     value={values.phone}
                   />
-                  {errors.phone && touched.phone ? (
+                }   
+                  </Field>{errors.phone && touched.phone ? (
                     <ErrorMessage>{errors.phone}</ErrorMessage>
-                  ) : null}
+                  ) : null} 
+
                   <TextAreaBox>
                     <Field
                       as={TextAreaInput}
