@@ -4,8 +4,6 @@ import {
 } from "../../pages/ContactsPage/ContactsPage.styled";
 import navBar from "../../assets/JSONs/navBar.json";
 
-console.log("navBar", navBar);
-
 const LinkContainer = ({ title }) => {
   const item = navBar.find((item) => item.link === title);
 

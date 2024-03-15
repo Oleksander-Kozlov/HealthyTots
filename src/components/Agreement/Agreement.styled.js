@@ -48,5 +48,10 @@ export const Text = styled.p`
     font-size: 24px;
   }
 `;
-
+export const TextContainer = styled.div`
+display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+`
 ;
