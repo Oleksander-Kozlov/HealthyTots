@@ -2317,3 +2317,62 @@ const ModernEquipment = (props) => (
   </svg>
 );
 export { ModernEquipment };
+  
+const FeedbackStar = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    {...props}
+  >
+    <g clipPath="url(#a)">
+      <path
+        fill="#F27B57"
+        fillRule="evenodd"
+        d="M10.757 1.318a.833.833 0 0 0-1.514 0L6.852 6.5l-5.668.673a.833.833 0 0 0-.468 1.439l4.191 3.875-1.112 5.6a.833.833 0 0 0 1.224.889L10 16.189l4.982 2.788a.833.833 0 0 0 1.225-.89l-1.113-5.598 4.191-3.876a.833.833 0 0 0-.468-1.44L13.147 6.5l-2.39-5.182Z"
+        clipRule="evenodd"
+      />
+    </g>
+    <defs>
+      <clipPath id="a">
+        <path fill="#fff" d="M0 0h20v20H0z" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+export { FeedbackStar };
+  
+const ArrowRight = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={48}
+    height={48}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="#0D3F7C"
+      d="M20 34.616 30.616 24 20 13.384 18.584 14.8l9.2 9.2-9.2 9.2L20 34.616Z"
+    />
+  </svg>
+);
+export { ArrowRight };
+
+
+
+const ArrowLeft = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={48}
+    height={48}
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="#0D3F7C"
+      d="M29.2 34.616 18.584 24 29.2 13.384l1.416 1.416-9.2 9.2 9.2 9.2-1.416 1.416Z"
+    />
+  </svg>
+)
+export { ArrowLeft };

@@ -1,4 +1,4 @@
-import { AgreementH3, Text, TextContainer } from "./Agreement.styled";
+import { AgreementContainer, AgreementH3, Text, TextContainer } from "./Agreement.styled";
 import item from "../../assets/JSONs/documents.json";
 import { useParams } from "react-router";
 import { LinkContainerContactPage, NavLinks } from "../../pages/ContactsPage/ContactsPage.styled";
@@ -10,7 +10,7 @@ const Agreement = () => {
   // console.log("item[id]", item[id])
   window.scrollTo(0, 0)
   return (
-    < div style={{ marginTop: "50px", padding: "0 120px" }}>
+    < AgreementContainer >
       
       {/* <LinkContainer title={item[id].title} /> */}
 
@@ -30,7 +30,7 @@ const Agreement = () => {
           </TextContainer>
         ))}
       </div>
-    </div>
+    </AgreementContainer>
   );
 };
 

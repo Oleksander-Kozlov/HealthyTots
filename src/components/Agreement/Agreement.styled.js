@@ -1,5 +1,14 @@
 import { styled } from "styled-components";
 
+export const AgreementContainer = styled.div`
+margin-top: 50px; 
+padding: 0 40px;
+
+@media screen and (min-width: 1440px) {
+  margin-top: 50px; 
+    padding: 0 120px;
+  }
+`
 
 export const AgreementTitle = styled.h2`
 margin-bottom: 28px;
